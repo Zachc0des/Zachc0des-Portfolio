@@ -1,7 +1,5 @@
 # Zach-s-Portfolio
 
-# Z-s-Portfolio
-
 <h1>Hello, I'm Zachary! <br/></<a> Information Technology Trade School Graduate ⌄</a>
 
 <h2> ☁About me☁ </h2>
