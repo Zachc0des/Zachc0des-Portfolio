@@ -29,6 +29,7 @@ With a blend of customer service expertise, technical curiosity, and a drive for
 <a>HTML/CSS</a>
 <br> <a>PYTHON/SQL</a> </b>
 <br> <a>JAVA</a> </b>
+<br> <a>Mac</a> </b>
 <br> <a>Windows Operating Systems</a> </b>
 <br> <a>Linux/Sudo</a> </b>
 <br> <a>Microst Office Suite Programs</a> </b>
