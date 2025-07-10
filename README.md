@@ -32,6 +32,7 @@ With a blend of customer service expertise, technical curiosity, and a drive for
 <br> <a>Windows Operating Systems</a> </b>
 <br> <a>Microst Office Suite Programs</a> </b>
 <br> <a>Adobe Premire/Photohop</a> </b>
+<br> <a>Canva</a> </b>
 
 <h2>⚡︎HR Softwares/Applications⚡︎</h2>
 <a>Sales Force</a>
