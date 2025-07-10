@@ -3,7 +3,7 @@
 <h1>Hello, I'm Zachary! <br/></<a> Information Technology Trade School Graduate ⌄</a>
 
 <h2> ☁About me☁ </h2>
-<br><a>I’m 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in customer service, having over five years of experience in various customer-facing roles. I studied on campus at Miami Job Corps while also commuting to Dade Institute of Technology, further expanding my knowledge and skill set.
+<br><a>I’m 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in customer service, having over five years of experience in various customer-facing roles. I've studied on campus at Miami Job Corps while also commuting to Dade Institute of Technology, further expanding my knowledge and skill set.
 
 From a young age, technology has been an integral part of my life—learning to use a computer at the same age I learned to read. This early exposure sparked a deep passion for the ever-evolving world of technology, and I continuously seek to expand my knowledge in this field. Beyond tech, I’m also passionate about fitness, valuing both physical and mental well-being.
 
@@ -32,6 +32,16 @@ With a blend of customer service expertise, technical curiosity, and a drive for
 <br> <a>Windows Operating Systems</a> </b>
 <br> <a>Microst Office Suite Programs</a> </b>
 <br> <a>Adobe Premire/Photohop</a> </b>
+
+<h2>⚡︎HR Softwares/Applications⚡︎</h2>
+<a>Sales Force</a>
+<br> <a>Demand Ware</a> </b>
+<br> <a>IBM</a> </b>
+<br> <a>Zenith</a> </b>
+<br> <a>Flight Plan</a> </b>
+<br> <a>Slack</a> </b>
+<br> <a>Microsoft Teams</a> </b>
+<br> <a>Ring Central</a> </b>
 
 
 <h2>👨‍💻 Projects:</h2>
