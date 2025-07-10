@@ -30,7 +30,10 @@ With a blend of customer service expertise, technical curiosity, and a drive for
 <br> <a>PYTHON/SQL</a> </b>
 <br> <a>JAVA</a> </b>
 <br> <a>Windows Operating Systems</a> </b>
+<br> <a>Linux/Sudo</a> </b>
 <br> <a>Microst Office Suite Programs</a> </b>
+<br> <a>Cisco Packet Tracer</a> </b>
+<br> <a>Wire Shark</a> </b>
 <br> <a>Adobe Premire/Photohop</a> </b>
 <br> <a>Canva</a> </b>
 
