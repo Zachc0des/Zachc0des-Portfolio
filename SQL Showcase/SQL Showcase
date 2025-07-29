@@ -6,7 +6,7 @@
 ----------------------------------
 --STEP 1 
 
--- Table creation----
+-- Table creation
 --CREATE TABLE IF NOT EXISTS: Command that will create a a new database table **only if it does not already exist**.
 
 -- (ip_log: Name of the table to be created.)
@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS ip_log (
     bytes INTEGER,
     status VARCHAR(20)
 );
-----------------------
+---------------------------
 --STEP 2
 -- /d ip_log; This command will display the structure of the table ip_log, showing the columns and their data
----------------------===========
+----------------------------
     /d ip_log;
 -----------------------------
 
