@@ -1,12 +1,12 @@
 --------------------------------
  --How to Create a Table & Query an Ip log
 
---Zachc0des
+--@Zachc0des
 
 ----------------------------------
 --STEP 1 
 
--- Table creation
+-- Table creation----
 --CREATE TABLE IF NOT EXISTS: Command that will create a a new database table **only if it does not already exist**.
 
 -- (ip_log: Name of the table to be created.)
@@ -20,13 +20,13 @@
 
 -- dust_ip INET: PostgreSQL command that creates a column for storing destination IP addresses in the INET data type.
 
--- Port INTEGER: PostgreSQL command that creates a column for storing port numbers as integers.
+-- Port INTERGER: PostgreSQL command that creates a column for storing port numbers as integers.
 
--- protocol VARCHAR: PostgreSQL command that creates a column for storing protocol names as variable character strings with a maximum length of 10 characters.
+-- prtocol VARCHAR: PostgreSQL command that creates a column for storing protocol names as variable character strings with a maximum length of 10 characters.
 
--- Action VARCHAR: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.
+-- Acion Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.
 
--- bytes INTEGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.
+-- bytes INTERGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.
 
 -- status VARCHAR: PostgreSQL command that creates a column for storing status messages as variable character strings with a maximum length of 20 characters.
 -----------------------------
@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS ip_log (
     bytes INTEGER,
     status VARCHAR(20)
 );
----------------------------
+----------------------
 --STEP 2
 -- /d ip_log; This command will display the structure of the table ip_log, showing the columns and their data
-----------------------------
+--------------------------
     /d ip_log;
 -----------------------------
 
