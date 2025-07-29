@@ -29,8 +29,8 @@ With a blend of customer service expertise, technical curiosity, and a drive for
 <a>HTML/CSS</a>
 <br> <a>PYTHON/SQL</a> </b>
 <br> <a>JAVA</a> </b>
-<br> <a>Mac Operating Systems</a> </b>
-<br> <a>Windows Operating Systems</a> </b>
+<br> <a>Mac Operating System & Hardware Repair</a> </b>
+<br> <a>Windows Operating Systems & Hardware Repair</a>  </b>
 <br> <a>Linux/Sudo</a> </b>
 <br> <a>Microst Office Suite Programs</a> </b>
 <br> <a>Cisco Packet Tracer</a> </b>
