@@ -20,13 +20,13 @@
 
 -- dust_ip INET: PostgreSQL command that creates a column for storing destination IP addresses in the INET data type.
 
--- Port INTERGER: PostgreSQL command that creates a column for storing port numbers as integers.
+-- Port INTEGER: PostgreSQL command that creates a column for storing port numbers as integers.
 
--- prtocol VARCHAR: PostgreSQL command that creates a column for storing protocol names as variable character strings with a maximum length of 10 characters.
+-- protocol VARCHAR: PostgreSQL command that creates a column for storing protocol names as variable character strings with a maximum length of 10 characters.
 
--- Acion Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.
+-- Action VARCHAR: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.
 
--- bytes INTERGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.
+-- bytes INTEGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.
 
 -- status VARCHAR: PostgreSQL command that creates a column for storing status messages as variable character strings with a maximum length of 20 characters.
 -----------------------------
