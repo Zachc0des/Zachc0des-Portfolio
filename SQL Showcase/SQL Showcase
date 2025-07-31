@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS ip_log (
 --------------------------
     /d ip_log;
 -----------------------------
-
+a
 --STEP 3 
 -- INSERT INTO IP_LOG: Command that will insert new rows into the ip_log table.
 -- (timestamp, source_ip, dest_ip, port, protocol, action, bytes, status): Specifies the columns into which data will be inserted.
