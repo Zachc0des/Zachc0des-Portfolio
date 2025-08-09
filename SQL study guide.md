@@ -19,8 +19,16 @@ status VARCHAR (20) <BR>
 <h3> Step 2</h3> 
 <p1> /d ip_log; </p1> 
 <Br>
-<h3> Step 3</h3>
-<p1> </p1>
+
+<h3> Step 3</h4>
+<p1>INSERT INTO ip_log (timestamp, source_ip, dest_ip, port, protocol, action, bytes, status) VALUES<br>
+('2025-01-15 08:23:14', '192.168.1.101', '8.8.8.8', 53, 'UDP', 'ALLOW', 64, 'SUCCESS'),<br>
+('2025-01-15 08:23:15', '192.168.1.102', '172.217.12.46', 443, 'TCP', 'ALLOW', 1024, 'SUCCESS'),<br>
+('2025-01-15 08:24:32', '10.0.0.5', '192.168.1.200', 22, 'TCP', 'DENY', 0, 'BLOCKED'),<br>
+('2025-01-15 08:25:01', '192.168.1.103', '54.230.87.12', 80, 'TCP', 'ALLOW', 2048, 'SUCCESS'),<br>
+('2025-01-15 08:26:45', '172.16.0.10', '192.168.1.101', 3389, 'TCP', 'DENY', 0, 'BLOCKED')<br>
+</p1>
+<br>
 
 -------------------------------------------------------------{CODE SUMMARY STEP #1}--------------------------------------------------
   
@@ -37,7 +45,7 @@ status VARCHAR (20) <BR>
   -- dust_ip INET: PostgreSQL command that creates a column for storing destination IP addresses in the INET data type.<BR><BR>
   -- Port INTERGER: PostgreSQL command that creates a column for storing port numbers as integers.<BR><BR>
   -- protocol VARCHAR: PostgreSQL command that creates a column for storing protocol names as variable character strings with a maximum length of 10 characters.<BR><BR>
-  -- Acion Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.<BR><BR>
+  -- Action Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.<BR><BR>
   -- bytes INTERGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.<BR><BR>
   -- status VARCHAR: PostgreSQL command that creates a column for storing status messages as variable character strings with a maximum length of 20 characters.<BR><BR>
   -------------------------------------------------------------{Step 2}----------------------------------------------------------<BR><BR>
