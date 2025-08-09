@@ -5,8 +5,8 @@
 
 <P1>CREATE TABLE IF NOT EXISTS ip_log ( <br>
 id SERIAL PRIMARY KEY<BR>
-timestamp TIMESTAMP<BR>  
-source_ip INET<BR>
+timestamp TIMESTAMP  
+source_ip INET <BR>
 dest_ip INET <BR>
 port INTERGER<BR>
 protocol VARCHAR (10)<BR>
