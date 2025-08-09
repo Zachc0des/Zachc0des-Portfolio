@@ -15,7 +15,7 @@ protocol VARCHAR (10)<BR>
 action VARCHAR (10)<BR>
 bytes INTERGER <BR>
 status VARCHAR (20) <BR>
--------------------------------------------------------------{CODE SUMMARY}----------------------------------------------------------
+-------------------------------------------------------------{CODE SUMMARY STEP #1}----------------------------------------------------------
   
 </P1>
 <br>
@@ -33,6 +33,10 @@ status VARCHAR (20) <BR>
   -- Acion Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.<BR><BR>
   -- bytes INTERGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.<BR><BR>
   -- status VARCHAR: PostgreSQL command that creates a column for storing status messages as variable character strings with a maximum length of 20 characters.<BR><BR>
+  -------------------------------------------------------------{End}----------------------------------------------------------
+</p2>
+
+<h3>Step 2</h3>
   
   
   
