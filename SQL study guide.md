@@ -54,6 +54,14 @@ status VARCHAR (20) <BR>
   
   -------------------------------------------------------------{Step 3}----------------------------------------------------------<BR><BR>
 
+  -- INSERT INTO IP_LOG: Command that will insert new rows into the ip_log table.<br>
+  -- (timestamp, source_ip, dest_ip, port, protocol, action, bytes, status): Specifies the columns into which data will be inserted.<br>
+  -- VALUES: SQL Keyword that separates the colum names from the actual data, Everything after this keyword is the data that will be inserted into the table.<br>
+  -- the data is pulled from a a practical example of an IP log, which includes timestamps, source and destination IP addresses, ports, protocols, actions taken, bytes transferred, and     status messages.<br><br>
+
+   -------------------------------------------------------------{Step 4}----------------------------------------------------------<BR><BR>
+
+  
   
   
   
