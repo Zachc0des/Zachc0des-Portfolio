@@ -15,6 +15,13 @@ protocol VARCHAR (10)<BR>
 action VARCHAR (10)<BR>
 bytes INTERGER <BR>
 status VARCHAR (20) <BR>
+
+<h3> Step 2</h3> 
+<p1> /d ip_log; </p1> 
+<Br>
+<h3> Step 3</h3>
+<p1> </p1>
+
 -------------------------------------------------------------{CODE SUMMARY STEP #1}--------------------------------------------------
   
 </P1>
@@ -33,10 +40,12 @@ status VARCHAR (20) <BR>
   -- Acion Varchar: PostgreSQL command that creates a column for storing action types (e.g., allow, deny) as variable character strings with a maximum length of 10 characters.<BR><BR>
   -- bytes INTERGER: PostgreSQL command that creates a column for storing the number of bytes transferred as an integer.<BR><BR>
   -- status VARCHAR: PostgreSQL command that creates a column for storing status messages as variable character strings with a maximum length of 20 characters.<BR><BR>
-  -------------------------------------------------------------{End}----------------------------------------------------------
-</p2>
+  -------------------------------------------------------------{Step 2}----------------------------------------------------------<BR><BR>
+  
+  -- /d ip_log; This command will display the structure of the table ip_log, showing the columns and their data <BR>
+  
+  -------------------------------------------------------------{Step 3}----------------------------------------------------------<BR><BR>
 
-<h3>Step 2</h3>
   
   
   
