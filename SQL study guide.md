@@ -3,6 +3,7 @@
 <h2> How to create a Table & Query an Ip Log</h2>
 <P1>CREATE TABLE IF NOT EXISTS ip_log ( <br>
 id SERIAL PRIMARY KEY<BR>
+timestamp TIMESTAMP<BR>  
 source_ip INET<BR>
 dest_ip INET <BR>
 port INTERGER<BR>
@@ -15,8 +16,15 @@ status VARCHAR (20) <BR>
 </P1>
 <br>
 <p2> --CREATE TABLE IF NOT EXISTS: Command that will create a a new database table **only if it does not already exist**.<BR><BR>
--- (ip_log: Name of the table to be created.)<BR><BR>
+-- ip_log: Name of the table to be created.<BR><BR>
 -- ID SERIAL PRIMARY KEY: PostgreSQL command that creates a speccial column for uniqely identiifying each row in a table. 
+  <BR> <BR> -^- ID: Column name, SERIAL: Data type that auto-increments the value for each new row(1,2,3,4,5),
+   PRIMARY KEY: Specifies that this column is the primary key of the table.
+  <BR><BR>
+  -- Time stamp TIMESTAMP: PostgreSQL command that creates a column for storing date and time values.
+<BR><BR>
+
+  
 
 
 
