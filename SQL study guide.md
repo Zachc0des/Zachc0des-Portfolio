@@ -1,7 +1,8 @@
 <h1> Zachc0de's SQL Study guide </h1>
 
-<h2> How to create a Table & Query an Ip Log</h2>
-<h3>Provided Below are the steps required with a summary of each function in chronological order </h3>
+<h2> How to create a Table & Query an Ip Log:
+<BR><P2>Provided Below are the steps required with a summary of each function in chronological order! </P2></h2>
+
 <P1>CREATE TABLE IF NOT EXISTS ip_log ( <br>
 id SERIAL PRIMARY KEY<BR>
 timestamp TIMESTAMP<BR>  
