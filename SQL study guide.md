@@ -3,6 +3,8 @@
 <h2> How to create a Table & Query an Ip Log:
 <BR><P2>Provided Below are the steps required with a summary of each function in chronological order! </P2></h2>
 
+<h3>Step 1</h3>
+
 <P1>CREATE TABLE IF NOT EXISTS ip_log ( <br>
 id SERIAL PRIMARY KEY<BR>
 timestamp TIMESTAMP  
