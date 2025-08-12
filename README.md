@@ -10,7 +10,7 @@
 <BR>
 ☁About me☁ ↓
 </h2>
-<br><a>I’m 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in customer service, having over five years of experience in various customer-facing roles. I've studied on campus at Miami Job Corps while also commuting to Dade Institute of Technology, further expanding my knowledge and skill set.
+<br><a>I’m a 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in Computer literacy which has assisted greatly with my previous & current occupation I've studied at Miami Job Corps,Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset.
 
 From a young age, technology has been an integral part of my life—learning to use a computer at the same age I learned to read. This early exposure sparked a deep passion for the ever-evolving world of technology, and I continuously seek to expand my knowledge in this field. Beyond tech, I’m also passionate about fitness, valuing both physical and mental well-being.
 
