@@ -12,7 +12,7 @@
 </h2>
 <br>
 
-<a>I’m a 22 year old Tech Enthusiast, orignally from Ontario now based in Florida with a wide background in Computer literacy which has assisted greatly with my previous & current occupation I've studied at Miami Job Corps,Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset</a><br>
+<a>I’m a 22 year old Tech Enthusiast, orignally from Ontario now based in Florida with a wide background in Computer literacy which has assisted greatly with my current & previous occupations I've studied abroad at Miami Job Corps & Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset</a><br>
 
 
 
