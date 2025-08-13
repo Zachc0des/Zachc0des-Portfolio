@@ -72,7 +72,9 @@ status VARCHAR (20) <BR>
    -- (SELECT 'DATA INSERTION VERIFCATION' as check type;   --SELECT command that will retrieve data from the ip_log table<br>
    -- SELECT COUNT(*) FROM ip_log;); This command will count the number of rows in the ip_log table to verify that data has been inserted correctly.<br><br>
 
-   -------------------------------------------------------------{Step 5}----------------------------------------------------------<BR><BR>
+ -------------------------------------------------------------{Step 5}----------------------------------------------------------<BR><BR>
+
+ --
 
   
   
