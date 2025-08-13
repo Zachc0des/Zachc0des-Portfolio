@@ -7,10 +7,9 @@
 </h2>
 
 <h2><a href="https://www.linkedin.com/in/zachary-f-04193520a/" target="_blank" class="linkedin-link">Connect with me on LinkedIn</a>
-<BR>
-☁About me☁ ↓
 </h2>
-<br>
+
+<h2> ☁About me☁ ↓</h2>
 
 <a>I’m a 22 year old Tech Enthusiast, orignally from Ontario now based in Florida with a wide background in Computer literacy which has assisted greatly with my current & previous occupations I've studied abroad at Miami Job Corps & Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset</a><br>
 
