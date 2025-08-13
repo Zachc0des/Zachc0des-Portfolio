@@ -30,7 +30,9 @@ status VARCHAR (20) <BR>
 </p1>
 <br>
 <h3> Step 4</h3>
-<P1>SELECT 'DATA INSERTION VERIFICATION' as check_type, </P1>
+<P1>SELECT 'DATA INSERTION VERIFICATION' as check_type, <br>
+  COUNT(*) as total records FROM  ip_log;
+</P1>
 
 -------------------------------------------------------------{CODE SUMMARY STEP #1}--------------------------------------------------
   
