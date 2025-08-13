@@ -20,15 +20,6 @@
 
 <a>With a blend of technical curiosity,customer service expertise,and a drive for learning, I’m always looking for new opportunities to grow and apply my skills.</a></b>
 
-<h2>📚 Education 📚 </h2>
-<a> <b>Miami Job Corps Vocational School</b><i> Miami,Gardens, Florida </i> </a> 
-<br> <a> <b>Dade Institute of Technology</b> <i> North Miami Beach, Florida <i/> </a> </b>
-<br><a> <b>Seminole Ridge Community High School</b> <i>West Lake, Florida</i></a></i></b>
-<br><a><b>Woodroffe High School</b>,<i> Ottawa,Ontario</i> </a> </b>
-
-
-
-
 <h2>📜Certifications📜</h2>
 <a> Google Proffesional Cyber Security;Networking,Linux & SQL, Python Automation,SIEM TOOLS, </a>
 <br> <a> Google Proffesional Foundations of Tehcnical Support </a> </b>
