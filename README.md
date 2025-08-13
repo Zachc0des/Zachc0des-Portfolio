@@ -10,11 +10,14 @@
 <BR>
 ☁About me☁ ↓
 </h2>
-<br><a>I’m a 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in Computer literacy which has assisted greatly with my previous & current occupation I've studied at Miami Job Corps,Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset.
+<br>
 
-From a young age, technology has been an integral part of my life—learning to use a computer at the same age I learned to read. This early exposure sparked a deep passion for the ever-evolving world of technology, and I continuously seek to expand my knowledge in this field. Beyond tech, I’m also passionate about fitness, valuing both physical and mental well-being.
+<a>I’m a 22 year old Tech Enthusiast, orignally from Ottawa Ontario now based in Palm Beach Florida with a strong background in Computer literacy which has assisted greatly with my previous & current occupation I've studied at Miami Job Corps,Dade Institute of Technology & have enrolled in multiple self paced education programs to further sharpen my skillset.</a>
+<br>
 
-With a blend of customer service expertise, technical curiosity, and a drive for learning, I’m always looking for new opportunities to grow and apply my skills.</a></b>
+<a>From a young age, computers have been an integral part of my life—learning to use a desktop at the same age I learned how to read. This early exposure sparked a deep passion for the ever-evolving world of technology, Beyond tech, I’m also passionate about Fitness.</a>
+
+<a> With a blend of technical curiosity,customer service expertise,and a drive for learning, I’m always looking for new opportunities to grow and apply my skills.</a></b>
 
 <h2>📚 Education 📚 </h2>
 <a> <b>Miami Job Corps Vocational School</b><i> Miami,Gardens, Florida </i> </a> 
