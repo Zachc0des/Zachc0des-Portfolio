@@ -3,4 +3,10 @@
 <H1>File Types</H1><BR>
 
 <H1>Logical Workspace </H1> <BR>
-<H2>Device Types</H2>
+<H2>Device Types</H2><br>
+<h3></h3><br>
+<h3></h3><br>
+<h3></h3><br>
+<h3></h3><br>
+<h3></h3><br>
+<h3></h3><br>
