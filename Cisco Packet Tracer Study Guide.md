@@ -13,9 +13,9 @@
 <h1>Create a Network</h1>
 <h2>Step 1: Add Network Devices to the Workspace</h2>
 <p1>Locating End Devices:</p1><br>
-<p1>PC:End Devices->PC</p1><br>
-<p1>Laptop:End Devices->Laptop</p1><br>
-<p1>Cable Modem[Network Devices[->WAN Emulator->[Device Specific Box]->Cable Modem</p1>
+<p1>PC: [End Devices]->PC</p1><br>
+<p1>Laptop: [End Devices]->Laptop</p1><br>
+<p1>Cable Modem: [Network Devices]->WAN Emulator->[Device Specific Box]->Cable Modem</p1>
 
 
 <h2>(Optional) Change Display name</h2>
