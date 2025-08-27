@@ -20,3 +20,8 @@
 <p1>Click the device icon in the logical workspace</p1><br>
 <p1>Click the configuration tab in the device confugration window</p1><br>
 <p1>Enter the name of the newly added device into the Display name field</p1>
+
+<h3>Add the physcial cabaling between devices on the workspaces.</h3>
+<p1>**Using the device-type selection Box, add the physical cabaling between devices on the workspace**</p1><br>
+<p1>The PC & Laptop will need a copper-straight through Cable to connect to the Wire Router</p1><br>
+<p1>[Device Type selection box]->Connections->[Device Speicfic Box]->Copper-Straight-Through</p1>
