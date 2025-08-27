@@ -11,3 +11,9 @@
 <p1>Multi User Connections</p1><br>
 
 <h1>Create a Network</h1>
+<h2>Step 1: Add Network Devices to the Workspace</h2>
+<p1>Locating End Devices:</p1><br>
+<p1>PC:End Devices->PC</p1><br>
+<p1>Laptop:End Devices->Laptop</p1>
+
+
