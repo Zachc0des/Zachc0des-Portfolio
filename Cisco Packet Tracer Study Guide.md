@@ -16,4 +16,7 @@
 <p1>PC:End Devices->PC</p1><br>
 <p1>Laptop:End Devices->Laptop</p1>
 
-
+<h2>(Optional) Change Display name</h2>
+<p1>Click the device icon in the logical workspace</p1><br>
+<p1>Click the configuration tab in the device confugration window</p1><br>
+<p1>Enter the name of the newly added device into the Display name field</p1>
