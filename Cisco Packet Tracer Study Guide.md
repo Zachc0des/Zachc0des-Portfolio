@@ -23,7 +23,7 @@
 <p1>Click the configuration tab in the device confugration window</p1><br>
 <p1>Enter the name of the newly added device into the Display name field</p1>
 
-<h2>Step 3: Add the physcial cabaling between devices on the workspaces.</h3>
+<h2>Step 3: Add the physcial cabling between devices on the workspaces.</h3>
 <h4>Using the device-type selection Box, add the physical cabaling between devices in the workspace</h4>
 
 <p1>[Device Type selection box]->Connections->[Device Specfic Box]->Copper-Straight-Through</p1>
