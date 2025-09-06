@@ -40,3 +40,7 @@ Ethernet1 for Wireless Router
 
 <p1>  C) The Cable Modem will need a Coaxial cable to connect to the internet cloud.<br> 
 [Device-Type-Selection]->Connections-[Device Specific Box]-> Coaxial Cable </p>
+
+<h1>Part 2: Configure the End Devices and verify Connectivity</h1>
+
+
