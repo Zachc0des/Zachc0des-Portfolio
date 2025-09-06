@@ -32,8 +32,11 @@
 Ethernet1 for Wireless Router
 </p1><br><br>
 
-<p1>1 A) The PC & Laptop will need a copper-straight through Cable to connect to the Wire Router:</p1><br>
+<p1> A) The PC & Laptop will need a copper-straight through Cable to connect to the Wire Router:</p1><br>
 <p1>[Device-Type selection]->Connections-[Device Specific Box]->Copper-Straight-Through</p1>
 
-<p1>1 B)  The wireless router will need a copper straight-through cable to connect to the cable modem </p1><br>
+<p1> B)  The wireless router will need a copper straight-through cable to connect to the cable modem </p1><br>
 <p1>[Device-Type selection]->Connections-[Device Specific Box]->Copper-Straight-Through</p1>
+
+<p1>  C) The Cable Modem will need a Coaxial cable to connect to the internet cloud.<br> 
+[Device-Type-Selection]->Connections-[Device Specific Box]-> Coaxial Cable </p>
