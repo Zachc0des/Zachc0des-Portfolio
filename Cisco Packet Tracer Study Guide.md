@@ -30,16 +30,20 @@
 <h4>Interface Connection Types</h4>
 <p1>Fast Ethernet0 for PC<br>
 Ethernet1 for Wireless Router
-</p1><br><br>
+</p1><br>
 
-<p1> A) The PC & Laptop will need a copper-straight through Cable to connect to the Wire Router:</p1><br>
+<h4> A: The PC & Laptop will need a copper-straight through Cable to connect to the Wire Router:</h4>
 <p1>[Device-Type selection]->Connections-[Device Specific Box]->Copper-Straight-Through</p1>
+<h5>Attach  to the FastEthernet0 interface of the PC and the Ethernet 1 interface of the wireless router.</h5>
 
-<p1> B)  The wireless router will need a copper straight-through cable to connect to the cable modem </p1><br>
+
+<h4> B: The wireless router will need a copper straight-through cable to connect to the cable modem </h4>
 <p1>[Device-Type selection]->Connections-[Device Specific Box]->Copper-Straight-Through</p1>
+<h5>Attach to the internet interface of the wireless router and the Port 1 interface of the cable modem.</h5>
 
-<p1>  C) The Cable Modem will need a Coaxial cable to connect to the internet cloud.<br> 
-[Device-Type-Selection]->Connections-[Device Specific Box]-> Coaxial Cable </p>
+<h4> C: The Cable Modem will need a Coaxial cable to connect to the internet cloud.</h4>
+<p1>[Device-Type-Selection]->Connections-[Device Specific Box]-> Coaxial Cable </p>
+<h5>Attach to the Port 0 interface of the cable modem and the Coaxial 7 interface of the internet cloud.</h5>
 
 <h1>Part 2: Configure the End Devices and verify Connectivity</h1>
 
