@@ -45,6 +45,11 @@ Ethernet1 for Wireless Router
 <p1>[Device-Type-Selection]->Connections-[Device Specific Box]-> Coaxial Cable </p>
 <h5>Attach to the Port 0 interface of the cable modem and the Coaxial 7 interface of the internet cloud.</h5>
 
-<h1>Part 2: Configure the End Devices and verify Connectivity</h1>
+<h1>Part 2: Configure the End Devices and verify Connectivity</h1><BR>
+<h2>In this Part you will be connecting a PC and a Laptop to the Wireless Router</h2><BR>
+<h4>The PC will be connected to the network using an Ethernet Cable<h4>
+<h4>The Laptop will undergo a chip replacment in order to connect to the Network Wirelessly</h4>
+<p1> The Wired Ethernet Network Interface Card [NIC] will be replaced with a [Wireless NIC] and will sustain a connection to the router wirelessly </P1>
+
 
 
