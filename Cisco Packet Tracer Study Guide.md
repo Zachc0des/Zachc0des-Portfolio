@@ -1,6 +1,12 @@
 <H1> Zachc0des Cisco Packet Tracer Study Guide </h1><BR>
 
-<H1>File Types</H1><BR>
+<H1>File Types</H1>
+<p1>
+.Pka: Activity File;Built in Instruction Window  <BR>
+.Pkt: Created when Simulated network is built  <BR>
+.Pksz: Packet Tracer Tutored Activities  <BR>
+.Pkx: Depricated File type for previously used images/embeds & other files in a packet tracer file  <BR>
+</p1>
 
 <H1>Logical Workspace </H1> <BR>
 <H2>Device Types</H2>
