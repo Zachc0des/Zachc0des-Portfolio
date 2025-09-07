@@ -50,6 +50,9 @@ Ethernet1 for Wireless Router
 <h4>The PC will be connected to the network using an Ethernet Cable<h4>
 <h4>The Laptop will undergo a chip replacment in order to connect to the Network Wirelessly</h4>
 <p1> The Wired Ethernet Network Interface Card [NIC] will be replaced with a [Wireless NIC] and will sustain a connection to the router wirelessly </P1>
+<H4>After both end devices are connected to the netowrk, you will veriify the connectivity to Cisco.SRV</h4>
+<p1>The PC and the Laptop wil each be Assinged an IP (Internet Protocol) address The Internet Protocol is a set of rules for routing and addressing data on the Internet<BR><br>
+The IP addresses are used to identify the devices on a network and allow devices to connect and transfer on a network</p1>
 
 
 
