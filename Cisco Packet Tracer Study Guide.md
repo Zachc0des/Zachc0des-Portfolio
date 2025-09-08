@@ -21,7 +21,8 @@
 <p1>Locating End Devices:</p1><br>
 <p1>PC: [End Devices]->PC</p1><br>
 <p1>Laptop: [End Devices]->Laptop</p1><br>
-<p1>Cable Modem: [Network Devices]->WAN Emulator->[Device Specific Box]->Cable Modem</p1>
+<p1>Cable Modem: [Network Devices]->[WAN Emulator]->Cable Modem</p1><br>
+<p1>Wireless Router [Network Devices]->[Wireless Devices]-> Home Router</p1>
 
 
 <h2>Step 2: (Optional) Change Display name</h2>
