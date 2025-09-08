@@ -60,6 +60,6 @@ Ethernet1 for Wireless Router
 <p1>The PC and the Laptop wil each be Assinged an IP (Internet Protocol) address The Internet Protocol is a set of rules for routing and addressing data on the Internet<BR><br>
 The IP addresses are used to identify the devices on a network and allow devices to connect and transfer on a network</p1>
 <h2>Step 1 Configure the PC</h2>
-
+<P>In this step you will configure the PC for the wired Network</P>
 
 
