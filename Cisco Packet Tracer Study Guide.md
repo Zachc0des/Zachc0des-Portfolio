@@ -62,5 +62,9 @@ Ethernet1 for Wireless Router
 The IP addresses are used to identify the devices on a network and allow devices to connect and transfer on a network</p1>
 <h2>Step 1 Configure the PC</h2>
 <P>In this step you will configure the PC for the wired Network</P>
-
+<h4> A) Click the PC in the Desktop Tab, Navigate to the Ip Configuration to verify that DHCP is enabled and the PC has reieved an IP address</h4>
+<p1>Select DHCP for the IP configuartion heading if you do not see an IP address for the IPv4 Address filed. Observe the process as the PC is reiveiwing an IP address from the DHCP Server</p1>
+<h4> B) Close IP configuration, in the Desktop tab click Command Prompt</h4>
+<h4> C) At the Prompt, Enter ipconfig/all to review the IPv4 addressing infomration from the DHCP server. The PC should have received an IPv4 Address in the 202.168.0.x range</h4>
+<h4>D) Test Connectivtiy to the Cisco.Srv from the PC. From the command prompt issue the commandm [img Cisco.srv. It may take a few econds for the ping to return, 4 replies should be received</h4>
 
