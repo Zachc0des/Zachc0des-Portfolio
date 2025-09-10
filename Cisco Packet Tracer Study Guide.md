@@ -1,5 +1,5 @@
 <H1> Zachc0des Cisco Packet Tracer Study Guide </h1><BR>
-
+<p1> Sources: Cisco Networking Academy </p1>
 <H1>File Types</H1>
 <p1>
 .Pka: Activity File;Built in Instruction Window  <BR>
@@ -67,4 +67,23 @@ The IP addresses are used to identify the devices on a network and allow devices
 <h4> B) Close IP configuration, in the Desktop tab click Command Prompt</h4>
 <h4> C) At the Prompt, Enter ipconfig/all to review the IPv4 addressing infomration from the DHCP server. The PC should have received an IPv4 Address in the 202.168.0.x range</h4>
 <h4>D) Test Connectivtiy to the Cisco.Srv from the PC. From the command prompt issue the commandm [img Cisco.srv. It may take a few econds for the ping to return, 4 replies should be received</h4>
+<h2> Step 2 Configure the Laptop</h2>
+<p1>In this step you will configure the Laptop to acess the Wireless network</p1>
+<h4>B) In the Physical tab you will need to remove the ethernet copper module and replace it with the Wireless "WPC300N" Module</h4>
+  
+<p>
+1) Power off the Laptop by clicking the power button on the side of the laptop<BR><BR>
+2) Remove the currently installed Ethernet copper moudlue by clicking on the module on the side of the laptop and dragging it to the Modules pane on the left of the laptop window <BR><BR>
+3) Install the WIreless "WPC300N" Module by clicking itin the Moudles pane and dragging it to the empty mouse port on the side of the Laptop<br><BR>
+4) Power on the Laptop by clicking the Laptop power button again.
+</p>
 
+<h4>C) With the wireless module isntalledm connect the laptop to the wireless network, Click the Desktop tab and select the PC wireless</h4>
+<p>Select the Connect Tab. After a slight delay, the wireless network "HomeNetwork" will be invisible in the list of wirieless networks. Click refresh if necessary to see the list of available networks. Select HomeNetwork, Click Connect</p>
+<h4>E) Close PC Wireless, Select Web Browser in the Desktop Tab</h4>
+<h4>F) In the Web browser, navigate to Cisco.srv</h5>
+<h1>Understanding the Properties of an IP addressing Table</h1>
+<h3> The Ip config commmand displays your computers network configuartion infomration including the following:<BR></h3>
+<h4>IP address:</h4>
+<h4>Subnet Mask:</h4>
+<h4>Gate way settings</h4>
