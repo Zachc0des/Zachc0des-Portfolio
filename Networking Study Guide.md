@@ -1,18 +1,18 @@
 Networking study Guide OSI MODEL LAYERS (7)
 
-<h1>OSI MODEL</h1>
-<H2>Layer decriptions</H2>
-<h3>Layer 1:</h3>
-<p1></p1>
-<h3>Layer 2:</h3>
-<p1></p1>
-<h3>Layer 3:</h3>
-<p1></p1>
-<h3>Layer 4:</h3>
+<h1>The Seven layers of OSI MODEL</h1>
+
+<h3>Layer 7:Application</h3>
+  <p1>This where network applications and their protocols operate. It is what users directly interact with- web browsers, email clients, file transfer programs. Protocols include HTTP/HTTPS</p1>
+<h3>Layer 6:</h3>
 <p1></p1>
 <h3>Layer 5:</h3>
 <p1></p1>
-<h3>Layer 6:</h3>
+<h3>Layer 4:</h3>
 <p1></p1>
-<h3>Layer 7:</h3>
+<h3>Layer 3:</h3>
+<p1></p1>
+<h3>Layer 2:</h3>
+<p1></p1>
+<h3>Layer 1:</h3>
 <p1></p1>
