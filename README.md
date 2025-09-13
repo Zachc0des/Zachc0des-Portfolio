@@ -59,7 +59,7 @@
   
 
 
-<h2> Projects </h2><BR>
+<h2>Showcased repositories & Projects </h2><BR>
 
 
 <br><a href="https://www.linkedin.com/in/zachary-f-04193520a/" target="_blank" class="linkedin-link">Connect with me on LinkedIn</a>
