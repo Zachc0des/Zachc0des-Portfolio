@@ -16,6 +16,7 @@
 <h3>Usbaility Testing</h3>
 <h3> User Research </h3>
 <h3>Data Visualization</h3>
+<h3> Usability Critique</h3>
 
 <h2> Tools</h2>
 <h3>Figma</h3>
