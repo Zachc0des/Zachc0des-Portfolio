@@ -1,7 +1,8 @@
-<h1> Zachc0de's SQL Study guide </h1>
-<h1> SQL Syntax Guide/Refrenece 
-
-<h2> How to create a Table & Query an Ip Log:
+<h1> Zachc0de's SQL Study guidee </h1>
+<h2>Syntax Refrence </h1>
+<h2>Tasks</h2>
+<p1>add hyperlink/ short curt to each section below </p1>
+<h3> How to create a Table & Query an Ip Log:
 <BR><P2>Provided Below are the steps required with a summary of each function in chronological order! </P2></h2>
 
 <h3>Step 1</h3>
