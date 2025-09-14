@@ -1,4 +1,5 @@
 <h1> Zachc0de's SQL & Python Automation Study guide </h1>
+<h1> Understanding Task Automation </h1>
 <h2>Syntax Refrence </h1>
 <h2>Tasks</h2>
 <p1>add hyperlink/ short curt to each section below </p1>
