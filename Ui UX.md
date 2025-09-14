@@ -9,7 +9,7 @@
 
 <h2>Tasks</h2>
 <h3>Case Study Devolpment</h3>
-<h3>Infomration Architecture</h3>
+<h3>Information Architecture</h3>
 <h3>Wireframe Creation
 <h3> Landing Page Redesign </h3>
 <h3> Basic Prototyping</h3>
