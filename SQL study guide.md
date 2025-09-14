@@ -1,4 +1,5 @@
 <h1> Zachc0de's SQL Study guide </h1>
+<h1> SQL Syntax Guide/Refrenece 
 
 <h2> How to create a Table & Query an Ip Log:
 <BR><P2>Provided Below are the steps required with a summary of each function in chronological order! </P2></h2>
