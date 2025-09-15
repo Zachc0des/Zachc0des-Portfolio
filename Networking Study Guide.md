@@ -4,8 +4,9 @@ Networking study Guide OSI MODEL LAYERS (7)
 <h1>The Seven layers of Osi Model</h1>
 
 <h3>Layer 7:Application</h3>
+  <h4>The closet layer to the end user. Provides network services diretly to applications and handles user interface and application-specific netwokring functions.</h4>
   <p1>This where network applications and their protocols operate. It is what users directly interact with- web browsers, email clients, file transfer programs. Protocols include HTTP/HTTPS</p1>
-  <h5> Example: </h5>
+  <h5> Example: HTTP/HTTPS, FTP, SMTP, DNS, Web Browsers & Email Clients </h5>
 <h3>Layer 6:Presentation Layer</h3>
 <p1>Handles data formatting, encyrption, and compression. It ensures data from the application layer can be understood by the receiving system, magning things like character encoding (ASCII,Unicode) and file formats</p1>
  <h5> Example: </h5>
