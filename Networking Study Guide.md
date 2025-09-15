@@ -1,7 +1,7 @@
 
 Networking study Guide OSI MODEL LAYERS (7)
-
-<h1>The Seven layers of Osi Model</h1>
+<h1> Network Models </h1>
+<h2>The Seven layers of Osi Model</h2>
 
 <h3>Layer 7:Application</h3>
   <h4>The closet layer to the end user. Provides network services diretly to applications and handles user interface and application-specific netwokring functions.</h4>
@@ -25,3 +25,7 @@ Networking study Guide OSI MODEL LAYERS (7)
 <h3>Layer 1: Physical Layer</h3>
 <p1>The Actual hardware cables,wireless signals, voltage levels and timing it defines the electrical and physical specifications for transmitting raw bits</p1>
  <h5> Example: </h5>
+
+ <h1>Network Protocols</h1>
+
+ 
