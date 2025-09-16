@@ -1,6 +1,43 @@
 
-Networking study Guide OSI MODEL LAYERS (7)
-<h1> Network Models </h1>
+<h1>Networking study Guide</h1>
+<h3>Table of contents</h3>
+<h4>Standards & Concepts</h4>
+<p1>Osi & TCP/IP Models<br>
+  Network Protocols<br>
+  Network Services
+  <h4>Adressing & Subnetting</h4>
+ <P1>Ipv4 Adressing<br>
+  Ipv6 Adressing <br>
+  Subnetting & VLSM
+  </P1> 
+  <h4>Network Infrastructure</h4>
+   <p1>Network Devices<br>
+   Network Topologies<br>
+   Cablaing & Standards<br>
+   Wireless Networking
+  </p1> 
+  <h4>Network Operations</h4>
+  <p1>Network Documentaiton<br>
+  Peformance Monitoring<br>
+  Device Configuration<br>
+  <h4>Network Security</h4>
+  <p1> Security Fundamentals <br>
+  Acess Control <br>
+  Security Devices 
+  </p1>
+  <h4> Network Troubleshooting </h4>
+  <P>Troubleshooting Methodology<br>
+  Common Network Issues<br>
+  Network Tools<br>
+  Layer-specific Troubleshooting                                 
+  </P>
+    
+  </h4>
+  
+    
+  </p1>
+
+<h2> Network Models </h1>
 <h2>The Seven layers of Osi Model</h2>
 
 <h3>Layer 7:Application</h3>
