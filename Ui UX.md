@@ -1,11 +1,19 @@
 <h1>Zachc0des, Ui Ux </h1>
 
-<h2>Core Skills</h2>
+<h2>Foundation/ Core Skills</h2>
 <h3>Color Theory & Pyshchology</h3>
 <h3>Typography & Hiearchy</h3>
 <h3>Layout & Composition</h3>
 <h3>Design thinking methodology</h3>
 <h3>User Flows & Wireframing</h3>
+
+<h2>User Rearch</h2>
+<h2>Wireframes & Protoypes</h2>
+<h2>Visual Desgin</h2>
+<h2>Usability Testing</h2>
+<h2>Responsive Design</h2>
+
+
 
 <h2>Tasks</h2>
 <h3>Case Study Devolpment</h3>
