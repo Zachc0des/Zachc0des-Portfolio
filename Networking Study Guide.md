@@ -68,7 +68,30 @@
 <h4>Trasmits raw bit sreams over physical media.</h4>
 <p1>The Actual hardware cables,wireless signals, voltage levels and timing it defines the electrical and physical specifications for transmitting raw bits</p1>
  <h5> Example:Cables, Fiber Optic,Radio Waves, Hubs & Electrical Signals </h5>
-
- <h1>Network Protocols</h1>
-
  
+  <h2> The Four Layers of TCP/IP Model</h2>
+ <h3>Application Layer</h3>
+ <h3>Transport Layer</h3>
+ <h3>Internet Layer</h3>
+ <h3>Network Acess Layer</h3>
+ 
+ <h2>Network Protocols</h2>
+ <h3>TCP</h3>
+ <h3>UDP</h3>
+ <h3>HTTP/HTTPS</h3>
+ <h3>FTP/TFTP</h3>
+ <h3>SMTP</h3>
+ <h3>POP3</h3>
+ <h3>IMAP</h3>
+ <h3>DNS</h3>
+ <h3>DHCP operations</h3>
+ <h3>SNMP</h3>
+ <h3>Telnet</h3>
+ <h3>SSH</h3>
+
+<h2>Network Services</h2>
+<h3>DHCP configuartion & troubleshooting</h3>
+<h3> DNS resoultion process</h3>
+<h3> NAT/PAT operations</h3>
+<h3>Quality of Service (Qos) basics</h3>
+<h3>Network Time Protocol (NTP)</h3> 
