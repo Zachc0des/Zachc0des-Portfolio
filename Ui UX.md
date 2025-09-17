@@ -18,14 +18,19 @@
 <h2>Tasks</h2>
 <h3>Case Study Devolpment</h3>
 <h3>Information Architecture</h3>
-<h3>Wireframe Creation
-<h3> Landing Page Redesign </h3>
+<h3>Wireframe Creation</h3>
+<h3> Mobile Wireframes </h3>
+<h3> Landing Page Design & Redesign </h3>
+<h3> App Screen Design & Redesign</h3> 
 <h3> Basic Prototyping</h3>
 <h3>Usbaility Testing</h3>
 <h3> User Research </h3>
+<h3> User Persona Creation </h3>
+<H3> User Flow Diagram </H3>
 <h3>Data Visualization</h3>
 <h3> Usability Critique</h3>
 <h3> User Persona Creation</h3>
+<h3>Interactive Prototype</h3>
 
 <h2> Tools</h2>
 <h3>Figma</h3>
