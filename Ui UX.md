@@ -1,5 +1,19 @@
 <h1>Zachc0des, Ui Ux </h1>
-<H2> Product Devlopment Life Cycle </H2>
+<H2> Product Devlopment Life Cycle</H2>
+<h3>Brainstorm</h3>
+<p1> 
+</p1>
+<h3>Define</h3>
+<p1> 
+</p1>
+<h3>Design</h3>
+<p1> 
+</p1>
+<h3>Test</h3>
+<p1> 
+</p1>
+<h3>Launch</h3>
+<p1></p1>
 <h2>Foundation/ Core Skills</h2>
 <h3>Color Theory & Pyshchology</h3>
 <H4>Color Theory is the science and art of using color.</H4>
