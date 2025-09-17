@@ -1,7 +1,15 @@
 <h1>Zachc0des, Ui Ux </h1>
 <H2> Product Devlopment Life Cycle</H2>
 <h3>Brainstorm</h3>
-<p1> 
+<p1> Key Delierables:<br>
+ User Research Reports<br>
+ Competitor Research<br>
+ Problem Statements<br>
+ Oppourtunity Maps <br>
+ Market Anlaysis <br>
+ User Personas <br>
+ Ideal Documentation <br>
+ Initial Concepts <br>                  
 </p1>
 <h3>Define</h3>
 <p1> 
