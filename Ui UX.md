@@ -1,6 +1,7 @@
 <h1>Zachc0des, Ui Ux </h1>
 <H2> Product Devlopment Life Cycle</H2>
 <h3>Brainstorm</h3>
+<h4> This stage focues on understadning user paint points, Identify gaps in the market & conceptulazing soultions that address real user needs</h4>
 <p1> Key Deliverables:<br>
  User Research Reports<br>
  Competitor Research<br>
