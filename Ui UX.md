@@ -5,6 +5,8 @@
 <h3>Typography & Hiearchy</h3>
 <h3>Layout & Composition</h3>
 <h3>Design thinking methodology</h3>
+<h4>Design Sprint.</h4>
+
 <h3>User Flows & Wireframing</h3>
 
 <h2>User Rearch</h2>
