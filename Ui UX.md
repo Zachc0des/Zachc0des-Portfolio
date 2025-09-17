@@ -2,7 +2,31 @@
 <H2> User Research </H2>
 <h2>Foundation/ Core Skills</h2>
 <h3>Color Theory & Pyshchology</h3>
-<h4>Color Thoery Insert<h4>
+<H4>Color Theory is the science and art of using color.</H4>
+<P1>In UI.UX deisgn, it helps us:<br>
+-Create visual harmony and balance<br>
+- Guide user attention & Behavior<br>
+-Convey emotions & brand personality<br>
+Imrpove usabilty and acessbility<br></P1>
+<h5>Example:The Color Wheel-Foundation of all color relationships</h5>
+<h4>Color Harmonies</h4>
+<p1>Color harmonies are pleasing comabintions of colors that work well together ↓<br><br>
+Monochromatic: shades of the same color. Creates unity and sophistication<br>
+Analogus:Colors next to each other on the wheel Natural and harminous<br>
+Complemtary: Color opposite on the wheel. High contrast & Vibrant<br>
+Triadic: Three colors even spaced. Bold and balanced<br>
+<h4>Color Psychology</h4>
+ 
+<p1>
+Red:Urgency passion Passions[CTAS & Alerts]<br>
+Blue: Trust calm professional[ Coprate Sites]<br>
+Green: Growth, success, nature [Eco, Financial Apps/websties]<br>
+Yellow: Happiness, optimisim,attention[Highlights]<br>
+Purple: Luxury, creativity,mystery.[Premuim rands]<br>
+Orange: Enthuasiam, warmth fun [Playful intefraces]
+</p1>
+
+</p1>
 <h4> Bias</h4>  
 <h3>Typography & Hiearchy</h3>
 <h3>Layout & Composition</h3>
