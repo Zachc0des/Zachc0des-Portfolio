@@ -1,7 +1,7 @@
 <h1>Zachc0des, Ui Ux </h1>
 <H2> Product Devlopment Life Cycle</H2>
 <h3>Brainstorm</h3>
-<p1> Key Delierables:<br>
+<p1> Key Deliverables:<br>
  User Research Reports<br>
  Competitor Research<br>
  Problem Statements<br>
@@ -47,7 +47,19 @@ Yellow: Happiness, optimisim,attention[Highlights]<br>
 Purple: Luxury, creativity,mystery.[Premuim rands]<br>
 Orange: Enthuasiam, warmth fun [Playful intefraces]
 </p1>
-<h4> Bias</h4>  
+<h3> Bias</h3>
+<p>Favoring or having prejudice against somone or something can have a negative impact on your user reach,design & final product</p>  
+<h4>Preventing bias in data collection </h4>
+<p1>Anticipitae,Identify & Overcome </p1>
+<h4> Chose your words carefully</h4>
+<h4> Foster Independent thinkning</h4>
+<h4>Avoid speicfic language</h4>
+<h4>Limit the guidance you give users</h4>
+<h4>Consider user's tone & body lanuage</h4>
+<h4>Be careful of your own body language & reactions</h4>
+<h4> Plan your research effectively</h4>
+<h4>Remain open Minded </h4>
+
 <h3> User Research </h3>
 <h3>Typography & Hiearchy</h3>
 <h3>Layout & Composition</h3>
