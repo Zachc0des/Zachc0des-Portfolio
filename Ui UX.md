@@ -33,7 +33,7 @@ Orange: Enthuasiam, warmth fun [Playful intefraces]
 <h3>Design thinking methodology</h3>
 <h4>Design Sprint.</h4>
 <h3>User Flows & Wireframing</h3>
-<h2>Wireframes & Protoypes</h2>
+<h3>Wireframes & Protoypes</h3>
 <h2>Visual Desgin</h2>
 <h2>Usability Testing</h2>
 <h2>Responsive Design</h2>
