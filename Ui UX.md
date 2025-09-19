@@ -13,7 +13,17 @@
  Initial Concepts <br>                  
 </p1>
 <h3>Define</h3>
-<p1> 
+<h4>This stage is where insights transform into actionable requirement, ensuring everyone understands the what,why & how of the product</h4>
+<p1> Key Deliverables <br>
+ User Jounrey Maps<br>
+ Success Metrics(KPIs)<br>
+ Content Stratgy<br>
+ Project Roadmap<br>
+ Feature Requirements<br>
+ Technical Specifications<br>
+ Infomration architecture<br>
+ Design System Planning
+                 
 </p1>
 <h3>Design</h3>
 <p1> 
