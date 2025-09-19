@@ -23,10 +23,20 @@
  Technical Specifications<br>
  Infomration architecture<br>
  Design System Planning
-                 
-</p1>
+ </p1>
 <h3>Design</h3>
+<h4>This stage is where concepts become tangible interfaces, creating wireframes,Interactive mockups,Focusing on Visual hireachy, Interaction patterns & ensuring accessbility across all user touch points</h4>
 <p1> 
+ Key deliverables<br>
+ Wireframes & Mockups <br>
+ Design System Components<br>
+ Responive Desgins<br>
+ Animation Specifications<br>
+ Interactive Prototypes<br>
+ UI Style Guide<br>
+ Accessbility Guidelines <br>
+ Animation specifications<br>
+ Design handoff Files
 </p1>
 <h3>Test</h3>
 <p1> 
