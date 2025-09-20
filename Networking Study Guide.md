@@ -87,7 +87,14 @@
   UDP:Video streaming, Online gaming, DNS quereies (fast)
    
  <h3>Internet Layer</h3>
- <h3>Network Acess Layer</h3>
+<h4> Handles the movement of packets around the network </h4>
+<p1>Responsible for addressing,routing & packet fowarding across multiple networks</p1>
+<h5>Examples: IP addressing (192.168.1.1), Routing between networks, Ping commands (ICMP), FIndning MAC addresses (ARP)</h5>
+ 
+ <h3>Network Access Layer</h3>
+ <h4>Combines physical & data link functions</h4>
+ <p1>Handles the physical transmission of data & local network addressing using MAc addresses</p1>
+ <h5>Examples: Ethernet cables, Wifi connections, Network Swithces & Network interface cards</h5>
  
  <h2>Network Protocols</h2>
  <h3>TCP</h3>
