@@ -37,7 +37,6 @@
     
   </p1>
 
-<h2> Network Models </h1>
 <h2>The Seven layers of Osi Model</h2>
 
 <h3>Layer 7:Application</h3>
@@ -68,7 +67,7 @@
 <h4>Trasmits raw bit sreams over physical media.</h4>
 <p1>The Actual hardware cables,wireless signals, voltage levels and timing it defines the electrical and physical specifications for transmitting raw bits</p1>
  <h5> Example:Cables, Fiber Optic,Radio Waves, Hubs & Electrical Signals </h5>
- 
+ <br>
   <h2> The Four Layers of TCP/IP Model</h2>
  <h3>Application Layer</h3>
  <h4>Location of operation for network applications & their protocols</h4>
@@ -95,6 +94,7 @@
  <h4>Combines physical & data link functions</h4>
  <p1>Handles the physical transmission of data & local network addressing using MAc addresses</p1>
  <h5>Examples: Ethernet cables, Wifi connections, Network Swithces & Network interface cards</h5>
+ <br>
  
  <h2>Network Protocols</h2>
  <h3>TCP</h3>
