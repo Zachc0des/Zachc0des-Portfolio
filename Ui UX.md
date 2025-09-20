@@ -82,13 +82,26 @@ Orange: Enthuasiam, warmth fun [Playful intefraces]
 <h4>Remain open Minded </h4>
 
 <h3> User Research </h3>
+<h4>Foundational Research: </h4>
+<h4>Design Research: </h4>
+<h4>Post Launch Research: </h4>
+
 <h3>Typography & Hiearchy</h3>
+
 <h3>Layout & Composition</h3>
+
 <h3>Design thinking methodology</h3>
 <h4>Design Sprint:</h4>
-<p1>
+<p1>Sprint Framework:</p1>
+<H5>Phase 1: Understand</H5>
+<H5>Phase 2: Define</H5>
+<H5>Phase 3: Sketch</H5>
+<H5>Phase 4: Decide</H5>
+<H5>Phase 5: Protype</H5>
+<H5>Phase 6: Validate</H5>
+
  
-</p1>
+
 <h3>User Flows & Wireframing</h3>
 <h3>Wireframes & Protoypes</h3>
 <h2>Visual Desgin</h2>
