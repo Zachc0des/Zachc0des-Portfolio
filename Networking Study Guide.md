@@ -71,6 +71,14 @@
  
   <h2> The Four Layers of TCP/IP Model</h2>
  <h3>Application Layer</h3>
+ <h4>Location of operation for network applications & their protocols</h4>
+ <p>
+  The layer closest to the end-user & provides netowrk services directly to applications
+ </p>
+ <h5>
+   Examples: Web browsing (HTTP/HTTPS), Email (SMTP/POP3, File transfer (FTP), Domain name resoultion (DNS) & Telnet
+ </h5>
+ 
  <h3>Transport Layer</h3>
  <h3>Internet Layer</h3>
  <h3>Network Acess Layer</h3>
