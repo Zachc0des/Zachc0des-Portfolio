@@ -80,6 +80,12 @@
  </h5>
  
  <h3>Transport Layer</h3>
+ <h4>Provides relaibile data transfer services between applications</h4>
+ <p>Handles error recovery, flow control & ensures data intergrity</p>
+ 
+ <h5>Examples: TCP: Web browsing, email, file downloads, (reliable) <br>
+  UDP:Video streaming, Online gaming, DNS quereies (fast)
+   
  <h3>Internet Layer</h3>
  <h3>Network Acess Layer</h3>
  
