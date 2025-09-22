@@ -98,8 +98,18 @@
  
  <h2>Network Protocols</h2>
  <h3>TCP</h3>
- <h3>UDP</h3>
- <h3>HTTP/HTTPS</h3>
+ <h4> A reilable transport protocol that ensures data arrives complete and in order</h4>
+<p>Almost like sending a registred letter, you get confimration that it was delivered</p>
+   <h5> Example: When downloading a file,TCP breaks it into packets,numbers them, and snrues they all arrie correctly. If any packets arelost, TCP requests them again.
+   </p>
+ <h3>UDP (User Data Protocol)</h3>
+ <h4> A fast ubt unreliable transport protocol. It sends data quickly without checking if it arried - like throwing a paper airline across the room.
+ <h5> Example: Online gaming & live video streaming use UDP because speed matters more than perfect delivery. A few lost packets wont ruin the expreience. </h5>  
+<h3> HTTP </h3>
+   <h3>HTTPS</h3>
+   <h4> HTTP with an extra layer of secuirty.</h4>
+     <p>All data is encrypted using SSL/TLS, making it safe to send sensitie information like passwords & credit cards </p>
+     <h5> Online banking websites use HTTPS (notice the padlock icon 🔒 in your browser) to ensure fiancial data is encrypted during transmission.
  <h3>FTP/TFTP</h3>
  <h3>SMTP</h3>
  <h3>POP3</h3>
