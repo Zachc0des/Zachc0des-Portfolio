@@ -103,9 +103,12 @@
    <h5> Example: When downloading a file,TCP breaks it into packets,numbers them, and snrues they all arrie correctly. If any packets arelost, TCP requests them again.
    </p>
  <h3>UDP (User Data Protocol)</h3>
- <h4> A fast ubt unreliable transport protocol. It sends data quickly without checking if it arried - like throwing a paper airline across the room.
+ <h4> A fast but unreliable transport protocol. It sends data quickly without checking if it arried - like throwing a paper airline across the room.
  <h5> Example: Online gaming & live video streaming use UDP because speed matters more than perfect delivery. A few lost packets wont ruin the expreience. </h5>  
 <h3> HTTP </h3>
+<h4>The foundation of web communication.</h4>  
+<p>Everytime you vist a website, your browser uses HTTP to reqeust & receie web pages,images & other content from web servers</p>
+<h5>When you type "http://example.com" in your browser,it sends a HTTP GET reqeyest to tge server, which resopnds with the websites's HTML content. </h5>   
    <h3>HTTPS</h3>
    <h4> HTTP with an extra layer of secuirty.</h4>
      <p>All data is encrypted using SSL/TLS, making it safe to send sensitie information like passwords & credit cards </p>
