@@ -88,7 +88,7 @@
  <h3>Internet Layer</h3>
 <h4> Handles the movement of packets around the network </h4>
 <p1>Responsible for addressing,routing & packet fowarding across multiple networks</p1>
-<h5>Examples: IP addressing (192.168.1.1), Routing between networks, Ping commands (ICMP), FIndning MAC addresses (ARP)</h5>
+<h5>Examples: IP addressing (192.168.1.1), Routing between networks, Ping commands (ICMP), Finding MAC addresses (ARP)</h5>
  
  <h3>Network Access Layer</h3>
  <h4>Combines physical & data link functions</h4>
@@ -113,7 +113,11 @@
    <h4> HTTP with an extra layer of secuirty.</h4>
      <p>All data is encrypted using SSL/TLS, making it safe to send sensitie information like passwords & credit cards </p>
      <h5> Online banking websites use HTTPS (notice the padlock icon 🔒 in your browser) to ensure fiancial data is encrypted during transmission.
- <h3>FTP/TFTP</h3>
+ <h3>FTP</h3>
+ <h4> A protocol desinged specifically for transferring files between computers.</h4>
+ <p>Conisder as a specilized delivery service for digital files</p> 
+ <h5> Example: Web developers use FTP to upload website files to web servers.<br> You can connect to       ftp://files.example.com  to download or upload files.
+   <h3>TFTP</h3>
  <h3>SMTP</h3>
  <h3>POP3</h3>
  <h3>IMAP</h3>
