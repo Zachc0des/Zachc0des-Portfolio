@@ -115,9 +115,12 @@
      <h5> Online banking websites use HTTPS (notice the padlock icon 🔒 in your browser) to ensure fiancial data is encrypted during transmission.
  <h3>FTP</h3>
  <h4> A protocol desinged specifically for transferring files between computers.</h4>
- <p>Conisder as a specilized delivery service for digital files</p> 
+ <p>Conisder as a specilized delivery service for digital files, Secudre, feature rich, needs login, uses TCP</p> 
  <h5> Example: Web developers use FTP to upload website files to web servers.<br> You can connect to       ftp://files.example.com  to download or upload files.
    <h3>TFTP</h3>
+ <h4>Simple no-authentication file transfer ,
+   <p1> mainly for network device booting using UDP</p1>
+   <h5>Example: A Cisco router boots up -> sends TFTP reqeuest -> downloads its IOS firmware from server-> starts operating. No login needed, just "get firmware.bin"</h5>
  <h3>SMTP</h3>
  <h3>POP3</h3>
  <h3>IMAP</h3>
