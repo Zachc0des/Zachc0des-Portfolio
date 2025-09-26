@@ -97,27 +97,27 @@
  <br>
  
  <h2>Network Protocols</h2>
- <h3>TCP</h3>
+ <h3>TCP:Transmission Control Protocol</h3>
  <h4> A reilable transport protocol that ensures data arrives complete and in order</h4>
 <p>Almost like sending a registred letter, you get confimration that it was delivered</p>
    <h5> Example: When downloading a file,TCP breaks it into packets,numbers them, and snrues they all arrie correctly. If any packets arelost, TCP requests them again.
    </p>
- <h3>UDP (User Data Protocol)</h3>
+ <h3>UDP:User Data Protocol)</h3>
  <h4> A fast but unreliable transport protocol. It sends data quickly without checking if it arried - like throwing a paper airline across the room.
  <h5> Example: Online gaming & live video streaming use UDP because speed matters more than perfect delivery. A few lost packets wont ruin the expreience. </h5>  
-<h3> HTTP </h3>
+<h3> HTTP:HyperText Transfer Protocol </h3>
 <h4>The foundation of web communication.</h4>  
 <p>Everytime you vist a website, your browser uses HTTP to reqeust & receie web pages,images & other content from web servers</p>
 <h5>When you type "http://example.com" in your browser,it sends a HTTP GET reqeyest to tge server, which resopnds with the websites's HTML content. </h5>   
-   <h3>HTTPS</h3>
+   <h3>HTTPS:HTTP Secure</h3>
    <h4> HTTP with an extra layer of secuirty.</h4>
      <p>All data is encrypted using SSL/TLS, making it safe to send sensitie information like passwords & credit cards </p>
      <h5> Online banking websites use HTTPS (notice the padlock icon 🔒 in your browser) to ensure fiancial data is encrypted during transmission.
- <h3>FTP</h3>
+ <h3>FTP:File Transfer Protocol</h3>
  <h4> A protocol desinged specifically for transferring files between computers.</h4>
  <p>Conisder as a specilized delivery service for digital files, Secudre, feature rich, needs login, uses TCP</p> 
  <h5> Example: Web developers use FTP to upload website files to web servers.<br> You can connect to       ftp://files.example.com  to download or upload files.
-   <h3>TFTP</h3>
+   <h3>TFTP:Trival File Transfer Protocol</h3>
  <h4>Simple no-authentication file transfer ,
    <p1> mainly for network device booting using UDP</p1>
    <h5>Example: A Cisco router boots up -> sends TFTP reqeuest -> downloads its IOS firmware from server-> starts operating. No login needed, just "get firmware.bin"</h5>
@@ -125,7 +125,11 @@
    <h4>The postal service of the internet</h4>
    <p>SMTP handles sending emails from your email client to mail servers & between mail servers across the internet</p>
    <h5>Example: When you hit "Send" on an email, SMTP carries it from your email app to your mail server, then to the recipient's mail server</h5>
- <h3>DNS </h3>
+ <h3>DNS:Domain Name System</h3>
+ <h4>The Internets Phonebook</h4>  
+ <p>It translates human-readable domain names (like google.com) into IP addresses (172.217.164.110) that computers can understand</p> 
+   <h5>Example:When you type wwww.google.com, DNS servers lookup & return Google's IP address so your browser knows where to connect</h5>
+ <h3>SSH:Secure SHell</h3>
  <h3>IMAP</h3>
  <h3>POP3</h3>
  <h3>DHCP operations</h3>
