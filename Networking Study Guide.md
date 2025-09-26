@@ -102,7 +102,7 @@
 <p>Almost like sending a registred letter, you get confimration that it was delivered</p>
    <h5> Example: When downloading a file,TCP breaks it into packets,numbers them, and snrues they all arrie correctly. If any packets arelost, TCP requests them again.
    </p>
- <h3>UDP:User Data Protocol)</h3>
+ <h3>UDP:User Data Protocol</h3>
  <h4> A fast but unreliable transport protocol. It sends data quickly without checking if it arried - like throwing a paper airline across the room.
  <h5> Example: Online gaming & live video streaming use UDP because speed matters more than perfect delivery. A few lost packets wont ruin the expreience. </h5>  
 <h3> HTTP:HyperText Transfer Protocol </h3>
