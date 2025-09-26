@@ -121,14 +121,18 @@
  <h4>Simple no-authentication file transfer ,
    <p1> mainly for network device booting using UDP</p1>
    <h5>Example: A Cisco router boots up -> sends TFTP reqeuest -> downloads its IOS firmware from server-> starts operating. No login needed, just "get firmware.bin"</h5>
- <h3>SMTP</h3>
- <h3>POP3</h3>
+ <h3>SMTP:Simple Mail Transfer Protocol</h3>
+   <h4>The postal service of the internet</h4>
+   <p>SMTP handles sending emails from your email client to mail servers & between mail servers across the internet</p>
+   <h5>Example: When you hit "Send" on an email, SMTP carries it from your email app to your mail server, then to the recipient's mail server</h5>
+ <h3>DNS </h3>
  <h3>IMAP</h3>
- <h3>DNS</h3>
+ <h3>POP3</h3>
  <h3>DHCP operations</h3>
  <h3>SNMP</h3>
  <h3>Telnet</h3>
  <h3>SSH</h3>
+ <h3>Port Numbers</h3>
 
 <h2>Network Services</h2>
 <h3>DHCP configuartion & troubleshooting</h3>
