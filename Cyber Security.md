@@ -1,4 +1,14 @@
-<h1> Cyber Security Study Guide <h1>
+<h1> Cyber Security Study Guide </h1>
+  <p>
+   <h3>Table of Contents:</h3>
+    Core Concepts<br>
+    Risk Managment<br>
+    Threat Landscape<br>
+    Security Frameworks<br>
+    Tools & Technology<br>
+    Home Lab Setup<br>
+    Procedures/Tasks
+  </p>
   <H1> Core Concepts </H1>
   <h2>CIA TRIAD</h2>
   <p> The following three principles listed below work togegther to create a comprehensive security framework that protects information systems from various threats</p>
