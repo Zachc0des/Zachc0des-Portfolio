@@ -11,11 +11,44 @@
   <h3>Availability</h3>
   <p>Ensuring authroized users have reliable access to information when needed </p>
   <h4>Examples: Regular backups, Redundant Systems, DDoS Protection, Diaster recovery plans, Load balancing</h4>
-    
   </h3>  
   <h2>Risk Managment</h2>
-  <h2>Threat Landscape</h2>
-  <h2>Security Frame Works</h2>
+  <h3>Identify</h3>
+  <p>Discover potential threats & vulnerablitlites to your assets</p>
+  <h3>Assess</h3>
+  <p> Evulate likelihood & impact of each identified risk</p>
+  <h3>Priotize</h3>
+  <p>Rank risk based on severity & potential damage</p>
+  <h3> Mitaigate </h3>
+  <p>Implement cotrrols to reduce or elimate risks</p>
+  <h3>Monitor</h3>
+  <p>Contiously review & update risk strategies</p>
+  <h2>Threat Landscape:</h2>
+    <h3>Ransomware Attacks</h3>
+      <p>Malcious software that encrypts data & demandspayment for restoration, combining                 encryption with data theft threats</p>
+    <h3>Phising & Social Enegineering </h3>
+        <p>Depective tactics to manipulate indivudals into revealing senstiveinfomration or credntials. Evolving with AI-generated contetns & sophicated inpersonation techniques </p>
+    <h3>Advanced Persistent Threats (APT)</h3>
+   <p>Prolonged, stealthy cyberattacks where intruders gain acess to netwroks & remain undected for extended periods, often targeting senstive data and critical infrastrcture</p>
+    <h3>AI-Powered Attacks</h3>
+  <P> Levraging artificial intelligence to automate attacks, create convincing deepfakes, generate pokyoprhic malware, & conduct sophiscated reconnasissance at a unprecendeted scale</P>
+    <h3>Cloud Security Vulenerablities</h3>
+  <p>Misconfigured cloud services, inadequeaet acess controls & shared infrastrcutre risks. As organizations migrate to ckoud, attack surfaces expand with new vulnerabilities</p>
+    <h3> Iot & Mobile Threats</h3>
+  <P>Vulnerabilities in Internet of Things devices & mobile applicatoins. Weak security in connected devices creates entry points for broader network compromise</P>
+    <h3>Supply Chain Attacks <h3>
+      <p> Comprosing trusted third-party vendors, software dependencies, or hardware components to inflitrate target organizations through legitmate update mechanisms & trusted relationships</p>
+    <h3> Zero-Day Exploits</h3> 
+    Attacks previously unkown vulenerablities before vendors can develop patches. Increasingly weaponized & traded in underground markets for high-value targets  
+    <h3>Insider Threats</h3>  
+      <p>Malcious or negligent actions by employees,contractors, or partners with legitmate access. Can be intentional sabotage or unitentional security lapses causing data exposure.</p>
+    <h3> Cryptocurrency & Defi Attacks </h3>
+      <p> Exploiting vulnerablities in blockchain platforms, smart contracts & crypto exchanges. Growing target as cryptocurrency adoptions increases, with billions stolen anually</p>
+    <h3> Quantum Computing Threats </h3>
+      <p> Future threat from quantum computers capable of breaking current encryption standards.Organizations must prepare for "Harvest now decrypt later" attacks collecting ecncrypted today.</p>
+    <h3> Denial of Service (DDoS)
+      <p> Overwhelming systems with massive traffic volumes to disrupt service availability. INcreasingly used for extortion or as diversinoary tactics during other attacks</p>
+    <h2>Security Frame Works</h2>
   <h2> Compliance </h2>
   <h2> Ethical Hacking methodlogies </h2>
 <H1>Tools & Technolgies</H1>
