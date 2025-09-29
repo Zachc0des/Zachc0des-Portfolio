@@ -36,7 +36,7 @@
   <p>Misconfigured cloud services, inadequeaet acess controls & shared infrastrcutre risks. As organizations migrate to ckoud, attack surfaces expand with new vulnerabilities</p>
     <h3> Iot & Mobile Threats</h3>
   <P>Vulnerabilities in Internet of Things devices & mobile applicatoins. Weak security in connected devices creates entry points for broader network compromise</P>
-    <h3>Supply Chain Attacks <h3>
+    <h3>Supply Chain Attacks </h3>
       <p> Comprosing trusted third-party vendors, software dependencies, or hardware components to inflitrate target organizations through legitmate update mechanisms & trusted relationships</p>
     <h3> Zero-Day Exploits</h3> 
     Attacks previously unkown vulenerablities before vendors can develop patches. Increasingly weaponized & traded in underground markets for high-value targets  
@@ -46,7 +46,7 @@
       <p> Exploiting vulnerablities in blockchain platforms, smart contracts & crypto exchanges. Growing target as cryptocurrency adoptions increases, with billions stolen anually</p>
     <h3> Quantum Computing Threats </h3>
       <p> Future threat from quantum computers capable of breaking current encryption standards.Organizations must prepare for "Harvest now decrypt later" attacks collecting ecncrypted today.</p>
-    <h3> Denial of Service (DDoS)
+    <h3> Denial of Service (DDoS)</h3>
       <p> Overwhelming systems with massive traffic volumes to disrupt service availability. INcreasingly used for extortion or as diversinoary tactics during other attacks</p>
     <h2>Security Frame Works</h2>
   <h2> Compliance </h2>
