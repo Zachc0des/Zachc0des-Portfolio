@@ -59,6 +59,15 @@
     <h3> Denial of Service (DDoS)</h3>
       <p> Overwhelming systems with massive traffic volumes to disrupt service availability. INcreasingly used for extortion or as diversinoary tactics during other attacks</p>
     <h2>Security Frame Works</h2>
+    <h3>NIST Cybersecurity framework</h3>
+      <p>A flexible framework for manging cybersecuirty risks across organizaions of all sizes<br><br>
+      Key Functions<br><br>
+        Identify:<br>
+        Protect:<br>
+        Detect:<br>
+        Respond:<br>
+        Recover:</p>
+      <h5>Exmaple: A hosptial uses NIST CSF to identify cirtical patient data systems, implement access controls, moniotr for breaches, and establish incident response procedures</h5>
   <h2> Compliance </h2>
   <h2> Ethical Hacking methodlogies </h2>
 <H1>Tools & Technolgies</H1>
