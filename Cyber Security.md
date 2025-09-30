@@ -85,6 +85,24 @@
      Data Protection:<br>
      Incident Response:
      <h5>Example: A small business implements CIS Controls by first inventorying all devices, then securing configurations & enabling multi factor authentication </h5>
+    <h3>SOC 2</h3>
+    <p> Trust service creiteria for service organizations handling customer data<br><br>
+    Key Functions
+    Security:<br>
+    Availability:<br>
+    Confidentiality:<br>
+    Privacy:<br>
+    Processing Intergirty:</p>
+    <h5>Exmaple:A cloud software provider undergoes SOC 2 audit to prove to enterprise clinets that their systems meet security &availability standards </h5>
+    <h3> COBIT</h3>
+    <p>Framework for IT governance & managemen aligned with business objectives<br><br>
+    Key Functions<br><br>
+    Governance:<br>
+    Managment:<br>
+    Risk Aligment:<br>
+    Value Deliery:</p>
+    <h5>Exmaple: A large corporation  uses COBIT to align IT security INvestments with business goals & demonstrate value to stakeholders</h5>
+     
      
      
      
