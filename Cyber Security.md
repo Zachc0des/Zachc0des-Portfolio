@@ -101,22 +101,49 @@
     Managment:<br>
     Risk Aligment:<br>
     Value Deliery:</p>
-    <h5>Exmaple: A large corporation  uses COBIT to align IT security INvestments with business goals & demonstrate value to stakeholders</h5>
-     
-     
-     
-     
-     
-  
+    <h5>Exmaple: A large corporation  uses COBIT to align IT security INvestments with business goals & demonstrate value to stakeholders</h5> 
   <h2> Compliance </h2>
   <h2> Ethical Hacking methodlogies </h2>
 <H1>Tools & Technolgies</H1>
-<h2>Vulnerablity Scanners</h2>
-<h2>SIEM Tools</h2>
+
+<h3>Security Stack</h3>
+<p>A Layer of defense that an organiation uses to protect its systems,data & networks from cyber threats</p>
+<h5>Essential Layer:</h5>
+<p>Firewalls, Antivirus and IAM form the foundation of any security strategy</p>
+<h5>Detection Layer:</h5>
+<p>SIEM, IDS/IPS, & Vulnerability Scanners provide visiblity & threat detection </p>
+<h5>Protection Layer:</h5>
+<p>Encryption, DLP, & Email Security protect sensitive data & communications </p>
+
+<h3>Firewalls</h3>
+<p>Network security systems that monitor & control incoming & outgoing traffic</p>
+<h3> Antivirus/Anti-Malware</h3>
+<p>Software that detects, prevents & removes malicious sotwares</p>
+<h3>SIEM Systems </h3>
+<p>Secuirty Infomration & Event Managment platforms for real-time analysis</p>
+<h3>IDS/IPS</h3>
+<p>Intrusion Detection & Prevention Systems that moniotr network traffic</p>
+<h3>VPN soultions</h3>
+<p>Virtual Private networks that create secure encrypted connections</p>
+<h3>Encryption Tools</h3>
+<p>Tools that convert data into coded format to prevent unathorized access</p>
+<h3> IAM Soulutions </h3>
+<p>Identify & Access Maagmemt tools that control user access to resources</p>
+<h3> Vulnerablilty Scanners </h3>
+<p>Tools that identify security weaknesses in systems & applications</p>
+<h3> Email Security </h3>
+<p>Soultions that protect emial systems from threats & attacks</p>
+<h3> DLP Soultions </h3>
+<p>Data Loss Prevention tools that protect sensitie information from leakage</p>
+
 <h2>Network Analysis</h2>
+
 <h2>Penetration Testing Tools</h2>
+
 <h2>Incident Reposnse Tools</h2>
+
 <h1>Home Lab Setup</h1> 
+
 <h2>Vmware</h2>
 <h2>Virtual Box</h2>
 
