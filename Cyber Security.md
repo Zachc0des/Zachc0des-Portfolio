@@ -18,7 +18,7 @@
   <h3>I: Integrity</h3>
   <p>Maintaning accuracy & Consistency of data through its lifecycke</p>
   <h4>Examples: Digital signatures, Checksums & hasing, Version control systems,Aduit logs & trails, Input validation</h4>
-  <h3>Availability</h3>
+  <h3>A: Availability</h3>
   <p>Ensuring authroized users have reliable access to information when needed </p>
   <h4>Examples: Regular backups, Redundant Systems, DDoS Protection, Diaster recovery plans, Load balancing</h4>
   </h3>  
