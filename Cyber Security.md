@@ -68,6 +68,15 @@
         Respond:<br>
         Recover:</p>
       <h5>Exmaple: A hosptial uses NIST CSF to identify cirtical patient data systems, implement access controls, moniotr for breaches, and establish incident response procedures</h5>
+     <h3>ISO 27001 </h3>
+     <p>International standard for infomration security managmenet systems (ISMS)<br><br>
+     Key functions<br><br>
+       Risk Assessment:<br>
+       Security Controls:<br>
+       Continious Imrpoveement:<br>
+       Compliance:
+     </p>
+     <h5> Example: A financial service company achieves ISO 27001 ceritifcation to demonstarte secure handling of customer data to clients & regulator 
   <h2> Compliance </h2>
   <h2> Ethical Hacking methodlogies </h2>
 <H1>Tools & Technolgies</H1>
