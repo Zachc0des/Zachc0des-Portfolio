@@ -27,7 +27,7 @@
   <p>Discover potential threats & vulnerablitlites to your assets</p>
   <h3>Assess</h3>
   <p> Evulate likelihood & impact of each identified risk</p>
-  <h3>Priotize</h3>
+  <h3>Prioritize</h3>
   <p>Rank risk based on severity & potential damage</p>
   <h3> Mitaigate </h3>
   <p>Implement controls to reduce or elimate risks</p>
