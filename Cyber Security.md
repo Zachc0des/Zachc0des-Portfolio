@@ -30,7 +30,7 @@
   <h3>Priotize</h3>
   <p>Rank risk based on severity & potential damage</p>
   <h3> Mitaigate </h3>
-  <p>Implement cotrrols to reduce or elimate risks</p>
+  <p>Implement controls to reduce or elimate risks</p>
   <h3>Monitor</h3>
   <p>Contiously review & update risk strategies</p>
   <h2>Threat Landscape:</h2>
@@ -76,7 +76,20 @@
        Continious Imrpoveement:<br>
        Compliance:
      </p>
-     <h5> Example: A financial service company achieves ISO 27001 ceritifcation to demonstarte secure handling of customer data to clients & regulator 
+     <h5> Example: A financial service company achieves ISO 27001 ceritifcation to demonstarte secure handling of customer data to clients & regulator</h5>
+     <h3> CIS Controls </h3>
+     <p>Priotized set of 18 actionable security controls to defend against common cyber attacks<br><br>
+     Key Functions<br><br>
+     Asset Managment:<br>
+     Access Control:<br>
+     Data Protection:<br>
+     Incident Response:
+     <h5>Example: A small business implements CIS Controls by first inventorying all devices, then securing configurations & enabling multi factor authentication </h5>
+     
+     
+     
+     
+  
   <h2> Compliance </h2>
   <h2> Ethical Hacking methodlogies </h2>
 <H1>Tools & Technolgies</H1>
