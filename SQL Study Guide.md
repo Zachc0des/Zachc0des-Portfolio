@@ -6,8 +6,8 @@
 SQL is the language that can be used for the following:<br>
 Find Information- "Show me all customers who live in XYZ"<br>
 Add New information- "Add this new customer to the database"<br>
-Update Information- "Change Customer's email address to his new one"
-Delete Information- "Remove all orders from last year"
+Update Information- "Change Customer's email address to his new one"<br>
+Delete Information- "Remove all orders from last year"<br>
 Organize Information- "Sort these products by price"
 
 <h5> Examples: Banks manage Account information<br>
