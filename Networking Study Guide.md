@@ -142,12 +142,14 @@
   Folder management on  server<br>
   Read/unread status syncs           
   </p>
- <h3>POP3 | Port #110/995</h3>
- <h3>DHCP | Port #67/68 </h3>
- <h3>SNMP | Port #161/162</h3>
- <h3>Telnet | Port #23</h3>
- <h3>Port Numbers</h3>
-
+ <h3>POP3 </h3>
+ <h4>Port #110/995 | </h4>
+ <h3>DHCP</h3>
+  <h4>Port #67/68 | </h4>
+ <h3>SNMP </h3>
+ <h4> Port #161/162 | </h4>
+ <h3>Telnet </h3>
+ <h4> Port #23 | </h4>
 <h2>Network Services</h2>
 <h3>DHCP configuartion & troubleshooting</h3>
 <h3> DNS resoultion process</h3>
