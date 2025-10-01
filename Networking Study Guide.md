@@ -187,7 +187,7 @@ IP address lease management <br>
 <h3> NAT/PAT operations</h3>
 <h3>Quality of Service (Qos) basics</h3>
 <h3>Network Time Protocol (NTP)</h3> 
-<h1>Addressubg & Subnetting</h1>
+<h1>Addressing & Subnetting</h1>
 <h2>Ipv4</h2>
 <h2>Ipv6</h2>
 <h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
