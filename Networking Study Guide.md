@@ -66,7 +66,7 @@
 <h3>Layer 1: Physical Layer</h3>
 <h4> Transmits raw bit streams over physical media.</h4>
 <p1>The Actual hardware cables, wireless signals, voltage levels, and timing define the electrical and physical specifications for transmitting raw bits</p1>
- <h5> Example : Cables, Fiber Optic, Radio Waves, Hubs & Electrical Signals </h5>
+ <h5> Example: Cables, Fiber Optic, Radio Waves, Hubs & Electrical Signals </h5>
  <br>
   <h2> The Four Layers of TCP/IP Model</h2>
  <h3>Application Layer</h3>
@@ -188,7 +188,42 @@ IP address lease management <br>
 <h3>Quality of Service (Qos) basics</h3>
 <h3>Network Time Protocol (NTP)</h3> 
 <h1>Addressing & Subnetting</h1>
-<h2>Ipv4</h2>
+<h2>IPv4</h2>
+<p> IPv4 Addresses are divided into classes based on their first octet:<br>
+(One of Four 8-bit numbers in an IPv4 address separated by dots)</p>   
+<h3>Class A: Very large networks (16M hosts)</h3>
+  <P>
+  1st Ocet Range: <br>
+  Default Subnet mask: <br>
+  Network/Host Bits <br>
+  Usage: <br>
+</P>   
+<h3>Class B: Meduim networks (65k hosts) </h3>
+   <p>
+     1st Ocet Range: <br>
+    Default Subnet mask: <br>
+    Network/Host Bits <br>
+    Usage: <br>
+   </p>
+<h3>Class C: Small networks (254 hosts)</h3>
+  <p>1st Ocet Range: <br>
+    Default Subnet mask: <br>
+    Network/Host Bits <br>
+    Usage: <br>
+  </p>
+<h3>Class D: Multicast groups</h3>
+   <p>1st Ocet Range: <br>
+    Default Subnet mask: <br>
+    Network/Host Bits <br>
+    Usage: <br>
+   </p>
+<h3>Class E: Experimental/Reserved</h3>
+  <p>
+    1st Ocet Range: <br>
+    Default Subnet mask: <br>
+    Network/Host Bits <br>
+    Usage: <br>
+  </p>
 <h2>Ipv6</h2>
 <h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
 <h3></h3>
