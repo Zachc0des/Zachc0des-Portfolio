@@ -66,7 +66,7 @@
 <h3>Layer 1: Physical Layer</h3>
 <h4> Transmits raw bit streams over physical media.</h4>
 <p1>The Actual hardware cables, wireless signals, voltage levels, and timing define the electrical and physical specifications for transmitting raw bits</p1>
- <h5> Example :Cables, Fiber Optic, Radio Waves, Hubs & Electrical Signals </h5>
+ <h5> Example : Cables, Fiber Optic, Radio Waves, Hubs & Electrical Signals </h5>
  <br>
   <h2> The Four Layers of TCP/IP Model</h2>
  <h3>Application Layer</h3>
@@ -105,10 +105,19 @@
  <h3>UDP:User Data Protocol</h3>
  <h4> A fast but unreliable transport protocol. It sends data quickly without checking if it arrived - like throwing a paper airplane across the room.
  <h5> Example: Online gaming & live video streaming use UDP because speed matters more than perfect delivery. A few lost packets won't ruin the experience. </h5>  
+<h3>DHCP:Dynamic Host Configuartion Protocol</h3>
+<h4>Port #67/68 | Automatically assigns IP addresses & network settings to devices when they connect to a network, eliminating manual configuration</h4>  
+<p>Key Features: <br>
+Automatic IP assignment <br>
+Provides gateway & DNS info <br>
+Prevents IP conflicts <br>
+IP address lease management <br>  
+</p>   
+<h5> Example: You connect your phone to a coffee shop's Wi-Fi. The router's DHCP server automatically assigns your phone the IP address 192.168.1.105, along with the gateway & DNS settings- no manual setup needed</h5>     
 <h3> HTTP:HyperText Transfer Protocol </h3>
 <h4>Port #80 | The foundation of web communication.</h4>  
 <p> Every time you visit a website, your browser uses HTTP to request & receive web pages, images & other content from web servers</p>
-<h5>When you type "http://example.com" in your browser,it sends a HTTP GET request to the server, which responds with the website's HTML content. </h5>   
+<h5>When you type "http://example.com" in your browser, it sends an HTTP GET request to the server, which responds with the website's HTML content. </h5>   
    <h3>HTTPS:HTTP Secure </h3>
    <h4>Port #443 | HTTP with an extra layer of security.</h4>
      <p>All data is encrypted using SSL/TLS, making it safe to send sensitive information like passwords & credit cards </p>
@@ -143,13 +152,35 @@
   Read/unread status syncs           
   </p>
  <h3>POP3 </h3>
- <h4>Port #110/995 | </h4>
- <h3>DHCP</h3>
-  <h4>Port #67/68 | </h4>
- <h3>SNMP </h3>
- <h4> Port #161/162 | </h4>
+ <h4> Port #110/995 | POP3 downloads emails from the server to your device  </h4>
+ <p>Key Features:<br>
+ Download emails locally <br>
+ Usually deletes from the server<br>
+ Works offline after download <br>
+ Single device focused  
+ </p>  
+ <h5>Example: Your email client downloads all new messages to your computer at 9 AM. After download, the messages are removed from the server & only exist on that computer   
+ <h3>SNMP: Simple Network Managment Protocol </h3>
+ <h4> Port #161/162 | Moniotring & Managing network devices.</h4>
+   <p>
+     Collecting information about network performance, device status & alerts administrators use<br>
+     Key Features:<br>
+     Device monitoring & managment<br>
+     Performance data collection <br>
+     Trap notifications for alerts <br> 
+     Remote device configuration <br>
+   </p> 
+ <h5>Example: A network administrator uses SNMP to monitor all routers in a company. When Router #3's CPU usage hits 95%, SNMP sends an automatic alert so the admin can investigate before users experience problems</h5>
  <h3>Telnet </h3>
- <h4> Port #23 | </h4>
+ <h4> Port #23 | Remote command-line access to other devices over a network.</h4>
+   <p>Largely deprecated due to security issues<br>
+   Key Features:<br>
+     Remote terminal access<br>
+     Text-based commands<br>
+     No encryption (insecure)<br>
+     Replaced by SSH in modern use</p>
+     <h5>Example: An admin uses telnet 192.168.1.1 to connect to a router's command line from their desk. They can type commands to configure the router remotely. </h5>
+   </p>
 <h2>Network Services</h2>
 <h3>DHCP configuartion & troubleshooting</h3>
 <h3> DNS resoultion process</h3>
