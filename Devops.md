@@ -152,7 +152,7 @@
 
 </p>
 
-<h2>What is Dev ops?</h2>
+<h2>What is Devops?</h2>
 <p>
   Development  & operations is an extension of agile development environments  that aims to enhance the process of software delivery as a whole
 </p>
