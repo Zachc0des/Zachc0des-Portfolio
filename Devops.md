@@ -4,7 +4,7 @@
 <p>
   What is DevOps?<br>
   DevOps Culture & Principles<br>
-  Benefits of DevOps<br>
+  DevOps Stack<br>
   IBM's Approach to DevOps<br><br>
 
   IBM Cloud Platform<br>
