@@ -58,7 +58,7 @@
   IBM Rational Test automation<br>
   Performance Testing<br>
   Security Testing<br>
-  Test Data Mangemen<br><br>
+  Test Data Mangement<br><br>
 
   IBM Cloud Monitoring <br>
   Application Performance monitoring <br>
@@ -133,22 +133,6 @@
   Chaos Engineering<br>
   Site Reliability Engineering (SRE)<br>
   Platform Engineering<br><br>
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
 
 </p>
 
@@ -156,3 +140,70 @@
 <p>
   Development  & operations is an extension of agile development environments  that aims to enhance the process of software delivery as a whole
 </p>
+
+<h2> Culture & Principles </h2>
+
+<h2>Devops Stack</h2>
+
+<h2>IBM's Approach to DevOps</h2>
+<br>
+<h2>IBM Cloud platform</h2>
+<h2>Intergration with existing Infrastrcture</h2>
+<h2>Hybrid & Multi-Cloud SUpport</h2>
+<h2>Security & Complaince</h2>
+<br>
+<h2>IBM Engineering Workflow Managmeent</h2>
+<h2>Agile Planning & Tracking</h2>
+<h2>Requiremets Management</h2>
+<h2>Team collaboration Tools</h2>
+<h2>Intergration with Jira & Other Tools</h2>
+<br>
+<h2>Git & Github Intergration</h2>
+<h2>IBM Git Repository</h2>
+<h2>Version Control Best Practices</h2>
+<h2>Branching Strategies</h2>
+<h2>Code Reveiw Processes</h2>
+<br>
+<h2>IBM CLoud Continous Deliery</h2>
+<h2>Build Automation</h2>
+<h2>Jenkins Intergration</h2>
+<h2>Automated Testing in CL Pipeline Build Artifact Management</h2>
+<h2>CL Best Pratices</h2>
+<br>
+<h2>Deployment Pipelines</h2>
+<h2>IBM UrbanCode Deploy</h2>
+<h2>Automated Deplayment Strategies</h2>
+<h2>Blue-Green Deployment Strategies</h2>
+<h2>Canary Releases</h2>
+<h2>Rollback Procedures</h2>
+<h2>Release Management</h2>
+<br>
+<h2>IBM Cloud Schematics</h2>
+<h2>Terraform Integration</h2>
+<h2>Ansible for Configuration Managment</h2>
+<h2>Infrastructure Automation</h2>
+<h2>Envrioment Provisioning</h2>
+<br>
+<h2>Docker Fundamentals</h2>
+<h2>IBM CLoud Kubernets Service</h2>
+<h2> Red Hat OpenShift on IBM CLoud</h2>
+<h2>Container Registry</h2>
+<h2>Container Secuirty</h2>
+<h2>Microservices Architecture</h2>
+<br>
+<h2>Test Strategy & Planning</h2>
+<h2>Unit TEsitng</h2>
+<h2>Intergration Testing</h2>
+<h2>IBM Rational Test automation</h2>
+<h2>Peformance Tesitng</h2>
+<h2>Security Testing</h2>
+<h2>Test Data Managementt</h2>
+<br>
+<h2>IBM CLoud Monitoring</h2>
+<h2>Applicaiton Peformance monitoring</h2>
+<h2>Log Managmeent with IBM Log Analysis</h2>
+<h2>Distrubuted Tracing</h2>
+<h2>Metrics & Dashborards</h2>
+<h2>Alerting & Incident Response</h2>
+<br>
+<h2></h2>
