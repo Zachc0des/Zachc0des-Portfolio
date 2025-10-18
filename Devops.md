@@ -96,7 +96,7 @@
   ChatOps with Slack/Microsoft Teams<br>
   Documentation Practices<br>
   Knowledge Sharing<br>
-  Blameless Post-Mortems>br>
+  Blameless Post-Mortems<br>
   Cross-Functional Team Collaboration<br>
 
   DevOps Metrics Framework<br>
@@ -199,11 +199,74 @@
 <h2>Security Testing</h2>
 <h2>Test Data Managementt</h2>
 <br>
-<h2>IBM CLoud Monitoring</h2>
+<h2>IBM Cloud Monitoring</h2>
 <h2>Applicaiton Peformance monitoring</h2>
 <h2>Log Managmeent with IBM Log Analysis</h2>
 <h2>Distrubuted Tracing</h2>
 <h2>Metrics & Dashborards</h2>
 <h2>Alerting & Incident Response</h2>
 <br>
-<h2></h2>
+<h2>Secuirty Integration in CI/CD</h2>
+<h2>IBM Cloud Secuirty & Compliance Center</h2>
+<h2>Vulnerability Scanning</h2>
+<h2>Container Secuirty Scanning</h2>
+<h2>Secrets Managment</h2>
+<h2>Compliance Automation</h2>
+<h2>Secuirty Best Practices</h2>
+<br>
+<h2>IBM Watson AIOps</h2>
+<h2>Intellignet Incident Maagment</h2>
+<h2>Predictive Analytics</h2>
+<h2>Automated Remediation</h2>
+<h2>ChatOps Integration</h2>
+<br>
+<h2>Cloud Native Application Design</h2>
+<h2>Twelve-Factor App Methodolgy</h2>
+<h2>IBM Cloud Functions (serverlesss)</h2>
+<h2>API Management</h2>
+<h2> Service Mesh</h2>
+<br>
+<h2>Database Version Control</h2>
+<h2>Automated Database Deployments</h2>
+<h2>IBM DB2 on Cloud Database Testing & Validation</h2>
+<h2>Data Migration Strategies</h2>
+<br>
+<h2>ChatOps with Slack/Microsoft Teams</h2>
+<h2>Documentaiton Practices</h2>
+<h2>Knowledge Sharing</h2>
+<h2>Blameless Post-Mortems</h2>
+<br>
+<h2>DevOPS Metrics Framework</h2>
+<h2>Deployment Freqeuncy</h2>
+<h2>Lead Time for Changes</h2>
+<h2>Mean Time to Recovery (MTTR)</h2>
+<h2>Change Failure Rate</h2>
+<h2>Custom Metrics & Reporting</h2>
+<br>
+<h2>IBM Cloud ToolChain</h2>
+<h2>Tool Integration Patterns</h2>
+<h2>Third-Party Tool Integration</h2>
+<h2>Custom Tool Development</h2>
+<h2>Toolchain Automation</h2>
+<br>
+<h2>Regulatory Compliance (SOC2,HIPAA,GDPR)</h2>
+<h2>Audit Trials & Logging</h2>
+<h2>Change Management</h2>
+<h2>Policy as Code</h2>
+<h2>Compliance Reportng</h2>
+<br>
+<h2>Cloud Cost managment</h2>
+<h2>Resource Optimization</h2>
+<h2>FinOps Practices</h2>
+<h2>Cost Allocation & Tagging</h2>
+<h2>Budget Monitoring & Alerts</h2>
+<br>
+<h2>Enterprise DevOPS Transformations</h2>
+<h2>Industry-Specific Implentations</h2>
+<h2>Common Challanges & Solutions</h2>
+<br>
+<h2>GitOps Methodlogy</h2>
+<h2>Progressive Delivery</h2>
+<h2>Chaos Engineering</h2>
+<h2>Site Reliability Engineerig (SRE)</h2>
+<h2>Platform Engineering</h2>
