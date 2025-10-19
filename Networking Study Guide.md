@@ -201,33 +201,33 @@ IP address lease management <br>
 </P>   
 <h3>Class B: Meduim networks (65k hosts) </h3>
    <p>
-     1st Ocet Range: <br>
-    Default Subnet mask: <br>
-    Network Bits: <br>
-    Host Bits: <br>
-    Usage: <br>
+     1st Ocet Range: 128-191 <br>
+    Default Subnet mask:255.255.0.0 <br>
+    Network Bits: 16 bits <br>
+    Host Bits: 16 bits <br>
+    Usage: Medium networks (65,534 hosts)<br>
    </p>
 <h3>Class C: Small networks (254 hosts)</h3>
   <p>1st Ocet Range: <br>
-    Default Subnet mask: <br>
-    Network Bits: <br>
-    Host Bits: <br>
-    Usage: <br>
+    Default Subnet mask: 255.255.255.0 <br>
+    Network Bits: 24 bits <br>
+    Host Bits: 8 bits <br>
+    Usage: Small networks (254 hosts) <br>
   </p>
 <h3>Class D: Multicast groups</h3>
-   <p>1st Ocet Range: <br>
-    Default Subnet mask: <br>
-    Network Bits: <br>
-    Host Bits: <br>
-    Usage: <br>
+   <p>1st Ocet Range: 224-239 <br>
+    Default Subnet mask: N/A <br>
+    Network Bits:N/A <br>
+    Host Bits:N/A <br>
+    Usage: Multicast groups <br>
    </p>
 <h3>Class E: Experimental/Reserved</h3>
   <p>
-    1st Ocet Range: <br>
-    Default Subnet mask: <br>
-    Network Bits:<br>
-    Host Bits: <br>
-    Usage: <br>
+    1st Ocet Range:240-255 <br>
+    Default Subnet mask:N/A <br>
+    Network Bits:N/A<br>
+    Host Bits: N/A <br>
+    Usage: Experimental/Reserved <br>
   </p>
 <h2>Ipv6 Address Structure</h2>
 <h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
