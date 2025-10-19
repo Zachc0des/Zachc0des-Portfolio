@@ -230,5 +230,36 @@ IP address lease management <br>
     Usage: Experimental/Reserved <br>
   </p>
 <h2>Ipv6 Address Structure</h2>
+   <h3>Global Unicast</h3>
+   <P>
+     Prefix: 2000::/3<br>
+     Network Bits:48-64 bits<br>
+     Usage: Public Internet addresses<br>
+   </P>
+    <h3>Link Local</h3>
+   <P>
+     Prefix: fe80::/10<br>
+     Network Bits:64 bits<br>
+     Usage: Local network segment only<br>
+   </P>
+    <h3>Unique Local</h3>
+   <P>
+     Prefix: fc00::/7<br>
+     Network Bits:48 bits<br>
+     Usage: Private network<br>
+   </P>
+    <h3>Multicast</h3>
+   <P>
+     Prefix: ff00::/8<br>
+     Network Bits: Varies <br>
+     Usage: One-to-many communication<br>
+   </P>
+    <h3>Loopback</h3>
+   <P>
+     Prefix: ::1/128<br>
+     Network Bits: 128 bits<br>
+     Usage: Local loopback<br>
+   </P>
+   
 <h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
 <h3></h3>
