@@ -193,35 +193,40 @@ IP address lease management <br>
 (One of Four 8-bit numbers in an IPv4 address separated by dots)</p>   
 <h3>Class A: Very large networks (16M hosts)</h3>
   <P>
-  1st Ocet Range: <br>
-  Default Subnet mask: <br>
-  Network/Host Bits <br>
-  Usage: <br>
+  1st Octet Range: 1-126 <br>
+  Default Subnet mask: 255.0.0.0(/8) <br>
+  Network Bits: 8 bits<br>
+  Host Bits: 24 Bits <br>
+  Usage: Large networks (16.7M hosts) <br>
 </P>   
 <h3>Class B: Meduim networks (65k hosts) </h3>
    <p>
      1st Ocet Range: <br>
     Default Subnet mask: <br>
-    Network/Host Bits <br>
+    Network Bits: <br>
+    Host Bits: <br>
     Usage: <br>
    </p>
 <h3>Class C: Small networks (254 hosts)</h3>
   <p>1st Ocet Range: <br>
     Default Subnet mask: <br>
-    Network/Host Bits <br>
+    Network Bits: <br>
+    Host Bits: <br>
     Usage: <br>
   </p>
 <h3>Class D: Multicast groups</h3>
    <p>1st Ocet Range: <br>
     Default Subnet mask: <br>
-    Network/Host Bits <br>
+    Network Bits: <br>
+    Host Bits: <br>
     Usage: <br>
    </p>
 <h3>Class E: Experimental/Reserved</h3>
   <p>
     1st Ocet Range: <br>
     Default Subnet mask: <br>
-    Network/Host Bits <br>
+    Network Bits:<br>
+    Host Bits: <br>
     Usage: <br>
   </p>
 <h2>Ipv6 Address Structure</h2>
