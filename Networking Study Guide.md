@@ -188,7 +188,7 @@ IP address lease management <br>
 <h3>Quality of Service (Qos) basics</h3>
 <h3>Network Time Protocol (NTP)</h3> 
 <h1>Addressing & Subnetting</h1>
-<h2>IPv4</h2>
+<h2>IPv4 Address Structure </h2>
 <p> IPv4 Addresses are divided into classes based on their first octet:<br>
 (One of Four 8-bit numbers in an IPv4 address separated by dots)</p>   
 <h3>Class A: Very large networks (16M hosts)</h3>
@@ -224,6 +224,6 @@ IP address lease management <br>
     Network/Host Bits <br>
     Usage: <br>
   </p>
-<h2>Ipv6</h2>
+<h2>Ipv6 Address Structure</h2>
 <h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
 <h3></h3>
