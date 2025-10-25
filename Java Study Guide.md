@@ -1,29 +1,34 @@
-<h1> Zachc0des Java Study Guide </h1>
+<h1>Java  & JS</h1>
+<h2>Table of Contents</h2>
+<h3>Java</h3>
+<p>
+Class Structure<br>
+Data Types<br>
+Constuctor<br>
+Methods<br>
+Condtional logic<br>
+This keyword  
+</p>
 
-<h1> Fundmentals</h1>
-<h3>Varibales & Data Types</h1>
-<h3>Classes & Objects</h3>
-<h3>Methods</h3>
-<h3>Control Flow</h3>
+<h3>Java Script</h3>
+<p>
+Objects<br>
+Arrays<br>
+Loops<br>
+Arrow functions<br>
+Template literals<br>
+Arrray methods<br>
+Variable delcarations<br>
+</p>
+  
+<h3>Java vs JS</h3>
+<p>
+Variable Declaration & Types<br>
+Control Structures<br>
+Functions/Methods<br>
+Basic Data Structure<br>
+</p>
 
-<h1>Understanding Refrence & Pointers</h1>
-<h3>Object Refrence</h3>
-<h3>Null Refrence</h3>
-<h3>Memory Managment</h3>
-<h3>Refrence Eqaulity vs Object Equality</h3>
-
-<h1>Node Creation</h1>
-<h3>Node Concept</h3>
-<h3>Basic node Structure</h3>
-<h3>Generic Types</h3>
-<h3>Construction & Methods</h3>
-
-<h1>Data Strcuture</h1>
-
-<h1> Advanced Linked Strucutre</h1>
-
-<h1> Tree Node & HIerachial Structures </h3>
-
-<h1>Graph nodes & advanced connections </h1>
-
-<h1>Practial Projects & Mastery </h1>
+<h3>Fluency</h3>
+<p>Code Reading in Java<br>
+Code Reading in JS</p>
