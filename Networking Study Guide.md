@@ -6,9 +6,11 @@
   Network Protocols<br>
   Network Services
   <h4>Adressing & Subnetting</h4>
- <P1>Ipv4 Adressing<br>
-  Ipv6 Adressing <br>
-  Subnetting & VLSM
+ <P1>Ipv4<br>
+  Ipv6<br>
+  Subnetting<br>
+  Binary Conversion<br>
+  Calculating Subnets
   </P1> 
   <h4>Network Infrastructure</h4>
    <p1>Network Devices<br>
