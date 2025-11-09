@@ -91,7 +91,14 @@
 
  <H4>Span: Inline generic</H4>
  Features:<br>
- Basic Highlighting; [span class= "highlight"]text being highlighted [/span]
+ Basic Highlighting; [span class= "highlight"]text being highlighted [/span]<br>
+ Color Styling; [span class="red-text" text turned red[/span]<br>
+ Inline Styling (Direct CSS);[span style="color: green; font- weight: bold;"]font with Inline styling[/span]<br>
+ 
+<h5>**Font Weight Option:s<br>
+ Nomral, Bold, Lighter, Bolder</h5>
+ 
+ 
 
  <h4>
  Example:<br>
