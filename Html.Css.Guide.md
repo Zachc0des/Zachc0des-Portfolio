@@ -85,7 +85,7 @@
  [DIV] [H1] Tittle Header warpped in container[/H1]<br>
   [P] Paragraph warapped in container [/P]<br>
   [H3] Subection header wrapped in cotainer [/H3]
- <h4>Best Used for: Best for: Layout structure, applying CSS classes, grouping elements, creaitng sections, JavaScript targeting<br><br>
+ <h4>Best Used for: Best for: Layout structure, applying CSS classes, grouping elements, creating sections, <br><br>
  Use case: Groups multiple elements together for layout styling.</h4>  
 
   
