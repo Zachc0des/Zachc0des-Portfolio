@@ -59,17 +59,33 @@
 
   <h2> Heading Hiearchary</h2>
   <P>
-  H1: Main page title (only one per page)<br>
+  <h4>H1: Main page title (only one per page)</h4>
   Example: [H1] Main Title [/H1]
 
-   H2: Major Section headings<br>
+   <h4>H2: Major Section headings<br></h4>
    Example: [H2] Section Title [/H2]
 
-   H3: Subsection headings<br>
+   <h4>H3: Subsection headings<br></h4>
     Example: [H3] Subsection [/H3]
 
-  H4-H6: Further subdivisions<br>
-  Example: [H4] Sub-section [/H4]
+   <h4>H4-H6: Further subdivisions<br></h4>
+    Example: [H4] Sub-section [/H4]
   </P>
+
+  <h2>Text Content Elements</h2>
+  <p>
+ <H4> P: Paragraph </H4>
+  Example: [P] Lorem Ipsol, Lorem Ipsol, Lorem Ipsol [/P]<br>
+ <h5> Best Used For: Body Text, decriptions, articles, blog posts, any readable text content<br>
+  Use case: Group related sentences into a block of text.</h5>
+ 
+ <h4>Div: Generic Container </h4>   
+  
+ Example: <br> <br>
+ [DIV] [H1] Tittle Header warpped in container[/H1]<br>
+  [P] Paragraph warapped in container [/P]<br>
+  [H3] Subection header wrapped in cotainer [/H3]
+ <h4>Best Used for: Best for: Layout structure, applying CSS classes, grouping elements, creaitng sections, JavaScript targeting<br><br>
+ Use case: Groups multiple elements together for layout styling.</h4>  
 
   
