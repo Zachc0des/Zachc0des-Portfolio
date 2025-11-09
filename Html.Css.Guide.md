@@ -100,7 +100,7 @@
 <h5>**Font Weight Options:<br>
  Nomral, Bold, Lighter, Bolder</h5>
 
- Multiple Styles; [span class "fancy"> Text Composed of CSS class"Fancy"[/span]
+ Multiple Styles; [span class "fancy"> Text Composed of CSS class Fancy [/span]
  <h5>CSS class Fancy:<br>
  text-decoration: underline;<br>
  font-style: italic;<br>
