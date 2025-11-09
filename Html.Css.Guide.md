@@ -63,7 +63,14 @@
   H1: Main page title (only one per page)<br>
   Example: [H1] Main Title [/H1]
 
-  H2: Major Section headings<br>
-  Example: [H2] Section Title [/H2]
+   H2: Major Section headings<br>
+   Example: [H2] Section Title [/H2]
+
+   H3: Subsection headings<br>
+    Example: [H3] Subsection [/H3]
+
+  H4-H6: Further subdivisions<br>
+  Example: [H4] Sub-section [/H4]
+
  
   </P>
