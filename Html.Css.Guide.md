@@ -91,16 +91,20 @@
 
  <H4>Span: Inline generic</H4>
  Features:<br><br>
- Basic Highlighting; [span class= "highlight"]text being highlighted [/span]<br><br>
+ Basic Highlighting;<br>
+ [span class= "highlight"]text being highlighted [/span]<br><br>
  
- Color Styling; [span class="red-text" text turned red[/span]<br>
+ Color Styling;<br>
+ [span class="red-text" text turned red[/span]<br>
  
- Inline Styling (Direct CSS);[span style="color: green; font- weight: bold;"]font turned green with bold font[/span]<br>
+ Inline Styling (Direct CSS);<br>
+ [span style="color: green; font- weight: bold;"]font turned green with bold font[/span]<br>
  
 <h5>**Font Weight Options:<br>
  Nomral, Bold, Lighter, Bolder</h5>
 
- Multiple Styles; [span class "fancy"> Text Composed of CSS class Fancy [/span]
+ Multiple Styles;<br>
+ [span class "fancy"> Text Composed of CSS class Fancy [/span]
  <h5>CSS class Fancy:<br>
  text-decoration: underline;<br>
  font-style: italic;<br>
