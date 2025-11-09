@@ -74,6 +74,7 @@
 
   <h2>Text Content Elements</h2>
   <p>
+    
  <H4> P: Paragraph </H4>
   Example: [P] Lorem Ipsol, Lorem Ipsol, Lorem Ipsol [/P]<br>
  <h5> Best Used For: Body Text, decriptions, articles, blog posts, any readable text content<br>
@@ -87,5 +88,13 @@
   [H3] Subection header wrapped in cotainer [/H3]
  <h4>Best Used for: Best for: Layout structure, applying CSS classes, grouping elements, creating sections, <br><br>
  Use case: Groups multiple elements together for layout styling.</h4>  
+
+ <H4>Span: Inline generic</H4>
+ Features:<br>
+ Basic Highlighting; [span class= "highlight"]text being highlighted [/span]
+
+ <h4>
+ Example:<br>
+[P] lorem ipsol, The part after lorem will be highlighted next[span class= "highlight"]ipsol[/span] </h4>
 
   
