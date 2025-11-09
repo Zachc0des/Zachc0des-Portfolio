@@ -111,6 +111,12 @@
  color: #764ba2<br>
  font-weight: bold;<br>  
  </h5>
+
+ Emoji Styling<br>
+ [span class "emoji-style']👉[/span]
+
+ Multiple spans
+ 
  
  
 
