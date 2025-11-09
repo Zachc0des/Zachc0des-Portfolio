@@ -1,7 +1,7 @@
 <H1>HTML & CSS Guide</H1>
 <H3>Table of contents</H3>
 <h4>Html Basics</h4>
-<P>Html Document Strcture<br>
+<P>Html Document Structure<br>
   Common HTML Tags <br>
   HTML Attributes <br>
   Headings & Paragraphs<br>
