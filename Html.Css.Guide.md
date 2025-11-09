@@ -122,8 +122,15 @@
  
  
 
- <h4>
+ <h5>
  Example:<br>
-[P] lorem ipsol, The part after lorem will be highlighted next[span class= "highlight"]ipsol[/span] </h4>
+[P] lorem ipsol, The part after lorem will be highlighted next[span class= "highlight"]ipsol[/span] </h5>
+
+<H4>BR: Line Breaking</H4>
+Example:Lorem ipsol [BR] Lorem Ipsol<br>
+<h5>Use case: Forces Text to continue on the next line without creating a new pagraph<br>
+Best for: Adresses, poetry lryics, signatures, maintaining line structure without paragrpah spacing</h5 
+
+
 
   
