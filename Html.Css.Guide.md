@@ -115,7 +115,9 @@
  Emoji Styling<br>
  [span class "emoji-style']👉[/span]
 
- Multiple spans
+ Multiple Spans in One Line;<br><br>
+ [span class="red text"] Text in red[/span],span class= blue-bg"] Text with Blue background[/span,[span class=highlight"] Text with yellow Highlight[/span]
+
  
  
  
