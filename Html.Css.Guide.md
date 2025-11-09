@@ -1,8 +1,7 @@
 <H1>HTML & CSS Guide</H1>
-<H3>Table of contents</H3>
-<h4>Html Basics</h4>
-<P>Html Document Structure<br>
-  Common HTML Tags <br>
+<h4>Html Document Strucutre</h4>
+<P>Heading Hiearchy<br>
+  Text Content Elements <br>
   HTML Attributes <br>
   Headings & Paragraphs<br>
   Headings & Paragrpahs <br>
@@ -71,6 +70,6 @@
 
   H4-H6: Further subdivisions<br>
   Example: [H4] Sub-section [/H4]
-
- 
   </P>
+
+  
