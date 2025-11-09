@@ -60,7 +60,10 @@
 
   <h2> Heading Hiearchary</h2>
   <P>
-  H1: Main page title (only one per page)
-  <br> Example: [H1] Main Title [/H1]
+  H1: Main page title (only one per page)<br>
+  Example: [H1] Main Title [/H1]
+
+  H2: Major Section headings<br>
+  Example: [H2] Section Title [/H2]
  
   </P>
