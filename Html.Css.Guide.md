@@ -57,3 +57,10 @@
     Browser Developer Tools<br>
     CSS Preprocessors <br>
   </p>
+
+  <h2> Heading Hiearchary</h2>
+  <P>
+  H1: Main page title (only one per page)
+  <br> Example: [H1] Main Title [/H1]
+ 
+  </P>
