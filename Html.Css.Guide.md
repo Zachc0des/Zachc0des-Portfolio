@@ -4,7 +4,6 @@
   Text Content Elements <br>
   HTML Attributes <br>
   Headings & Paragraphs<br>
-  Headings & Paragrpahs <br>
   Links & Navigation <br>
   Adding Images <br>
   Lists (Ordered & Unordered <br>
