@@ -379,9 +379,35 @@ Key Pattern: All network bits</P>
 
 <h2>Binary Conversion</h2>
 
+<h4> Conversion Refrence</h4>
+<p>
+Character: A <br>
+Decimal: 65 <br>
+Binary: 01000001
+</p>
 
+<p>
+Character: B<br>
+Decimal: 66<br>
+Binary:01000010  
+</p>
 
-  
+<p>
+Character: 0<br>  
+Decimal: 48 <br>
+Binary: 00110000  
+</p>
 
+<p>
+Character: 1 <br>
+Decimal: 40 <br>
+Binary:00110001 
+</p>
+
+<h5>
+  Binary uses only 0s & 1s to represent data.<br>
+  Each Character has a decimal ASCII value that converts to an 8-bit number.<br>
+  Each Bit position represents a power of 2: 128,64,32,16,8,4,2  
+</h5>
 
 
