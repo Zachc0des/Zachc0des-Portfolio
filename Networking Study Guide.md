@@ -410,4 +410,21 @@ Binary:00110001
   Each Bit position represents a power of 2: 128,64,32,16,8,4,2  
 </h5>
 
+<h2>Network Devices</h2>
+<p>Network devices are hardware components that facilitate communication and  transfer data across networks. <br><br>
+  
+These devices operate at different layers of the OSI model and serve specific functions in network infrastructure: 
 
+<h4>Switches: (Layer 2/3) </h4>
+<p>
+Function: Connect devices within a LAN and forward data based on MAC addresses (Layer 2) or IP addresses (Layer 3).<br><br>
+Key Features: VLAN support, QoS, PoE (Power over Ethernet), port-security<br><br
+Example: Cisco Catalyst 9300 Series - Enterprise-grade multilayer switch supporting up to 48 ports, PoE+, and advanced security features like MACsec encryption
+</p>
+
+<h4> Routers: (Layer 3)</h4>
+<p>
+Function: Connect different networks & route traffic between them using IP addresses & routing protocols.<br><br>
+Key Features:  Routing Protocols (OSPF,EIGRP, BGP), NAT, ACLs, VPN support<br><br>
+Example: Cisco ISR 4000 Series - Integrated Services Router providing WAN connectivity, security & application optimization for branch offices   
+</p>
