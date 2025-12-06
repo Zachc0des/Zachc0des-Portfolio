@@ -320,3 +320,17 @@ Higher number + more network bits = fewer hosts
 /29: 6 hosts (very small)<br>
 /30: 2 hosts (point-to-point links)  
 </p>
+
+<h4>Powers of 2 in Subnetting</h4>
+<p>IP addresses are binary, each bit can be  either 0 or 1, giving us 2 possibilities per bit<br>
+Every calculation in subnetting is based on powers of 2
+<h4>Essential Formulas</h4>
+<p> Number of Addresses:<br>
+2n: where n = number of host bits<br><br>
+  
+Usable Hosts:<br>
+2n - 2: Subtract 2 (for network & broadcast addresses)
+
+</p>
+  
+</h5>
