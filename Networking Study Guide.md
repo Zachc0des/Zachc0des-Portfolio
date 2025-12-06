@@ -266,7 +266,7 @@ IP address lease management <br>
 <h2>Subnetting </h2>
 <h3>Core Concepts</h3>
 <h5>The practice of dividing a network into smaller, more manageable sub-networks (subnets)</h5>
-<p></p>Key Address Types<br>
+<p>Key Address Types<br>
 CIDR Notation <br>
 Block size trick<br>
 Quick Reference /24 to /30 <br>
@@ -284,4 +284,19 @@ The Magic Formula Usable Hosts = 2ⁿ - 2 <br>
 <p>The last address in any subnet where all host bits are set to 1. Used to send messages to all devices on the network simultaneously</p>
 <h4>Usable Host Addresses</h4>
 <p>All adresses between the network & brodacast addresses. These can be assigned to actual devices like computers, servers & routers</p>
+
+<H4>CIDR Notation</H4>
+<p>Classless Inter-Domain Routing) Notation is a compact way to specify an IP address and its associated network mask. It's written as an IP address followed by a slash & a number, like:192.168.1.0/24<br>
+
+192.168.1.0./24 means 24 network bits<br>
+The number after "/' tells you how many bits are "locked" for the network<br>
+Higher number + more network bits = fewer hosts
+</p>
+
+<h5> *Higher CIDR number = More network bits locked = Fewer hosts available* <br>
+/16 = Large network (65k + hosts)- Good for large organizations<br>
+/24 = Medium network (254 hosts) - Common for small offices/departments<br>
+/30 = Tiny network (2 hosts) - Perfect for point-to-point links between routers  
+</h5>
+
 
