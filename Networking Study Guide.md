@@ -10,7 +10,6 @@
   Ipv6<br>
   Subnetting<br>
   Binary Conversion<br>
-  Calculating Subnets
   </P1> 
   <h4>Network Infrastructure</h4>
    <p1>Network Devices<br>
@@ -378,6 +377,7 @@ Key Pattern: 4 addresses</p>
 Decimal: 255<br>
 Key Pattern: All network bits</P>
 
+<h2>Binary Conversion</h2>
 
 
 
