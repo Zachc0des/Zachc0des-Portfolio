@@ -299,4 +299,14 @@ Higher number + more network bits = fewer hosts
 /30 = Tiny network (2 hosts) - Perfect for point-to-point links between routers  
 </h5>
 
+<h4>Block Size Trick for Subnetting</h4>
+
+<h5> Formula: Block Size = 256 - Subnet - Octet</h5>
+
+<p>
+  The fastest way to find network ranges & subnet boundaries<br>
+  1. Find the "interesting octet"(the one that's NOT 0 or 255 in the subnet mask)<br>
+  2. Subtract that number from 256<br>
+  3. The result is your block size - count by this number to find all subnets <br>
+</p>
 
