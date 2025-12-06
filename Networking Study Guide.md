@@ -264,7 +264,7 @@ IP address lease management <br>
    </P>
    
 <h2>Subnetting </h2>
-<h4>Core Conepts</h4>
+<h4>Core Concepts</h4>
 <h5>The practice of dividing a network into smaller, more manageable sub-networks (subnets)</h5>
 <p></p>Key Address Types<br>
 CIDR Notation <br>
