@@ -310,3 +310,13 @@ Higher number + more network bits = fewer hosts
   3. The result is your block size - count by this number to find all subnets <br>
 </p>
 
+<h4>Quick Reference /24 to /30</h4>
+<p>
+/24: 254 hots (typical small network)<br>
+/25: 126 hosts (half of /24)<br> 
+/26: 62 hosts (quarter of /24)<br>
+/27: 30 hosts (small office)<br>
+/28: 14 hosts (tiny network)<br>
+/29: 6 hosts (very small)<br>
+/30: 2 hosts (point-to-point links)  
+</p>
