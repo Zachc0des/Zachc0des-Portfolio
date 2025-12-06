@@ -286,7 +286,7 @@ The Magic Formula Usable Hosts = 2ⁿ - 2 <br>
 <p>All adresses between the network & brodacast addresses. These can be assigned to actual devices like computers, servers & routers</p>
 
 <H4>CIDR Notation</H4>
-<p>Classless Inter-Domain Routing) Notation is a compact way to specify an IP address and its associated network mask. It's written as an IP address followed by a slash & a number, like:192.168.1.0/24<br>
+<p>Classless Inter-Domain Routing; Notation is a compact way to specify an IP address and its associated network mask. It's written as an IP address followed by a slash & a number, like:192.168.1.0/24<br>
 
 192.168.1.0./24 means 24 network bits<br>
 The number after "/' tells you how many bits are "locked" for the network<br>
