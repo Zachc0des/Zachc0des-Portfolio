@@ -418,7 +418,7 @@ These devices operate at different layers of the OSI model and serve specific fu
 <h4>Switches: (Layer 2/3) </h4>
 <p>
 Function: Connect devices within a LAN and forward data based on MAC addresses (Layer 2) or IP addresses (Layer 3).<br><br>
-Key Features: VLAN support, QoS, PoE (Power over Ethernet), port-security<br><br
+Key Features: VLAN support, QoS, PoE (Power over Ethernet), port-security<br><br>
 Example: Cisco Catalyst 9300 Series - Enterprise-grade multilayer switch supporting up to 48 ports, PoE+, and advanced security features like MACsec encryption
 </p>
 
@@ -427,4 +427,24 @@ Example: Cisco Catalyst 9300 Series - Enterprise-grade multilayer switch support
 Function: Connect different networks & route traffic between them using IP addresses & routing protocols.<br><br>
 Key Features:  Routing Protocols (OSPF,EIGRP, BGP), NAT, ACLs, VPN support<br><br>
 Example: Cisco ISR 4000 Series - Integrated Services Router providing WAN connectivity, security & application optimization for branch offices   
+</p>
+
+<h4>Firewalls (Layer 4-7)</h4>
+<p>
+Function: Monitor & control incoming/outgoing network traffic based on security rules & policies. <br><br>
+Key Features: Stateful inspection, IPS/IDS, application filtering, VPN concentrator <br><br>
+Example: Cisco Firepower - Next-generation firewall with threat intelligence, malware protection, & application visibility & control
+</p>
+
+<h4>Access Points (Layer 2)</h4>
+<p>
+Function: provide wireless connectivity to client devices & bridge wireless to wired networks.<br><br> Key Features: Multiple SSIDS, band steering, mesh capability, centralized management<br><br>
+Examples: Cisco Catalyst 9100 Series AP - WiFi 6 (802.11ax) access point supporting up to 4.8 Gbps aggregate data rate.
+</p>
+
+<h4> Wireless Controllers</h4>
+<p>
+Function: Centrally manage and configure multiple access points across the network.<br><br>
+Key Features: RF management, load balancing, guest access, mobility services<br><br>
+Example: Cisco Catalyst 9800 Wireless Controller - Manages up to 6,000 access points with integrated security & analytics   
 </p>
