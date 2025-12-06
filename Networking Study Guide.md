@@ -448,3 +448,27 @@ Function: Centrally manage and configure multiple access points across the netwo
 Key Features: RF management, load balancing, guest access, mobility services<br><br>
 Example: Cisco Catalyst 9800 Wireless Controller - Manages up to 6,000 access points with integrated security & analytics   
 </p>
+
+<h4> Netowrk Topologies</h4>
+<p> Network topology defines the physical or logical arrangement of network devices and connections.<br>
+The topology choice impacts network performance, scalability, fault tolerance, & cost.  
+</p>
+
+<h4>
+  Star Topology
+</h4>
+
+<p></p>
+
+<h4>Mesh Topology</h4>
+<p></p>
+
+<h4>Hiereachial (Three-Tier)</h4>
+<p></p>
+
+<h4>Hub-and-Spoke (WAN)</h4>
+<p></p>
+
+<h4>Spine-Leaf (Data Center)</h4>
+<p></p>
+
