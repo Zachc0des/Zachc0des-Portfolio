@@ -264,7 +264,7 @@ IP address lease management <br>
    </P>
    
 <h2>Subnetting </h2>
-<h4>Core Concepts</h4>
+<h3>Core Concepts</h3>
 <h5>The practice of dividing a network into smaller, more manageable sub-networks (subnets)</h5>
 <p></p>Key Address Types<br>
 CIDR Notation <br>
@@ -276,4 +276,12 @@ The Magic Formula Usable Hosts = 2ⁿ - 2 <br>
 </p>
 <h5>Example:Dividing a large apartment building into separate floors & apartments | Improving network peformance & enhancing security</h5>
 
+<h3>Key Address Types</h3>
+
+<h4>Network Address</h4>
+<p>The first address in any subnet where all host bits are set to 0. This identifies the network itself & cannot be assigned to a device.</p>
+<h4>Broadcast Address</h4>
+<p>The last address in any subnet where all host bits are set to 1. Used to send messages to all devices on the network simultaneously</p>
+<h4>Usable Host Addresses</h4>
+<p>All adresses between the network & brodacast addresses. These can be assigned to actual devices like computers, servers & routers</p>
 
