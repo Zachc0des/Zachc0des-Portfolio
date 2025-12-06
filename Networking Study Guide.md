@@ -299,7 +299,7 @@ Higher number + more network bits = fewer hosts
 /30 = Tiny network (2 hosts) - Perfect for point-to-point links between routers  
 </h5>
 
-<h4>Quick Reference /24 to /30</h4>
+<h4>Quick Reference /24 to /30:</h4>
 <p>
 /24: 254 hots (typical small network)<br>
 /25: 126 hosts (half of /24)<br> 
@@ -310,9 +310,17 @@ Higher number + more network bits = fewer hosts
 /30: 2 hosts (point-to-point links)  
 </p>
 
-<h4>Block Size Trick for Subnetting</h4>
+<h4>The Magic Formula:</h4>
+<p>
+  Usable Hosts = 2ⁿ - 2<br>
+  (where n = number of host bits)<br><br>
+  We subtract 2 because one address is the network and one is the broadcast address
+</p>
 
-<h5> Formula: Block Size = 256 - Subnet - Octet</h5>
+
+<h4>Block Size Trick for Subnetting:</h4>
+
+<h4> Formula: Block Size = 256 - Subnet - Octet</h4>
 
 <p>
   The fastest way to find network ranges & subnet boundaries<br>
@@ -323,7 +331,7 @@ Higher number + more network bits = fewer hosts
 
 
 
-<h4>Powers of 2 in Subnetting</h4>
+<h4>Powers of 2 in Subnetting:</h4>
 <p>IP addresses are binary, each bit can be  either 0 or 1, giving us 2 possibilities per bit<br>
 Every calculation in subnetting is based on powers of 2
 <h5> The Two Essential Formulas</h5>
@@ -335,4 +343,6 @@ Usable Hosts:<br>
 
 </p>
   
-</h5>
+
+
+
