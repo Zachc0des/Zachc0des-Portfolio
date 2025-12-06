@@ -342,6 +342,45 @@ Usable Hosts:<br>
 2n - 2: Subtract 2 (for network & broadcast addresses)
 
 </p>
+
+<h4>Subnet Mask Values to Memorize</h4>
+
+<p1>Binary: 00000000:<br>
+Decimal: 0<br>
+Key Pattern: All host bits  
+</p>
+
+<p1>Binary: 10000000
+Decimal: 128<br>
+Key Pattern: Split in Half</p1>
+
+<p1>Binary: 11000000:<br>
+Decimal: 192<br>
+Key Pattern: Split in quarters</p>
+
+<p1>Binary: 11100000:<br>
+Decimal: 224<br>
+Key Pattern: Split in eighths</p>
+
+<p1>Binary: 11110000:
+Decimal: 240 <br>
+Key Pattern: 16 addresses</p>
+
+<p1>Binary: 11111000:<br>
+Decimal: 248<br>
+Key Pattern: 8 addresses</p>
+
+<p1>Binary: 11111100:<br>
+Decimal: 252<br>
+Key Pattern: 4 addresses</p>
+
+<p1>Binary: 11111111:<br>
+Decimal: 255<br>
+Key Pattern: All network bits</P>
+
+
+
+
   
 
 
