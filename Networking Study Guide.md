@@ -263,5 +263,17 @@ IP address lease management <br>
      Usage: Local loopback<br>
    </P>
    
-<h2>Subnetting & VLSM:Variable Length Subnet Mask</h2>
-<h3></h3>
+<h2>Subnetting </h2>
+<h4>Core Conepts</h4>
+<h5>The practice of dividing a network into smaller, more manageable sub-networks (subnets)</h5>
+<p></p>Key Address Types<br>
+CIDR Notation <br>
+Block size trick<br>
+Quick Reference /24 to /30 <br>
+The Powers of 2 <br>
+The Magic Formula Usable Hosts = 2ⁿ - 2 <br>
+  
+</p>
+<h5>Example:Dividing a large apartment building into separate floors & apartments | Improving network peformance & enhancing security</h5>
+
+
