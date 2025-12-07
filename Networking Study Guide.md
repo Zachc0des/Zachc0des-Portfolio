@@ -439,7 +439,7 @@ Example: Cisco Firepower - Next-generation firewall with threat intelligence, ma
 <h4>Access Points (Layer 2)</h4>
 <p>
 Function: provide wireless connectivity to client devices & bridge wireless to wired networks.<br><br> Key Features: Multiple SSIDS, band steering, mesh capability, centralized management<br><br>
-Examples: Cisco Catalyst 9100 Series AP - WiFi 6 (802.11ax) access point supporting up to 4.8 Gbps aggregate data rate.
+Examples: Cisco Catalyst 9100 Series AP - WiFi 6 (802.11ax) access point supporting an aggregate data rate of up to 4.8 Gbps.
 </p>
 
 <h4> Wireless Controllers</h4>
@@ -457,18 +457,38 @@ The topology choice impacts network performance, scalability, fault tolerance, &
 <h4>
   Star Topology
 </h4>
-
-<p></p>
+<p>
+Description: All devices connect to a central  hub or switch. most common in modern LANS.<rb>
+Advantages: Easy troubleshooting, failure isolation, scalable<br> <br>
+Disadvantages: The Central device is a  single point of failure  <br><br>
+Example: Office network where all computers connect to a Cisco Catalyst switch in the server room. If one workstation fails, others remain operational
+</p>
 
 <h4>Mesh Topology</h4>
-<p></p>
+<p>Description: Every device connects to multiple other devices, creating redundant paths<br>
+Types: Full mesh (all-to-all) or Partial mesh (selective connections)<br>
+Advantages: High Redundancy, fault tolerance, no single point of failure <br> 
+Disadvantages: Expensive, complex configuration  
+</p>
 
 <h4>Hiereachial (Three-Tier)</h4>
-<p></p>
+<p>Description: Cisco's recommended design with Core, Distribution, & Access layers<br> </p>
+Layers: Core Layer; High-speed backbone connecting distribution layers<br>Distribution Layer; Aggregates access layer, applies policies<br>
+Access Layer: Connects end devices to the network
 
 <h4>Hub-and-Spoke (WAN)</h4>
-<p></p>
+<p>
+  Description: Central site (hub) connects to multiple remote sites (spokes).<br>
+  Advantages: Simplified management, centralized services<br>
+  Disadvantages: Hub is a single point of failure, no direct spoke-to-spoke communication<br>
+  Example: Company headquarters (hub) with Cisco ASR router connecting to 50 branch offices (spokes) via MPLS or VPN tunnels
+</p>
 
 <h4>Spine-Leaf (Data Center)</h4>
-<p></p>
+<p>Description: Every leaf switch connects to every spine switch in a full mesh pattern.
+Advantages: Low latency, high bandwidth, predictable performance <br>
+Use Case: Modern data centers with east-west traffic patterns<br>
+Example: Cisco ACI fabric using Nexus 9000 switches, where 4 spine switches connect to 32 leaf switches, providing consistent two-hop latency for any server-to-server communication
+</p>
+
 
