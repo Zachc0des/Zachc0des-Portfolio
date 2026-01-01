@@ -410,7 +410,9 @@ Binary:00110001
   Each Bit position represents a power of 2: 128,64,32,16,8,4,2  
 </h5>
 
-<h2>Network Devices</h2>
+<h2>Network infrastructure</h2>
+
+<h3>Network Devices</h3>
 <p>Network devices are hardware components that facilitate communication and  transfer data across networks. <br><br>
   
 These devices operate at different layers of the OSI model and serve specific functions in network infrastructure: 
@@ -449,7 +451,7 @@ Key Features: RF management, load balancing, guest access, mobility services<br>
 Example: Cisco Catalyst 9800 Wireless Controller - Manages up to 6,000 access points with integrated security & analytics   
 </p>
 
-<h4> Netowrk Topologies</h4>
+<h3> Netowrk Topologies</h3>
 <p> Network topology defines the physical or logical arrangement of network devices and connections.<br>
 The topology choice impacts network performance, scalability, fault tolerance, & cost.  
 </p>
@@ -491,4 +493,5 @@ Use Case: Modern data centers with east-west traffic patterns<br>
 Example: Cisco ACI fabric using Nexus 9000 switches, where 4 spine switches connect to 32 leaf switches, providing consistent two-hop latency for any server-to-server communication
 </p>
 
+<h3> Cabaling & Standards</h3>
 
