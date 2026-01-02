@@ -495,21 +495,21 @@ Example: Cisco ACI fabric using Nexus 9000 switches, where 4 spine switches conn
 
 <h3> Cabaling & Standards (UTP)</h3>
 
-<P>
+<p>
 UTP= Unshielded twisted Pair:<br><br>
-UTP refers to a type of a cable construction where the internal wire paris are twisted together but lack addtional shielding around them.<b><b>
+UTP refers to a type of a cable construction where the internal wire paris are twisted together but lack addtional shielding around them.<br><br>
 </p>
   
 <h4>Key Characteristics:</h4>
 
 <p>
 Twisted pairs: The wires inside are twisted in pairs to reduce electromagentic intereference (EMI) and crosswalk-between pairs<br><br>
-
 No shielding: Unlike STP (Shileding Twisted Pair) or FTP (Foil Twisted Pair), UTP cables dont have a metallic shiled or foild wrap around the wire pairs <br><br>
-
 Most commmon type: UTP is the most widely used cable type for Ethernet networking in homes and offices<br><br>
 UTP cables categories (↓)
 </p>
+
+
 
 
   
