@@ -499,7 +499,7 @@ UTP= Unshielded twisted Pair:<br><br>
 UTP refers to a type of a cable construction where the internal wire paris are twisted together but lack addtional shielding around them.<b><b>
 </p>
   
-<h4>Key Characterstics:<h4>
+<h4>Key Characteristics:<h4>
 
 <p>
 Twisted pairs: The wires inside are twisted in pairs to reduce electromagentic intereference (EMI) and crosswalk-between pairs<br><br>
