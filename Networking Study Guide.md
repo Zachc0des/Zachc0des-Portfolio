@@ -510,6 +510,16 @@ UTP cables categories (↓)
 </p>
 
 
+<h4>Cat 5e</h4>
+<p> Speed Threshold: 1Gbps<br>
+Distance: 100m <br>
+Enhanced to prevent crosstalk, supports Gigabit Ethernet   
+</p>
+
+ <h5>
+   Cross talk on Cat5e refers to unwated signal interferences between twisted pairs of wires inside the cable 
+ </h5>
+
 
 
   
