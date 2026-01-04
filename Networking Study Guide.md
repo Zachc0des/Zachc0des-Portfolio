@@ -493,7 +493,9 @@ Use Case: Modern data centers with east-west traffic patterns<br>
 Example: Cisco ACI fabric using Nexus 9000 switches, where 4 spine switches connect to 32 leaf switches, providing consistent two-hop latency for any server-to-server communication
 </p>
 
-<h3> Cabaling & Standards (UTP)</h3>
+<h3> Cabaling & Standards</h3>
+
+<h3>Cable Categories (UTP)</h3>
 
 <p>
 UTP= Unshielded twisted Pair:<br><br>
@@ -531,6 +533,17 @@ Speed Threshold: 10 Gbps<br>
   Lower AWG number=thicker wire<br>
   Higher AWG number=thinner wire 
 </h5>
-  
 
+
+  <h4>Cat 6</h4>
+<p>
+  Speed Threshold: 10 Gbps<BR>
+  Distance:100m<br>
+  Best balance for modern networks 500 Mhz bandwith
+</p>
+<h5>
+  Network bandiwth is a measurement indicating the maxium capacity of a wire or wireless communications link to transmit data over a network connnection in a given time 
+</h5>
+
+<h3>Cable types & Wiring Standards</h3>
 
