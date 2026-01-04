@@ -535,7 +535,7 @@ Speed Threshold: 10 Gbps<br>
 </h5>
 
 
-  <h4>Cat 6</h4>
+  <h4>Cat 6a</h4>
 <p>
   Speed Threshold: 10 Gbps<BR>
   Distance:100m<br>
@@ -547,3 +547,15 @@ Speed Threshold: 10 Gbps<br>
 
 <h3>Cable types & Wiring Standards</h3>
 
+<h4>Straight-Through Cable </h4>
+<p>
+  Most common type - connects different devices<br>
+  Common uses:<br>
+  PC-> Switch<br>
+  Router->Switch<br>
+  PC -> Router
+</p>
+<h5>Pinout Configuration:<br>
+Both ends: Same wire order (T568A or T568B)<br>
+T-568B being the standard 
+</h5>
