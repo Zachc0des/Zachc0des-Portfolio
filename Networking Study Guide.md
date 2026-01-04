@@ -520,8 +520,17 @@ Enhanced to prevent crosstalk, supports Gigabit Ethernet
    Cross talk on Cat5e refers to unwated signal interferences between twisted pairs of wires inside the cable 
  </h5>
 
-
-
+<h4> Cat 6 </h4>
+<p>
+Speed Threshold: 10 Gbps<br>
+  Distance:100m (1G), 55m (10g)
+  Larger guage wires, better peformance than Cat 5e 
+</p>
+<h5>
+  American Wire Gauge (AWG) is used to measure the diameter of electric conducted wiring in the US<br>
+  Lower AWG number=thicker wire<br>
+  Higher AWG number=thinner wire 
+</h5>
   
 
 
