@@ -559,3 +559,18 @@ Speed Threshold: 10 Gbps<br>
 Both ends: Same wire order (T568A or T568B)<br>
 T-568B being the standard 
 </h5>
+
+<h4>Crossover Cable</h4>
+<p>
+  Connects simliar devices directly<br>
+  Common uses:<br>
+  PC->PC<br>
+  Switch->Switch <br>
+  Router->Router 
+  <h5>
+    Pinout Configuration:<br>
+    Crossed Layout: Pin 1->3, Pin 2->6, Pin 3->1, Pin 6->2<br>
+    One end T568A & other T568B
+  </h5>
+
+</p>
