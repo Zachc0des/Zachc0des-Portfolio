@@ -552,7 +552,7 @@ Speed Threshold: 1-10 Gbps<br>
   Shielded twisted pair with enhanced electromagnetic (EMI protection)
 </p>
 <h5>
- EMI is unwanted electrical noise or disortion cuased by external electromagentic singals that can disrupt network cables & degrade data transmission 
+ EMI is unwanted electrical noise or disortion caused by external electromagentic singals that can disrupt network cables & degrade data transmission 
 </h5>
   
 <h3>Cable types & Wiring Standards</h3>
