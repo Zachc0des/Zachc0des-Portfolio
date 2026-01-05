@@ -524,8 +524,8 @@ Enhanced to prevent crosstalk, supports Gigabit Ethernet
 
 <h4> Cat 6 </h4>
 <p>
-Speed Threshold: 10 Gbps<br>
-  Distance:100m (1G), 55m (10g)
+Speed Threshold: 1-10 Gbps<br>
+  Distance:100m (1G), 55m (10g)<br>
   Larger guage wires, better peformance than Cat 5e 
 </p>
 <h5>
@@ -545,6 +545,16 @@ Speed Threshold: 10 Gbps<br>
   Network bandiwth is a measurement indicating the maxium capacity of a wire or wireless communications link to transmit data over a network connnection in a given time 
 </h5>
 
+<h4>Cat 7</h4>
+<p>
+  Spped Threshold:10 Gbps<br>
+  Distance: 100M<br>
+  Shielded twisted pair with enhanced electromagnetic (EMI protection)
+</p>
+<h5>
+ EMI is unwanted electrical noise or disortion cuased by external electromagentic singals that can disrupt network cables & degrade data transmission 
+</h5>
+  
 <h3>Cable types & Wiring Standards</h3>
 
 <h4>Straight-Through Cable </h4>
