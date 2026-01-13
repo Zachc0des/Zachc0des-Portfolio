@@ -584,3 +584,17 @@ T-568B being the standard
   </h5>
 
 </p>
+
+<h4> Rolled/Cosole Cable</h4>
+<p>
+Managment Cable for cisco devices<br>
+Common Use:<br>
+PC-> Router Console<br>  
+PC-> Switch Console<br>
+</p>
+<h5>
+ Pinout Configuration:<br>
+  Completly reversed pin order:RJ-45-D8-9 Adapter
+</h5>
+
+</h5>
