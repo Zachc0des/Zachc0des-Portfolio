@@ -595,6 +595,17 @@ PC-> Switch Console<br>
 <h5>
  Pinout Configuration:<br>
   Completly reversed pin order:RJ-45-D8-9 Adapter
-</h5>
+<h3>Cable Standards</h3>
+<h4>IEE 802.3</h4>
+<p>IEE 802.3 is the international standard that defines the physical layer and data link layer specifications for wired ethernet networks. It specifies cable types, maxium distances, transmission speeds, and connector types for local area networks (LANs)</p>
 
-</h5>
+<h4>
+ 10BBASE-T 
+</h4>
+<P>
+Speed Threshold:10 Mbps<br>
+Cable:Cat 3 UTP<br>
+Distance:100M<br>
+Connector:RJ-45<br>
+Use Case: Legacy Networks  
+</P>
