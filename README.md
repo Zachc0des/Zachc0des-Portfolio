@@ -1,4 +1,4 @@
-# Zachary Frederic
+# Zachary 
 
 > IT Professional · Developer · Creative Technologist · Orlando, FL
 
@@ -46,5 +46,5 @@
 
 ### Connect
 
-📧 zacharyfrederic@gmail.com · 📱 561-701-3687  
+📧  · 📱 
 🌐 [zachc0des.github.io](https://Zachc0des.github.io) · 💻 [github.com/Zachc0des](https://github.com/Zachc0des)
