@@ -6,7 +6,7 @@
 
 ### About
 
-22-year-old IT professional and self-directed learner pursuing a B.S. in Information Technology Management (WGU). Background spanning cybersecurity, customer operations, airline systems, CRM platforms, and creative production.
+23-year-old IT professional and self-directed learner pursuing a B.S. in Information Technology Management (WGU). Background spanning cybersecurity, customer operations, airline systems, CRM platforms, and creative production.
 
 ---
 
