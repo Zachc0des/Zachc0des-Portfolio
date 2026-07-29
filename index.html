@@ -7,8 +7,8 @@
 <!-- ═══════════════════════════════════════════════════════════════
      SITE TITLE + DESCRIPTION — edit these two lines
      ═══════════════════════════════════════════════════════════════ -->
-<title>Study Guides — Reference Library</title>
-<meta name="description" content="Code syntax and software walkthroughs, kept on hand." />
+<title>Zach C0des — Study Guides, References &amp; Tutorials</title>
+<meta name="description" content="Study guides, references, and tutorials written by Zach while learning IT, networking, and web development — kept on hand and searchable." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +39,20 @@
     font-size:16px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  /* faint blueprint grid + cobalt glow behind everything */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(900px 480px at 78% -10%, rgba(58,123,255,.13), transparent 62%),
+      radial-gradient(700px 420px at -10% 30%, rgba(58,123,255,.07), transparent 60%),
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:auto,auto,56px 56px,56px 56px;
+    opacity:.55;
+    mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.25) 55%, rgba(0,0,0,.12));
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.25) 55%, rgba(0,0,0,.12));
   }
   a{color:var(--cobalt);text-decoration:none}
   a:hover{text-decoration:underline}
@@ -64,6 +78,64 @@
     margin-left:auto;font-family:var(--mono);font-size:12px;
     color:var(--muted);letter-spacing:.06em;
   }
+  .headlinks{display:flex;gap:8px;align-items:center}
+  .headlink{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);border-radius:999px;
+    padding:6px 12px;transition:all .15s ease;white-space:nowrap;
+  }
+  .headlink svg{width:14px;height:14px;fill:currentColor;flex:none}
+  .headlink:hover{color:var(--paper);border-color:var(--cobalt);text-decoration:none;background:var(--cobalt-dim)}
+  @media(max-width:640px){
+    .headlink .lbl{display:none}
+    .headlink{padding:7px}
+    .masthead .count{display:none}
+  }
+
+  /* ---------- about / purpose strip ---------- */
+  .about{
+    display:grid;gap:22px;margin:52px 0 0;
+    grid-template-columns:minmax(0,1fr);
+  }
+  @media(min-width:820px){
+    .about{grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:28px}
+  }
+  .about-panel{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    padding:26px 28px;position:relative;overflow:hidden;
+  }
+  .about-panel::after{
+    content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--cobalt);
+  }
+  .about-panel .eyebrow{margin-bottom:12px}
+  .about-panel p{margin:0;color:var(--muted);font-size:14.5px;max-width:64ch}
+  .about-panel p + p{margin-top:12px}
+  .about-panel strong{color:var(--paper);font-weight:600}
+
+  .profile-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    padding:22px 24px;font-family:var(--mono);font-size:13px;
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .profile-card .term-label{
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--cobalt);margin-bottom:12px;
+  }
+  .term-line{
+    display:flex;align-items:center;gap:10px;padding:9px 10px;margin:0 -10px;
+    border-radius:3px;color:var(--paper);transition:background .15s ease;
+    line-height:1.4;min-width:0;
+  }
+  .term-line:hover{background:var(--cobalt-dim);text-decoration:none}
+  .term-line .caret{color:var(--cobalt);flex:none}
+  .term-line .cmd{color:var(--muted);flex:none}
+  .term-line .url{
+    color:var(--paper);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  }
+  .term-line:hover .url{color:var(--cobalt)}
+  .term-line svg{width:14px;height:14px;fill:var(--muted);flex:none;margin-left:auto}
+  .term-line:hover svg{fill:var(--cobalt)}
 
   /* ---------- hero + prompt ---------- */
   .hero{padding:64px 0 8px}
@@ -136,6 +208,7 @@
   }
   .card:hover,.card.active{
     background:var(--raised);transform:translateY(-2px);text-decoration:none;
+    box-shadow:0 10px 28px -14px rgba(58,123,255,.35);
   }
   .card.active{border-color:var(--cobalt)}
   .card .kicker{
@@ -287,8 +360,18 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="mark" href="#/" id="homeLink">Study<span>/</span>Guides</a>
+    <a class="mark" href="#/" id="homeLink">Zach<span>/</span>C0des</a>
     <div class="count" id="headCount"></div>
+    <nav class="headlinks" aria-label="Profile links">
+      <a class="headlink" href="https://github.com/Zachc0des" target="_blank" rel="noopener" title="GitHub profile">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span class="lbl">GitHub</span>
+      </a>
+      <a class="headlink" href="https://zachc0des.github.io" target="_blank" rel="noopener" title="Web profile">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm5.9 7.25h-2.42a12.6 12.6 0 0 0-1.06-4.67 6.52 6.52 0 0 1 3.48 4.67ZM8 14.5c-.77 0-1.86-1.78-2.15-5.75h4.3C9.86 12.72 8.77 14.5 8 14.5Zm-2.15-7.25C6.14 3.28 7.23 1.5 8 1.5s1.86 1.78 2.15 5.75h-4.3ZM5.58 2.58a12.6 12.6 0 0 0-1.06 4.67H2.1a6.52 6.52 0 0 1 3.48-4.67ZM2.1 8.75h2.42c.1 1.83.47 3.46 1.06 4.67A6.52 6.52 0 0 1 2.1 8.75Zm8.32 4.67c.59-1.21.96-2.84 1.06-4.67h2.42a6.52 6.52 0 0 1-3.48 4.67Z"/></svg>
+        <span class="lbl">Web Profile</span>
+      </a>
+    </nav>
   </div>
 </header>
 
@@ -298,9 +381,30 @@
     <!-- ═══════════════════════════════════════════════════════════
          PAGE TITLE + DESCRIPTION — edit the three lines below
          ═══════════════════════════════════════════════════════════ -->
-    <p class="eyebrow">Reference library</p>
-    <h1>Look it up.<br><em>Keep building.</em></h1>
+    <p class="eyebrow">Zach C0des</p>
+    <h1>Study Guides,<br><em>References &amp; Tutorials.</em></h1>
     <p class="lede">Study guides I wrote while learning. Everything renders straight from markdown — search, open, copy what you need.</p>
+
+    <div class="about">
+      <div class="about-panel">
+        <p class="eyebrow">Why this site exists</p>
+        <p><strong>This library is my public notebook.</strong> As I work through IT, networking, cybersecurity, and web development, I turn what I learn into clean, searchable study guides — first so I can look things up fast, and second so anyone else on the same path can too.</p>
+        <p>Everything here is written by hand while studying, kept up to date as I go, and free to reference. If it helped me pass a check or fix a problem, it lives here.</p>
+      </div>
+      <div class="profile-card">
+        <span class="term-label">Find me elsewhere</span>
+        <a class="term-line" href="https://github.com/Zachc0des" target="_blank" rel="noopener">
+          <span class="caret">&rsaquo;</span><span class="cmd">github</span>
+          <span class="url">github.com/Zachc0des</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7h-1.5V5.56L4.56 12.5 3.5 11.44 10.44 4.5H6V3Z"/></svg>
+        </a>
+        <a class="term-line" href="https://zachc0des.github.io" target="_blank" rel="noopener">
+          <span class="caret">&rsaquo;</span><span class="cmd">profile</span>
+          <span class="url">zachc0des.github.io</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7h-1.5V5.56L4.56 12.5 3.5 11.44 10.44 4.5H6V3Z"/></svg>
+        </a>
+      </div>
+    </div>
 
     <div class="prompt">
       <span class="caret" aria-hidden="true">&rsaquo;</span>
@@ -340,7 +444,7 @@
 </main>
 
 <footer class="wrap">
-  <span>Built and maintained by hand.</span>
+  <span>Built and maintained by hand by Zach C0des &nbsp;·&nbsp; <a href="https://github.com/Zachc0des" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp; <a href="https://zachc0des.github.io" target="_blank" rel="noopener">Web Profile</a></span>
   <span id="footCount"></span>
 </footer>
 
@@ -1369,7 +1473,7 @@ Use Case: Legacy Networks
   function showLibrary() {
     el.reader.classList.add("hidden");
     el.library.classList.remove("hidden");
-    document.title = "Study Guides — Reference Library";
+    document.title = "Zach C0des — Study Guides, References & Tutorials";
   }
 
   function openGuide(id) {
@@ -1379,7 +1483,7 @@ Use Case: Legacy Networks
     el.library.classList.add("hidden");
     el.reader.classList.remove("hidden");
     window.scrollTo(0, 0);
-    document.title = g.title + " — Study Guides";
+    document.title = g.title + " — Zach C0des";
 
     el.rKicker.textContent = prettyCat(g.category) +
       (g.updated ? "  ·  updated " + niceDate(g.updated) : "");
