@@ -1,1 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<!-- ═══════════════════════════════════════════════════════════════
+     SITE TITLE + DESCRIPTION — edit these two lines
+     ═══════════════════════════════════════════════════════════════ -->
+<title>Study Guides — Reference Library</title>
+<meta name="description" content="Code syntax and software walkthroughs, kept on hand." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#050A16;
+    --panel:#0A1428;
+    --raised:#0F1D38;
+    --line:#1C2E52;
+    --paper:#EEF3FC;
+    --muted:#8FA6CE;
+    --cobalt:#3A7BFF;
+    --cobalt-dim:rgba(58,123,255,.14);
+    --display:"IBM Plex Sans Condensed",system-ui,sans-serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --wrap:1120px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--cobalt);text-decoration:none}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:20;
+    background:rgba(5,10,22,.86);
+    backdrop-filter:blur(10px);
+  }
+  .masthead .wrap{display:flex;align-items:center;gap:16px;height:60px}
+  .mark{
+    font-family:var(--display);font-weight:700;font-size:20px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--paper);
+  }
+  .mark span{color:var(--cobalt)}
+  .mark:hover{text-decoration:none}
+  .masthead .count{
+    margin-left:auto;font-family:var(--mono);font-size:12px;
+    color:var(--muted);letter-spacing:.06em;
+  }
+
+  /* ---------- hero + prompt ---------- */
+  .hero{padding:64px 0 8px}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--cobalt);margin:0 0 18px;
+  }
+  .hero h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(44px,9vw,86px);line-height:.92;letter-spacing:-.02em;
+    text-transform:uppercase;margin:0 0 18px;
+  }
+  .hero h1 em{font-style:normal;color:var(--muted)}
+  .lede{max-width:52ch;color:var(--muted);margin:0 0 44px}
+
+  .prompt{
+    display:flex;align-items:center;gap:12px;
+    border-bottom:2px solid var(--line);
+    padding:10px 2px 14px;
+    transition:border-color .18s ease;
+  }
+  .prompt:focus-within{border-bottom-color:var(--cobalt)}
+  .prompt .caret{
+    font-family:var(--mono);font-size:22px;color:var(--cobalt);
+    line-height:1;transform:translateY(-1px);
+  }
+  #search{
+    flex:1;min-width:0;background:none;border:0;color:var(--paper);
+    font-family:var(--mono);font-size:clamp(16px,2.4vw,20px);
+    padding:0;caret-color:var(--cobalt);
+  }
+  #search::placeholder{color:#4E6699}
+  #search:focus{outline:none}
+  .keyhint{
+    font-family:var(--mono);font-size:11px;color:var(--muted);
+    border:1px solid var(--line);border-radius:4px;padding:3px 7px;
+    white-space:nowrap;
+  }
+  .promptmeta{
+    display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+    font-family:var(--mono);font-size:12px;color:var(--muted);
+    margin:14px 0 0;letter-spacing:.04em;
+  }
+
+  /* ---------- filters ---------- */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 22px}
+  .chip{
+    font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);
+    background:none;border:1px solid var(--line);border-radius:999px;
+    padding:7px 14px;cursor:pointer;transition:all .15s ease;
+  }
+  .chip:hover{color:var(--paper);border-color:#2B457A}
+  .chip[aria-pressed="true"]{
+    color:var(--ink);background:var(--paper);border-color:var(--paper);
+  }
+
+  /* ---------- library ---------- */
+  .grid{
+    display:grid;gap:14px;padding-bottom:80px;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  }
+  .card{
+    display:block;position:relative;text-align:left;width:100%;
+    background:var(--panel);border:1px solid var(--line);
+    border-left:3px solid var(--cobalt);
+    border-radius:3px;padding:20px 22px;cursor:pointer;
+    color:inherit;font:inherit;
+    transition:background .15s ease,transform .15s ease,border-color .15s ease;
+  }
+  .card:hover,.card.active{
+    background:var(--raised);transform:translateY(-2px);text-decoration:none;
+  }
+  .card.active{border-color:var(--cobalt)}
+  .card .kicker{
+    display:flex;justify-content:space-between;gap:12px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--cobalt);margin-bottom:12px;
+  }
+  .card .kicker .date{color:var(--muted)}
+  .card h3{
+    font-family:var(--display);font-weight:600;font-size:22px;
+    line-height:1.15;margin:0 0 8px;letter-spacing:.01em;
+  }
+  .card p{margin:0 0 14px;color:var(--muted);font-size:14.5px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{
+    font-family:var(--mono);font-size:11px;color:var(--muted);
+    background:var(--cobalt-dim);border-radius:3px;padding:2px 7px;
+  }
+
+  .empty{
+    border:1px dashed var(--line);border-radius:4px;
+    padding:40px 28px;color:var(--muted);margin-bottom:80px;
+  }
+  .empty h3{
+    font-family:var(--display);color:var(--paper);font-size:22px;
+    margin:0 0 8px;font-weight:600;
+  }
+  .empty code{
+    font-family:var(--mono);font-size:13px;color:var(--paper);
+    background:var(--raised);padding:2px 6px;border-radius:3px;
+  }
+
+  /* ---------- reader ---------- */
+  .reader{padding:44px 0 100px}
+  .back{
+    font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--muted);
+    background:none;border:0;padding:0;cursor:pointer;margin-bottom:36px;
+  }
+  .back:hover{color:var(--cobalt)}
+  .reader-head{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:40px}
+  .reader-head .kicker{
+    font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--cobalt);margin-bottom:14px;
+  }
+  .reader-head h2{
+    font-family:var(--display);font-weight:700;text-transform:uppercase;
+    font-size:clamp(32px,6vw,56px);line-height:.98;letter-spacing:-.01em;margin:0 0 12px;
+  }
+  .reader-head p{color:var(--muted);margin:0;max-width:60ch}
+
+  .reader-body{display:grid;gap:56px;grid-template-columns:minmax(0,1fr)}
+  @media(min-width:960px){
+    .reader-body{grid-template-columns:minmax(0,1fr) 210px}
+  }
+
+  .toc{display:none}
+  @media(min-width:960px){
+    .toc{display:block;position:sticky;top:92px;align-self:start;font-size:13.5px}
+    .toc .label{
+      font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--muted);
+      padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px;
+    }
+    .toc a{display:block;color:var(--muted);padding:5px 0;line-height:1.35}
+    .toc a:hover{color:var(--paper);text-decoration:none}
+    .toc a.sub{padding-left:14px;font-size:12.5px}
+  }
+
+  /* markdown content */
+  .doc{max-width:74ch}
+  .doc h1{font-family:var(--display);font-size:34px;margin:48px 0 16px;font-weight:700}
+  .doc h2{
+    font-family:var(--display);font-size:27px;font-weight:600;
+    margin:52px 0 14px;padding-top:14px;border-top:1px solid var(--line);
+  }
+  .doc h3{font-family:var(--display);font-size:20px;font-weight:600;margin:34px 0 10px}
+  .doc p{margin:0 0 18px}
+  .doc ul,.doc ol{margin:0 0 20px;padding-left:22px}
+  .doc li{margin-bottom:8px}
+  .doc li::marker{color:var(--cobalt)}
+  .doc strong{color:#fff}
+  .doc blockquote{
+    margin:24px 0;padding:2px 0 2px 20px;
+    border-left:3px solid var(--cobalt);color:var(--muted);
+  }
+  .doc hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+  .doc img{max-width:100%;border-radius:3px;border:1px solid var(--line)}
+  .doc table{
+    width:100%;border-collapse:collapse;margin:0 0 24px;
+    font-size:14.5px;display:block;overflow-x:auto;
+  }
+  .doc th,.doc td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+  .doc th{
+    background:var(--panel);font-family:var(--mono);font-size:12px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:500;
+  }
+  .doc :not(pre) > code{
+    font-family:var(--mono);font-size:.88em;color:#BBD0FF;
+    background:var(--cobalt-dim);padding:2px 6px;border-radius:3px;
+  }
+
+  .codeblock{position:relative;margin:0 0 24px}
+  .codeblock pre{
+    margin:0;overflow-x:auto;background:var(--panel);
+    border:1px solid var(--line);border-radius:4px;padding:20px 20px 20px 22px;
+  }
+  .codeblock code{
+    font-family:var(--mono);font-size:13.5px;line-height:1.7;
+    color:#D5E2FA;background:none;padding:0;
+  }
+  .copy{
+    position:absolute;top:9px;right:9px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);background:var(--raised);
+    border:1px solid var(--line);border-radius:3px;
+    padding:4px 9px;cursor:pointer;opacity:0;transition:opacity .15s ease,color .15s ease;
+  }
+  .codeblock:hover .copy,.copy:focus-visible{opacity:1}
+  .copy:hover{color:var(--paper)}
+  .copy.done{color:var(--cobalt);opacity:1}
+
+  /* syntax tokens — blue/white only */
+  .hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-doctag{color:#7FA9FF}
+  .hljs-string,.hljs-regexp,.hljs-addition{color:#9FE0FF}
+  .hljs-comment,.hljs-quote{color:#5C7099;font-style:italic}
+  .hljs-number,.hljs-symbol,.hljs-bullet{color:#C9B8FF}
+  .hljs-title,.hljs-name,.hljs-section,.hljs-function .hljs-title{color:#FFFFFF;font-weight:600}
+  .hljs-attr,.hljs-attribute,.hljs-variable,.hljs-template-variable{color:#8FA6CE}
+  .hljs-built_in,.hljs-type,.hljs-class .hljs-title{color:#6FD3FF}
+  .hljs-meta{color:#5C7099}
+  .hljs-deletion{color:#FF9AA2}
+
+  footer{
+    border-top:1px solid var(--line);padding:26px 0 40px;
+    font-family:var(--mono);font-size:12px;color:var(--muted);
+    display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+  }
+
+  .hidden{display:none !important}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="mark" href="#/" id="homeLink">Study<span>/</span>Guides</a>
+    <div class="count" id="headCount"></div>
+  </div>
+</header>
+
+<!-- ============ LIBRARY ============ -->
+<main id="library">
+  <section class="hero wrap">
+    <!-- ═══════════════════════════════════════════════════════════
+         PAGE TITLE + DESCRIPTION — edit the three lines below
+         ═══════════════════════════════════════════════════════════ -->
+    <p class="eyebrow">Reference library</p>
+    <h1>Look it up.<br><em>Keep building.</em></h1>
+    <p class="lede">Study guides I wrote while learning. Everything renders straight from markdown — search, open, copy what you need.</p>
+
+    <div class="prompt">
+      <span class="caret" aria-hidden="true">&rsaquo;</span>
+      <input id="search" type="search" placeholder="search guides, topics, tags — full text" autocomplete="off" spellcheck="false" aria-label="Search guides" />
+      <span class="keyhint" aria-hidden="true">/</span>
+    </div>
+    <p class="promptmeta">
+      <span id="matchCount">—</span>
+      <span>&uarr;&darr; move</span>
+      <span>&crarr; open</span>
+      <span>esc clear</span>
+    </p>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+  </section>
+
+  <div class="wrap">
+    <div class="grid" id="grid"></div>
+    <div class="empty hidden" id="empty"></div>
+  </div>
+</main>
+
+<!-- ============ READER ============ -->
+<main id="reader" class="hidden">
+  <div class="reader wrap">
+    <button class="back" id="backBtn">&larr; All guides</button>
+    <div class="reader-head">
+      <div class="kicker" id="rKicker"></div>
+      <h2 id="rTitle"></h2>
+      <p id="rSummary"></p>
+    </div>
+    <div class="reader-body">
+      <article class="doc" id="rDoc"></article>
+      <nav class="toc" id="rToc" aria-label="On this page"></nav>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap">
+  <span>Built and maintained by hand.</span>
+  <span id="footCount"></span>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════════════════
+     YOUR STUDY GUIDES LIVE HERE — this is the ONLY part you ever touch.
+
+     TO ADD A GUIDE:
+       1. Copy one whole <script type="text/markdown"> ... </script> block.
+       2. Paste your finished README.md content between the tags.
+       3. Set the three data- attributes on the opening tag:
+            data-category  one word, lowercase (networking, python, linux...)
+            data-tags      comma-separated keywords for the card
+            data-updated   YYYY-MM-DD (newest shows first)
+       4. Save, commit, push to GitHub. That's it. The site reads the
+          title from your first "# Heading" line and the description
+          from the first paragraph under it — nothing to fill out twice.
+
+     TO UPDATE A GUIDE: paste the new markdown over the old, bump the date.
+     TO REMOVE A GUIDE: delete its block.
+
+     One rule: if your markdown ever contains the literal text </script>
+     inside a code sample, write it as <\/script> so the browser
+     doesn't cut the guide short.
+     ════════════════════════════════════════════════════════════════════ -->
+
+
+<script type="text/markdown" data-category="networking" data-tags="osi, tcp/ip, subnetting, ports" data-updated="2026-07-29">
+# Networking Fundamentals
+
+Starter guide covering the OSI model, TCP/IP, common ports, and subnetting basics. (Placeholder — paste your finished README over this block.)
+
+## The OSI Model
+
+Seven layers, top to bottom. Mnemonic: **All People Seem To Need Data Processing**.
+
+| # | Layer | What it handles | Example |
+|---|-------|-----------------|---------|
+| 7 | Application | User-facing protocols | HTTP, DNS, SMTP |
+| 6 | Presentation | Encryption, encoding | TLS, JPEG |
+| 5 | Session | Opening/closing sessions | APIs, sockets |
+| 4 | Transport | End-to-end delivery | TCP, UDP |
+| 3 | Network | Routing between networks | IP, ICMP |
+| 2 | Data Link | Node-to-node on one link | Ethernet, MAC |
+| 1 | Physical | Cables and signals | Cat6, fiber |
+
+## Common Ports
+
+- **22** — SSH
+- **53** — DNS
+- **80 / 443** — HTTP / HTTPS
+- **3389** — RDP
+
+## Quick Commands
+
+```bash
+ipconfig /all        # Windows: full adapter info
+ping 8.8.8.8         # reachability test
+tracert google.com   # path a packet takes
+nslookup example.com # DNS lookup
+```
+
+> Keep going: subnetting, VLANs, DHCP vs static, NAT.
+</script>
+
+
+<!-- ── PASTE YOUR NEXT GUIDE BELOW (copy the block above as a template) ── -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var state = { guides: [], filter: "all", query: "", active: -1, visible: [] };
+
+  var el = {
+    library: document.getElementById("library"),
+    reader: document.getElementById("reader"),
+    grid: document.getElementById("grid"),
+    empty: document.getElementById("empty"),
+    search: document.getElementById("search"),
+    filters: document.getElementById("filters"),
+    matchCount: document.getElementById("matchCount"),
+    headCount: document.getElementById("headCount"),
+    footCount: document.getElementById("footCount"),
+    back: document.getElementById("backBtn"),
+    rKicker: document.getElementById("rKicker"),
+    rTitle: document.getElementById("rTitle"),
+    rSummary: document.getElementById("rSummary"),
+    rDoc: document.getElementById("rDoc"),
+    rToc: document.getElementById("rToc")
+  };
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function slug(s) {
+    return String(s).toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-") || "guide";
+  }
+
+  function prettyCat(id) {
+    if (!id) return "Guide";
+    return id.replace(/[-_]/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function niceDate(iso) {
+    if (!iso) return "";
+    var d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  }
+
+  /* strip the common leading indentation from an embedded block */
+  function dedent(text) {
+    var lines = text.replace(/^\n+/, "").replace(/\s+$/, "").split("\n");
+    var min = Infinity;
+    lines.forEach(function (l) {
+      if (!l.trim()) return;
+      var m = l.match(/^[ \t]*/)[0].length;
+      if (m < min) min = m;
+    });
+    if (!isFinite(min) || min === 0) return lines.join("\n");
+    return lines.map(function (l) { return l.slice(min); }).join("\n");
+  }
+
+  /* ---------- read every embedded markdown block ---------- */
+  function loadGuides() {
+    var blocks = document.querySelectorAll('script[type="text/markdown"]');
+    var seen = {};
+
+    Array.prototype.forEach.call(blocks, function (b) {
+      var md = dedent(b.textContent);
+      if (!md.trim()) return;
+
+      var lines = md.split("\n");
+      var title = "", titleIdx = -1, summary = "", summaryIdx = -1;
+
+      // title = first "# Heading"
+      for (var i = 0; i < lines.length; i++) {
+        var m = lines[i].match(/^#\s+(.+)/);
+        if (m) { title = m[1].trim(); titleIdx = i; break; }
+        if (lines[i].trim()) break; // first content line isn't an H1 — stop looking
+      }
+      if (!title) title = b.getAttribute("data-title") || "Untitled guide";
+
+      // summary = first plain paragraph line after the title
+      for (var j = titleIdx + 1; j < lines.length; j++) {
+        var t = lines[j].trim();
+        if (!t) continue;
+        if (/^(#{1,6}\s|```|\||[-*+]\s|\d+\.\s|>)/.test(t)) break;
+        summary = t.replace(/[*_`]/g, "").trim();
+        summaryIdx = j;
+        break;
+      }
+      if (b.getAttribute("data-summary")) summary = b.getAttribute("data-summary");
+
+      // reader body: drop the title + summary lines (the header shows them)
+      var body = lines.filter(function (_, k) { return k !== titleIdx && k !== summaryIdx; }).join("\n");
+
+      var id = b.getAttribute("data-id") || slug(title);
+      var n = 2;
+      while (seen[id]) { id = slug(title) + "-" + n++; }
+      seen[id] = true;
+
+      state.guides.push({
+        id: id,
+        title: title,
+        summary: summary,
+        category: (b.getAttribute("data-category") || "guide").toLowerCase(),
+        tags: (b.getAttribute("data-tags") || "").split(",").map(function (t) { return t.trim(); }).filter(Boolean),
+        updated: b.getAttribute("data-updated") || "",
+        md: body,
+        haystack: [title, summary, b.getAttribute("data-category") || "", b.getAttribute("data-tags") || "", md].join(" ").toLowerCase()
+      });
+    });
+
+    state.guides.sort(function (a, b) {
+      return (b.updated || "").localeCompare(a.updated || "");
+    });
+  }
+
+  /* ---------- filters ---------- */
+  function buildFilters() {
+    var used = {};
+    state.guides.forEach(function (g) { used[g.category] = true; });
+    var cats = Object.keys(used).sort();
+
+    var html = '<button class="chip" data-cat="all" aria-pressed="true">All</button>';
+    if (cats.length > 1) {
+      cats.forEach(function (id) {
+        html += '<button class="chip" data-cat="' + esc(id) + '" aria-pressed="false">' + esc(prettyCat(id)) + "</button>";
+      });
+    }
+    el.filters.innerHTML = html;
+    el.filters.addEventListener("click", function (e) {
+      var btn = e.target.closest(".chip");
+      if (!btn) return;
+      state.filter = btn.dataset.cat;
+      Array.prototype.forEach.call(el.filters.children, function (c) {
+        c.setAttribute("aria-pressed", String(c === btn));
+      });
+      state.active = -1;
+      render();
+    });
+  }
+
+  /* ---------- library render ---------- */
+  function matches(g) {
+    if (state.filter !== "all" && g.category !== state.filter) return false;
+    var q = state.query.trim().toLowerCase();
+    if (!q) return true;
+    return q.split(/\s+/).every(function (t) { return g.haystack.indexOf(t) !== -1; });
+  }
+
+  function render() {
+    state.visible = state.guides.filter(matches);
+    var n = state.visible.length;
+
+    el.matchCount.textContent = state.query.trim()
+      ? n + " match" + (n === 1 ? "" : "es")
+      : n + " guide" + (n === 1 ? "" : "s");
+
+    if (!n) {
+      el.grid.classList.add("hidden");
+      el.empty.classList.remove("hidden");
+      el.empty.innerHTML = state.guides.length
+        ? "<h3>Nothing matches that</h3><p>Try a shorter word, or clear the filter above.</p>"
+        : "<h3>The shelf is empty</h3><p>Open <code>index.html</code>, find the guides section, and paste a README into a <code>&lt;script type=&quot;text/markdown&quot;&gt;</code> block.</p>";
+      return;
+    }
+
+    el.empty.classList.add("hidden");
+    el.grid.classList.remove("hidden");
+    el.grid.innerHTML = state.visible.map(function (g, i) {
+      return '<button class="card" data-i="' + i + '" data-id="' + esc(g.id) + '">' +
+        '<span class="kicker"><span>' + esc(prettyCat(g.category)) + "</span>" +
+        '<span class="date">' + esc(niceDate(g.updated)) + "</span></span>" +
+        "<h3>" + esc(g.title) + "</h3>" +
+        "<p>" + esc(g.summary || "") + "</p>" +
+        '<span class="tags">' +
+          g.tags.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
+        "</span></button>";
+    }).join("");
+
+    Array.prototype.forEach.call(el.grid.children, function (card) {
+      card.addEventListener("click", function () {
+        location.hash = "#/guide/" + encodeURIComponent(card.dataset.id);
+      });
+    });
+    paintActive();
+  }
+
+  function paintActive() {
+    Array.prototype.forEach.call(el.grid.children, function (c, i) {
+      c.classList.toggle("active", i === state.active);
+    });
+    if (state.active > -1 && el.grid.children[state.active]) {
+      el.grid.children[state.active].scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  el.search.addEventListener("input", function () {
+    state.query = el.search.value;
+    state.active = -1;
+    render();
+  });
+
+  /* ---------- keyboard ---------- */
+  document.addEventListener("keydown", function (e) {
+    var typing = /INPUT|TEXTAREA/.test(document.activeElement.tagName);
+
+    if (e.key === "/" && !typing) {
+      e.preventDefault();
+      el.search.focus();
+      el.search.select();
+      return;
+    }
+    if (e.key === "Escape") {
+      if (!el.reader.classList.contains("hidden")) { location.hash = "#/"; return; }
+      if (el.search.value) { el.search.value = ""; state.query = ""; state.active = -1; render(); }
+      return;
+    }
+    if (el.reader.classList.contains("hidden") && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
+      if (!state.visible.length) return;
+      e.preventDefault();
+      state.active = e.key === "ArrowDown"
+        ? Math.min(state.active + 1, state.visible.length - 1)
+        : Math.max(state.active - 1, 0);
+      paintActive();
+      return;
+    }
+    if (e.key === "Enter" && typing && state.active > -1 && state.visible[state.active]) {
+      location.hash = "#/guide/" + encodeURIComponent(state.visible[state.active].id);
+    }
+  });
+
+  /* ---------- routing ---------- */
+  el.back.addEventListener("click", function () { location.hash = "#/"; });
+  window.addEventListener("hashchange", route);
+
+  function route() {
+    var h = location.hash;
+    if (h && h.slice(0, 2) !== "#/") return;   // in-page anchor, not a route
+    var m = h.match(/^#\/guide\/(.+)$/);
+    if (m) openGuide(decodeURIComponent(m[1]));
+    else showLibrary();
+  }
+
+  function showLibrary() {
+    el.reader.classList.add("hidden");
+    el.library.classList.remove("hidden");
+    document.title = "Study Guides — Reference Library";
+  }
+
+  function openGuide(id) {
+    var g = state.guides.filter(function (x) { return x.id === id; })[0];
+    if (!g) { location.hash = "#/"; return; }
+
+    el.library.classList.add("hidden");
+    el.reader.classList.remove("hidden");
+    window.scrollTo(0, 0);
+    document.title = g.title + " — Study Guides";
+
+    el.rKicker.textContent = prettyCat(g.category) +
+      (g.updated ? "  ·  updated " + niceDate(g.updated) : "");
+    el.rTitle.textContent = g.title;
+    el.rSummary.textContent = g.summary || "";
+
+    el.rDoc.innerHTML = window.marked ? marked.parse(g.md) : "<pre>" + esc(g.md) + "</pre>";
+    el.rToc.innerHTML = "";
+    decorate();
+    buildToc();
+  }
+
+  /* ---------- content decoration ---------- */
+  function decorate() {
+    el.rDoc.querySelectorAll("pre code").forEach(function (code) {
+      if (window.hljs) { try { hljs.highlightElement(code); } catch (err) {} }
+
+      var pre = code.parentNode;
+      var wrap = document.createElement("div");
+      wrap.className = "codeblock";
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+
+      var btn = document.createElement("button");
+      btn.className = "copy";
+      btn.type = "button";
+      btn.textContent = "Copy";
+      btn.addEventListener("click", function () {
+        navigator.clipboard.writeText(code.textContent).then(function () {
+          btn.textContent = "Copied";
+          btn.classList.add("done");
+          setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1400);
+        }, function () {
+          btn.textContent = "Press ⌘C";
+        });
+      });
+      wrap.appendChild(btn);
+    });
+
+    el.rDoc.querySelectorAll('a[href^="http"]').forEach(function (a) {
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+  }
+
+  function buildToc() {
+    var heads = el.rDoc.querySelectorAll("h2, h3");
+    if (heads.length < 2) return;
+    var html = '<div class="label">On this page</div>';
+    heads.forEach(function (h, i) {
+      var s = slug(h.textContent) + "-" + i;
+      h.id = s;
+      html += '<a href="#' + s + '"' + (h.tagName === "H3" ? ' class="sub"' : "") + ">" +
+              esc(h.textContent) + "</a>";
+    });
+    el.rToc.innerHTML = html;
+    el.rToc.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var t = document.getElementById(a.getAttribute("href").slice(1));
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  /* ---------- boot ---------- */
+  loadGuides();
+  buildFilters();
+  var total = state.guides.length + " guide" + (state.guides.length === 1 ? "" : "s");
+  el.headCount.textContent = total;
+  el.footCount.textContent = total + " in the library";
+  render();
+  route();
+})();
+</script>
+</body>
+</html>
