@@ -1,7 +1,6 @@
 # Zachary Frederic
 
-**IT Management · Development · Design**
-Palm Beach & Orlando, FL — open to opportunities
+**IT Management & Business Architecture · Development · Design**
 
 Source for [zachc0des.github.io](https://zachc0des.github.io) and the connected project sites listed below.
 
@@ -94,7 +93,6 @@ The main portfolio is the entry point. Each site below is a standalone build wit
 
 **Email** — [zfrederic00@outlook.com](mailto:zfrederic00@outlook.com)
 **Portfolio** — [zachc0des.github.io](https://zachc0des.github.io)
-**GitHub** — [github.com/Zachc0des](https://github.com/Zachc0des)
 
 ---
 
