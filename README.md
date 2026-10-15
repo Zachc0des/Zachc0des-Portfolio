@@ -8,7 +8,7 @@ Source for [zachc0des.github.io](https://zachc0des.github.io) and the connected 
 
 ## About
 
-IT professional, developer, and creative technologist working at the intersection of systems, design, and data. Currently pursuing a B.S. in Information Technology Management at WGU.
+IT opportunist,working at the intersection of systems, design, and data. Currently pursuing a B.S. in Information Technology Management.
 
 Background spans customer operations, airline reservation systems, CRM platforms, and cybersecurity fundamentals — work that rewards technical precision and clear communication in equal measure. Outside of study and client work: hardware repair, strength training, video production, and building tools for problems worth solving.
 
@@ -23,7 +23,6 @@ The main portfolio is the entry point. Each site below is a standalone build wit
 | Site | What it is |
 |---|---|
 | **[Zach/C0des](https://zachc0des.github.io/Zachc0des-Portfolio/#/)** | A public notebook — searchable study guides, references, and tutorials on IT, networking, cybersecurity, and web development. Renders straight from markdown. Free to use. |
-| **[Z Concepts](https://zachc0des.github.io/zconcepts/)** | A measured perspective on entering financial markets, built on six years of study. Price action review, back-test simulation, order book analysis, micro/macro analytics. Educational content only — not financial advice. |
 | **[Six Cards](https://zachc0des.github.io/sixcards/)** | Business card design service. Six signature styles, delivered as double-sided print-ready 300 DPI files with printing steps included. Fully custom work on request. |
 | **[Z Vault](https://zachc0des.github.io/Zvault/)** | A visual archive filed by concept rather than by date — charts, dashboards, breakdowns, and reference visuals. |
 | **[Z.JIM](https://zachc0des.github.io/zjim/)** | Training log and reference — form breakdowns, tracked programming, gear and app notes. |
@@ -66,28 +65,6 @@ The main portfolio is the entry point. Each site below is a standalone build wit
 **Professional Platforms** — Salesforce · Microsoft 365 · TalkDesk · RingCentral · Slack · FlightAware · IBM Cloud
 **AI** — Claude · Gemini · ChatGPT (drafting, code, document analysis, debugging)
 
----
-
-## Certifications
-
-| Issuer | Credential |
-|---|---|
-| Google | Cybersecurity Professional Certificate |
-| Google | Technical Support Fundamentals |
-| Anthropic | Claude 101 · AI Fluency: Framework & Foundations |
-| IBM SkillsBuild | Introduction to Data Concepts · Data Science in Our World |
-| OPAC TestGenius | Data Entry, Financial Record Keeping & Microsoft Office |
-| OSHA | 10-Hour Construction Safety |
-
----
-
-## Experience
-
-**Sales & Support Specialist** — VXI Technology
-**Support Representative** — Southern Airways Express / Mokulele Airlines
-**Front Desk Associate** — Planet Fitness
-
----
 
 ## Contact
 
