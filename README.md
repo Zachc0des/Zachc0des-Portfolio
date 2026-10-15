@@ -16,7 +16,7 @@ The approach is consistent across all of it — understand how a system connects
 
 ---
 
-## The Ecosystem
+##  Ecosystem
 
 The main portfolio is the entry point. Each site below is a standalone build with its own scope and visual identity, sharing one design system.
 
