@@ -8,7 +8,7 @@ Source for [zachc0des.github.io](https://zachc0des.github.io) and the connected 
 
 ## About
 
-IT opportunist,working at the intersection of systems, design, and data. Currently pursuing a B.S. in Information Technology Management.
+Tech opportunist, working at the intersection of systems, design, and data. Currently pursuing a B.S. in Information Technology Management.
 
 Background spans customer operations, airline reservation systems, CRM platforms, and cybersecurity fundamentals — work that rewards technical precision and clear communication in equal measure. Outside of study and client work: hardware repair, strength training, video production, and building tools for problems worth solving.
 
