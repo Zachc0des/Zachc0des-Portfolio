@@ -371,6 +371,15 @@
   .cp-preview > .cp-empty{color:#5B6676}
   .cp-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
 
+  /* ---------- example email panel ---------- */
+  .emailpanel{margin:0 0 28px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cobalt);border-radius:4px;overflow:hidden}
+  .ep-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--raised);font-family:var(--mono);font-size:12px}
+  .ep-head .cp-actions{margin-left:auto}
+  .ep-head a.cp-btn:hover{text-decoration:none}
+  .ep-body{padding:18px;background:#EEF1F4;display:flex;justify-content:center;max-height:720px;overflow:auto}
+  .ep-body img{display:block;max-width:100%;height:auto;border:1px solid #D5DBE2;border-radius:4px;background:#fff;box-shadow:0 6px 20px -10px rgba(5,10,22,.5)}
+  .ep-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
   /* ---------- screen recording panel ---------- */
   .videopanel{margin:0 0 28px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cobalt);border-radius:4px;overflow:hidden}
   .vp-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--raised);font-family:var(--mono);font-size:12px}
@@ -1345,6 +1354,12 @@ A presentation and final audit on investigating phishing emails and links using 
 
 [View the original presentation in Prezi ↗](https://prezi.com/page/qjf6HAWKfNhRHRP38LPLjm/phishing-forensics-browser-based-tools?referral_token=3_XUVklnB3FN)
 
+## Example Email
+
+The email investigated in this audit.
+
+<div class="emailpanel" data-title="Example Email · Under Investigation" data-src="images/phishing-forensics/example-email.png" data-alt="Screenshot of the example email being investigated"></div>
+
 ## Final Audit
 
 <div class="codepanel" data-title="Final Audit · JSX" data-src="audit/final-audit.jsx" data-filename="TED_Settlement_Email_Audit.jsx" data-source-id="final-audit-jsx"></div>
@@ -1956,6 +1971,7 @@ export default function Audit() {
     });
 
     buildSlideshows();
+    buildEmailPanels();
     buildCodePanels();
     buildVideoPanels();
   }
@@ -2092,6 +2108,38 @@ export default function Audit() {
     });
 
     go(0);
+  }
+
+  /* ---------- example email panel (.png screenshot) ---------- */
+  function buildEmailPanels() {
+    el.rDoc.querySelectorAll(".emailpanel").forEach(function (root) {
+      var title = root.getAttribute("data-title") || "Example Email";
+      var src = root.getAttribute("data-src") || "";
+      var alt = root.getAttribute("data-alt") || "Example email screenshot";
+      var fileName = src.split("/").pop();
+
+      function head(extra) {
+        return '<div class="ep-head"><span class="cp-title">' + esc(title) + "</span>" +
+          '<span class="cp-meta">' + esc(fileName) + "</span>" + (extra || "") + "</div>";
+      }
+
+      function empty() {
+        root.innerHTML = head("") +
+          '<div class="ep-empty"><strong style="color:var(--paper)">No email screenshot yet.</strong><br>' +
+          "Upload your image to <code>" + esc(src || "images/…") + "</code> and it will appear here automatically.</div>";
+      }
+
+      if (!src) { empty(); return; }
+
+      var probe = new Image();
+      probe.onload = function () {
+        root.innerHTML = head(
+          '<span class="cp-actions"><a class="cp-btn" href="' + esc(src) + '" target="_blank" rel="noopener">Open full size ↗</a></span>'
+        ) + '<div class="ep-body"><a href="' + esc(src) + '" target="_blank" rel="noopener"><img alt="' + esc(alt) + '" src="' + esc(src) + '"></a></div>';
+      };
+      probe.onerror = empty;
+      probe.src = src;
+    });
   }
 
   /* ---------- source code panels (final audit .jsx) ---------- */
