@@ -1,4 +1,18 @@
-import { useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email security audit: TED settlement notice</title>
+<style>html,body{margin:0;background:#EEF1F4}*{box-sizing:border-box}button:focus-visible{outline:3px solid #24406B;outline-offset:2px}</style>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js"></script>
+</head>
+<body>
+<div id="root"><noscript>This report needs JavaScript enabled.</noscript></div>
+<script type="text/babel" data-presets="react">
+const { useState } = React;
 
 const C = {
   bg: "#EEF1F4", ink: "#17202B", panel: "#FFFFFF", line: "#D5DBE2", mute: "#5B6676",
@@ -245,7 +259,7 @@ function Second() {
 
 const tabs = [["Verdict", Verdict], ["Evidence", Evidence], ["MX Toolbox decoded", MX], ["Second opinion", Second]];
 
-export default function Audit() {
+function Audit() {
   const [tab, setTab] = useState(0);
   const View = tabs[tab][1];
   return (
@@ -276,3 +290,8 @@ export default function Audit() {
     </div>
   );
 }
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Audit />);
+</script>
+</body>
+</html>
