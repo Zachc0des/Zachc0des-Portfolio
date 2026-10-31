@@ -365,6 +365,10 @@
     font-family:var(--mono);font-size:13px;line-height:1.7;
     color:#D5E2FA;background:none;padding:0;white-space:pre;
   }
+  .cp-tabs{display:flex;gap:6px}
+  .cp-btn.on{color:var(--paper);border-color:var(--cobalt);background:var(--cobalt-dim)}
+  .cp-preview{background:#EEF1F4;max-height:760px;overflow:auto}
+  .cp-preview > .cp-empty{color:#5B6676}
   .cp-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
 
   /* ---------- screen recording panel ---------- */
@@ -1323,6 +1327,7 @@ Use Case: Legacy Networks
      FINAL AUDIT: the audit JSX is pasted directly into the
        #final-audit-jsx block further down (it takes priority). If you ever
        empty that block, the panel falls back to loading audit/final-audit.jsx.
+       The panel now has a Preview tab (live-rendered audit) and a Source tab.
      SCREEN RECORDINGS: upload your clips to  videos/phishing-forensics/
        and name them step-01.mp4, step-02.mp4, step-03.mp4 ...
        They are found automatically, in order. (Different extension? change
@@ -1636,6 +1641,9 @@ export default function Audit() {
 </script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>
@@ -2098,18 +2106,68 @@ export default function Audit() {
       root.innerHTML =
         '<div class="cp-head"><span class="cp-title">' + esc(title) + "</span>" +
           '<span class="cp-meta">' + esc(fileName) + "</span>" +
+          '<span class="cp-tabs"><button type="button" class="cp-btn on" data-cp="preview">Preview</button>' +
+          '<button type="button" class="cp-btn" data-cp="source">Source</button></span>' +
           '<span class="cp-actions">' +
             '<button type="button" class="cp-btn" data-cp="copy" disabled>Copy</button>' +
             '<button type="button" class="cp-btn" data-cp="download" disabled>Download</button>' +
           "</span></div>" +
-        '<div class="cp-body"><div class="cp-empty">Loading…</div></div>';
+        '<div class="cp-preview"><div class="cp-empty">Loading…</div></div>' +
+        '<div class="cp-body hidden"><div class="cp-empty">Loading…</div></div>';
 
       var body = root.querySelector(".cp-body");
       var meta = root.querySelector(".cp-meta");
       var btnCopy = root.querySelector('[data-cp="copy"]');
       var btnDl = root.querySelector('[data-cp="download"]');
+      var previewEl = root.querySelector(".cp-preview");
+      var tabBtns = root.querySelectorAll('[data-cp="preview"],[data-cp="source"]');
+
+      function showTab(which) {
+        previewEl.classList.toggle("hidden", which !== "preview");
+        body.classList.toggle("hidden", which !== "source");
+        Array.prototype.forEach.call(tabBtns, function (b) {
+          b.classList.toggle("on", b.getAttribute("data-cp") === which);
+        });
+      }
+      Array.prototype.forEach.call(tabBtns, function (b) {
+        b.addEventListener("click", function () { showTab(b.getAttribute("data-cp")); });
+      });
+
+      /* compile the JSX in the browser and mount it in an isolated shadow root */
+      function renderPreview() {
+        try {
+          if (!window.React || !window.ReactDOM || !window.Babel) throw new Error("React/Babel did not load");
+          var hooks = [], name = "AuditApp";
+          var code = text
+            .replace(/import\s*\{([^}]*)\}\s*from\s*["']react["'];?/g, function (_, n) {
+              hooks = n.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+              return "";
+            })
+            .replace(/export\s+default\s+function\s+(\w+)/, function (_, n) { name = n; return "function " + n; })
+            .replace(/minHeight:\s*"100vh"/g, "minHeight: 0");
+          var out = Babel.transform(code, { presets: ["react"] }).code;
+          var Comp = new Function("React",
+            (hooks.length ? "var {" + hooks.join(",") + "} = React;\n" : "") + out + "\nreturn " + name + ";")(React);
+
+          previewEl.innerHTML = "";
+          var shadow = previewEl.attachShadow({ mode: "open" });
+          var style = document.createElement("style");
+          style.textContent = ":host{all:initial;display:block}*,*::before,*::after{box-sizing:border-box}";
+          var mount = document.createElement("div");
+          shadow.appendChild(style);
+          shadow.appendChild(mount);
+          ReactDOM.createRoot(mount).render(React.createElement(Comp));
+          showTab("preview");
+        } catch (err) {
+          console.error("Audit preview failed:", err);
+          previewEl.innerHTML = '<div class="cp-empty">Couldn’t render the preview (' + esc(err.message) +
+            "). Use the Source tab instead.</div>";
+          showTab("source");
+        }
+      }
 
       function empty() {
+        showTab("source");
         body.innerHTML = '<div class="cp-empty"><strong style="color:var(--paper)">No audit uploaded yet.</strong><br>' +
           (src ? "Upload your file to <code>" + esc(src) + "</code>" : "Add your file") +
           (inlineId ? " (or paste the code into the <code>#" + esc(inlineId) + "</code> block in <code>index.html</code>)" : "") +
@@ -2125,6 +2183,7 @@ export default function Audit() {
         meta.textContent = fileName + "  ·  " + t.split("\n").length + " lines";
         btnCopy.disabled = false;
         btnDl.disabled = false;
+        renderPreview();
       }
 
       btnCopy.addEventListener("click", function () {
