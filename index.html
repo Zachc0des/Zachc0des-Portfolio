@@ -298,12 +298,74 @@
   .doc hr{border:0;border-top:1px solid var(--line);margin:40px 0}
   .doc img{max-width:100%;border-radius:3px;border:1px solid var(--line)}
 
-  /* embedded presentations */
-  .embed{
-    position:relative;width:100%;aspect-ratio:16/10;margin:0 0 20px;
-    background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  /* ---------- screenshot slideshow ---------- */
+  .slideshow{margin:0 0 28px}
+  .ss-stage{
+    position:relative;width:100%;aspect-ratio:16/9;
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    overflow:hidden;display:flex;align-items:center;justify-content:center;
+    touch-action:pan-y;
   }
-  .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .ss-stage img{
+    display:block;width:100%;height:100%;object-fit:contain;
+    border:0;border-radius:0;user-select:none;-webkit-user-drag:none;
+  }
+  .ss-msg,.ss-err{
+    margin:0;padding:24px;text-align:center;color:var(--muted);
+    font-family:var(--mono);font-size:13px;line-height:1.6;
+  }
+  .ss-err{display:none;position:absolute;inset:0;align-items:center;justify-content:center}
+  .ss-stage.broken img{visibility:hidden}
+  .ss-stage.broken .ss-err{display:flex}
+  .ss-stage.ss-empty{
+    aspect-ratio:auto;min-height:220px;padding:28px;text-align:center;
+    color:var(--muted);border-style:dashed;font-size:14.5px;line-height:1.6;
+  }
+  .ss-stage.ss-empty strong{display:block;color:var(--paper);font-family:var(--display);font-size:20px;margin-bottom:6px;font-weight:600}
+  .ss-bar{display:flex;align-items:center;gap:10px;margin-top:12px}
+  .ss-mid{flex:1;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;min-width:0}
+  .ss-count{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+  .ss-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+  .ss-dot{width:8px;height:8px;padding:0;border-radius:50%;border:0;background:var(--line);cursor:pointer;transition:background .15s ease}
+  .ss-dot:hover{background:#2B457A}
+  .ss-dot.on{background:var(--cobalt)}
+  .ss-btn,.cp-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+    padding:8px 16px;cursor:pointer;transition:all .15s ease;white-space:nowrap;
+  }
+  .ss-btn:hover:not(:disabled),.cp-btn:hover:not(:disabled){color:var(--paper);border-color:var(--cobalt);background:var(--cobalt-dim)}
+  .ss-btn:disabled,.cp-btn:disabled{opacity:.4;cursor:default}
+  .ss-btn svg{width:14px;height:14px;fill:currentColor}
+  .ss-icon{padding:8px 10px}
+  @media(max-width:640px){.ss-dots{display:none}.ss-btn{padding:8px 12px}}
+  .slideshow:fullscreen{background:var(--ink);padding:20px;display:flex;flex-direction:column}
+  .slideshow:fullscreen .ss-stage{flex:1;aspect-ratio:auto;min-height:0}
+  .slideshow:-webkit-full-screen{background:var(--ink);padding:20px;display:flex;flex-direction:column}
+  .slideshow:-webkit-full-screen .ss-stage{flex:1;aspect-ratio:auto;min-height:0}
+
+  /* ---------- source code panel (final audit .jsx) ---------- */
+  .codepanel{
+    margin:0 0 28px;background:var(--panel);border:1px solid var(--line);
+    border-left:3px solid var(--cobalt);border-radius:4px;overflow:hidden;
+  }
+  .cp-head{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;
+    border-bottom:1px solid var(--line);background:var(--raised);
+    font-family:var(--mono);font-size:12px;
+  }
+  .cp-title{color:var(--cobalt);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+  .cp-meta{color:var(--muted)}
+  .cp-actions{margin-left:auto;display:flex;gap:8px}
+  .cp-btn{padding:6px 12px;font-size:11px}
+  .cp-body{max-height:620px;overflow:auto}
+  .cp-body pre{margin:0;padding:18px 20px}
+  .cp-body code{
+    font-family:var(--mono);font-size:13px;line-height:1.7;
+    color:#D5E2FA;background:none;padding:0;white-space:pre;
+  }
+  .cp-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
 
   .doc table{
     width:100%;border-collapse:collapse;margin:0 0 24px;
@@ -1234,16 +1296,35 @@ Use Case: Legacy Networks
 </script>     
 
 
-<!-- ── CYBER SECURITY GUIDES ── -->
-<script type="text/markdown" data-title="Phishing Forensics: Browser-Based Tools" data-category="cyber-security" data-tags="phishing,forensics,presentation" data-updated="2026-10-30">
+<!-- ── CYBER SECURITY GUIDES ──
+     SLIDESHOW: upload your screenshots to  images/phishing-forensics/
+       and name them slide-01.png, slide-02.png, slide-03.png ...
+       The slideshow finds them automatically, in order, and stops at the
+       first missing number. (Different extension? change data-ext below.
+       Custom names? use data-slides="images/a.png,images/b.png".)
+     FINAL AUDIT: upload your file to  audit/final-audit.jsx
+       or paste its code into the empty #final-audit-jsx block further down.
+-->
+<script type="text/markdown" data-title="Phishing Forensics: Browser-Based Tools" data-category="cyber-security" data-tags="phishing,forensics,presentation,audit" data-updated="2026-10-30">
 
 # Phishing Forensics: Browser-Based Tools
-A presentation on investigating phishing emails and links using free, browser-based forensic tools.
+A presentation and final audit on investigating phishing emails and links using free, browser-based forensic tools.
 
-<div class="embed"><iframe src="https://prezi.com/page/qjf6HAWKfNhRHRP38LPLjm/phishing-forensics-browser-based-tools?referral_token=3_XUVklnB3FN" title="Phishing Forensics: Browser-Based Tools" allowfullscreen allow="fullscreen; autoplay"></iframe></div>
+## Presentation
 
-[Open the presentation in Prezi ↗](https://prezi.com/page/qjf6HAWKfNhRHRP38LPLjm/phishing-forensics-browser-based-tools?referral_token=3_XUVklnB3FN)
+<div class="slideshow" data-folder="images/phishing-forensics" data-prefix="slide-" data-ext="png"></div>
 
+[View the original presentation in Prezi ↗](https://prezi.com/page/qjf6HAWKfNhRHRP38LPLjm/phishing-forensics-browser-based-tools?referral_token=3_XUVklnB3FN)
+
+## Final Audit
+
+<div class="codepanel" data-title="Final Audit · JSX" data-src="audit/final-audit.jsx" data-source-id="final-audit-jsx"></div>
+
+</script>
+
+<!-- Optional paste-in for the final audit. Leave empty to load audit/final-audit.jsx instead.
+     (If the code ever contains the literal text </script>, write it as <\/script>.) -->
+<script type="text/jsx-source" id="final-audit-jsx">
 </script>
 
 
@@ -1465,6 +1546,14 @@ A presentation on investigating phishing emails and links using free, browser-ba
       if (el.search.value) { el.search.value = ""; state.query = ""; state.active = -1; render(); }
       return;
     }
+    if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && !typing && !el.reader.classList.contains("hidden")) {
+      var s = lastShow || shows[0];
+      if (s && s.slides.length > 1) {
+        e.preventDefault();
+        s.go(s.i + (e.key === "ArrowRight" ? 1 : -1));
+      }
+      return;
+    }
     if (el.reader.classList.contains("hidden") && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
       if (!state.visible.length) return;
       e.preventDefault();
@@ -1547,6 +1636,213 @@ A presentation on investigating phishing emails and links using free, browser-ba
     el.rDoc.querySelectorAll('a[href^="http"]').forEach(function (a) {
       a.target = "_blank";
       a.rel = "noopener";
+    });
+
+    buildSlideshows();
+    buildCodePanels();
+  }
+
+  /* ---------- screenshot slideshows ---------- */
+  var shows = [], lastShow = null;
+
+  function pad2(n) { return n < 10 ? "0" + n : String(n); }
+
+  function toggleFullscreen(node) {
+    var d = document;
+    if (d.fullscreenElement || d.webkitFullscreenElement) {
+      (d.exitFullscreen || d.webkitExitFullscreen).call(d);
+      return;
+    }
+    var f = node.requestFullscreen || node.webkitRequestFullscreen;
+    if (f) f.call(node);
+  }
+
+  function buildSlideshows() {
+    shows = [];
+    lastShow = null;
+    el.rDoc.querySelectorAll(".slideshow").forEach(function (root) {
+      var show = { root: root, slides: [], i: 0, go: function () {} };
+      shows.push(show);
+
+      var folder = (root.getAttribute("data-folder") || "").replace(/\/+$/, "");
+      var prefix = root.getAttribute("data-prefix") || "slide-";
+      var ext = (root.getAttribute("data-ext") || "png").replace(/^\./, "");
+      var explicit = (root.getAttribute("data-slides") || "").split(",")
+        .map(function (s) { return s.trim(); }).filter(Boolean);
+
+      root.innerHTML = '<div class="ss-stage"><p class="ss-msg">Loading slides…</p></div>';
+
+      if (explicit.length) {
+        show.slides = explicit;
+        mountShow(show, folder, prefix, ext);
+        return;
+      }
+
+      // no list given: look for slide-01, slide-02, ... until one is missing
+      var found = [];
+      (function probe(n) {
+        if (n > 200) { show.slides = found; mountShow(show, folder, prefix, ext); return; }
+        var path = (folder ? folder + "/" : "") + prefix + pad2(n) + "." + ext;
+        var img = new Image();
+        img.onload = function () { found.push(path); probe(n + 1); };
+        img.onerror = function () { show.slides = found; mountShow(show, folder, prefix, ext); };
+        img.src = path;
+      })(1);
+    });
+  }
+
+  function mountShow(show, folder, prefix, ext) {
+    var root = show.root;
+    var n = show.slides.length;
+
+    if (!n) {
+      root.innerHTML = '<div class="ss-stage ss-empty"><div><strong>No slides yet</strong>' +
+        "Upload your screenshots to <code>" + esc((folder || ".") + "/") + "</code> named <code>" +
+        esc(prefix + "01." + ext) + "</code>, <code>" + esc(prefix + "02." + ext) +
+        "</code>, … and they will appear here automatically.</div></div>";
+      return;
+    }
+
+    var dots = "";
+    if (n > 1 && n <= 24) {
+      for (var d = 0; d < n; d++) {
+        dots += '<button type="button" class="ss-dot" data-i="' + d + '" aria-label="Go to slide ' + (d + 1) + '"></button>';
+      }
+    }
+    var canFs = !!(root.requestFullscreen || root.webkitRequestFullscreen);
+    var dis = n > 1 ? "" : " disabled";
+
+    root.innerHTML =
+      '<div class="ss-stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Presentation slides">' +
+        '<img alt="" draggable="false">' +
+        '<p class="ss-err"></p>' +
+      "</div>" +
+      '<div class="ss-bar">' +
+        '<button type="button" class="ss-btn" data-act="prev"' + dis + ">&larr; Prev</button>" +
+        '<div class="ss-mid"><span class="ss-count"></span><span class="ss-dots">' + dots + "</span></div>" +
+        (canFs ? '<button type="button" class="ss-btn ss-icon" data-act="fs" title="Fullscreen" aria-label="Toggle fullscreen">' +
+          '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1h5v1.5H2.5V6H1V1Zm9 0h5v5h-1.5V2.5H10V1ZM1 10h1.5v3.5H6V15H1v-5Zm12.5 0H15v5h-5v-1.5h3.5V10Z"/></svg></button>' : "") +
+        '<button type="button" class="ss-btn" data-act="next"' + dis + ">Next &rarr;</button>" +
+      "</div>";
+
+    var stage = root.querySelector(".ss-stage");
+    var img = stage.querySelector("img");
+    var err = stage.querySelector(".ss-err");
+    var count = root.querySelector(".ss-count");
+    var dotEls = root.querySelectorAll(".ss-dot");
+
+    function go(i) {
+      show.i = ((i % n) + n) % n;
+      stage.classList.remove("broken");
+      img.src = show.slides[show.i];
+      img.alt = "Slide " + (show.i + 1) + " of " + n;
+      count.textContent = pad2(show.i + 1) + " / " + pad2(n);
+      Array.prototype.forEach.call(dotEls, function (el2, k) {
+        el2.classList.toggle("on", k === show.i);
+        if (k === show.i) el2.setAttribute("aria-current", "true");
+        else el2.removeAttribute("aria-current");
+      });
+      if (n > 1) { var pre = new Image(); pre.src = show.slides[(show.i + 1) % n]; }
+    }
+    img.onerror = function () {
+      stage.classList.add("broken");
+      err.textContent = "Couldn’t load " + show.slides[show.i];
+    };
+    img.onload = function () { stage.classList.remove("broken"); };
+    show.go = go;
+
+    root.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-act], .ss-dot");
+      if (!b || !root.contains(b)) return;
+      lastShow = show;
+      if (b.classList.contains("ss-dot")) { go(parseInt(b.getAttribute("data-i"), 10)); return; }
+      var act = b.getAttribute("data-act");
+      if (act === "prev") go(show.i - 1);
+      else if (act === "next") go(show.i + 1);
+      else if (act === "fs") toggleFullscreen(root);
+    });
+    root.addEventListener("mouseenter", function () { lastShow = show; });
+    root.addEventListener("focusin", function () { lastShow = show; });
+
+    var x0 = null;
+    stage.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; lastShow = show; }, { passive: true });
+    stage.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      x0 = null;
+      if (Math.abs(dx) > 40 && n > 1) go(show.i + (dx < 0 ? 1 : -1));
+    });
+
+    go(0);
+  }
+
+  /* ---------- source code panels (final audit .jsx) ---------- */
+  function buildCodePanels() {
+    el.rDoc.querySelectorAll(".codepanel").forEach(function (root) {
+      var title = root.getAttribute("data-title") || "Source";
+      var src = root.getAttribute("data-src") || "";
+      var inlineId = root.getAttribute("data-source-id") || "";
+      var fileName = root.getAttribute("data-filename") || src.split("/").pop() || "final-audit.jsx";
+      var text = "";
+
+      root.innerHTML =
+        '<div class="cp-head"><span class="cp-title">' + esc(title) + "</span>" +
+          '<span class="cp-meta">' + esc(fileName) + "</span>" +
+          '<span class="cp-actions">' +
+            '<button type="button" class="cp-btn" data-cp="copy" disabled>Copy</button>' +
+            '<button type="button" class="cp-btn" data-cp="download" disabled>Download</button>' +
+          "</span></div>" +
+        '<div class="cp-body"><div class="cp-empty">Loading…</div></div>';
+
+      var body = root.querySelector(".cp-body");
+      var meta = root.querySelector(".cp-meta");
+      var btnCopy = root.querySelector('[data-cp="copy"]');
+      var btnDl = root.querySelector('[data-cp="download"]');
+
+      function empty() {
+        body.innerHTML = '<div class="cp-empty"><strong style="color:var(--paper)">No audit uploaded yet.</strong><br>' +
+          (src ? "Upload your file to <code>" + esc(src) + "</code>" : "Add your file") +
+          (inlineId ? " (or paste the code into the <code>#" + esc(inlineId) + "</code> block in <code>index.html</code>)" : "") +
+          " and it will appear here.</div>";
+      }
+
+      function fill(t) {
+        text = t;
+        var html;
+        try { html = window.hljs ? hljs.highlight(t, { language: "javascript" }).value : esc(t); }
+        catch (e1) { html = esc(t); }
+        body.innerHTML = "<pre><code>" + html + "</code></pre>";
+        meta.textContent = fileName + "  ·  " + t.split("\n").length + " lines";
+        btnCopy.disabled = false;
+        btnDl.disabled = false;
+      }
+
+      btnCopy.addEventListener("click", function () {
+        navigator.clipboard.writeText(text).then(function () {
+          btnCopy.textContent = "Copied";
+          setTimeout(function () { btnCopy.textContent = "Copy"; }, 1400);
+        }, function () { btnCopy.textContent = "Press ⌘C"; });
+      });
+      btnDl.addEventListener("click", function () {
+        var url = URL.createObjectURL(new Blob([text], { type: "text/plain" }));
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 500);
+      });
+
+      // 1) pasted-in block wins if it has content, 2) otherwise load the uploaded file
+      var node = inlineId ? document.getElementById(inlineId) : null;
+      var pasted = node ? (node.textContent || "").replace(/^\n+/, "").replace(/\s+$/, "") : "";
+      if (pasted) { fill(pasted); return; }
+      if (!src) { empty(); return; }
+      fetch(src, { cache: "no-cache" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (t) { if (t.trim()) fill(t); else empty(); })
+        .catch(empty);
     });
   }
 
