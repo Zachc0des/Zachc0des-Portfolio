@@ -367,6 +367,24 @@
   }
   .cp-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
 
+  /* ---------- screen recording panel ---------- */
+  .videopanel{margin:0 0 28px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cobalt);border-radius:4px;overflow:hidden}
+  .vp-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--raised);font-family:var(--mono);font-size:12px}
+  .vp-head .vp-auto{margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--muted);cursor:pointer}
+  .vp-main{display:grid;grid-template-columns:minmax(0,1fr)}
+  @media(min-width:820px){.vp-main{grid-template-columns:minmax(0,1fr) 240px}}
+  .vp-stage{background:#000;aspect-ratio:16/9}
+  .vp-stage video{display:block;width:100%;height:100%;background:#000}
+  .vp-list{display:flex;flex-direction:column;gap:4px;padding:8px;max-height:420px;overflow:auto;border-top:1px solid var(--line)}
+  @media(min-width:820px){.vp-list{border-top:0;border-left:1px solid var(--line)}}
+  .vp-item{display:flex;gap:10px;align-items:baseline;text-align:left;width:100%;background:none;border:1px solid transparent;border-radius:3px;padding:9px 10px;cursor:pointer;color:var(--muted);font:inherit;font-size:13.5px;line-height:1.35}
+  .vp-item .n{font-family:var(--mono);font-size:11px;color:var(--cobalt);flex:none}
+  .vp-item:hover{background:var(--cobalt-dim);color:var(--paper)}
+  .vp-item.on{background:var(--raised);border-color:var(--cobalt);color:var(--paper)}
+  .vp-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid var(--line)}
+  .vp-bar .ss-count{flex:1;text-align:center}
+  .vp-empty{padding:30px 24px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
   .doc table{
     width:100%;border-collapse:collapse;margin:0 0 24px;
     font-size:14.5px;display:block;overflow-x:auto;
@@ -1304,6 +1322,11 @@ Use Case: Legacy Networks
        Custom names? use data-slides="images/a.png,images/b.png".)
      FINAL AUDIT: upload your file to  audit/final-audit.jsx
        or paste its code into the empty #final-audit-jsx block further down.
+     SCREEN RECORDINGS: upload your clips to  videos/phishing-forensics/
+       and name them step-01.mp4, step-02.mp4, step-03.mp4 ...
+       They are found automatically, in order. (Different extension? change
+       data-ext. Custom names? use data-videos="videos/a.mp4,videos/b.mp4".
+       Step names in the side list: data-labels="First|Second|Third".)
 -->
 <script type="text/markdown" data-title="Phishing Forensics: Browser-Based Tools" data-category="cyber-security" data-tags="phishing,forensics,presentation,audit" data-updated="2026-10-30">
 
@@ -1319,6 +1342,12 @@ A presentation and final audit on investigating phishing emails and links using 
 ## Final Audit
 
 <div class="codepanel" data-title="Final Audit · JSX" data-src="audit/final-audit.jsx" data-source-id="final-audit-jsx"></div>
+
+## Screen Recordings
+
+Step-by-step recordings of the investigation being performed.
+
+<div class="videopanel" data-title="Screen Recordings · Step by Step" data-folder="videos/phishing-forensics" data-prefix="step-" data-ext="mp4"></div>
 
 </script>
 
@@ -1581,6 +1610,7 @@ A presentation and final audit on investigating phishing emails and links using 
   }
 
   function showLibrary() {
+    el.rDoc.querySelectorAll("video").forEach(function (v) { v.pause(); });
     el.reader.classList.add("hidden");
     el.library.classList.remove("hidden");
     document.title = "Zach C0des — Study Guides, References & Tutorials";
@@ -1640,6 +1670,7 @@ A presentation and final audit on investigating phishing emails and links using 
 
     buildSlideshows();
     buildCodePanels();
+    buildVideoPanels();
   }
 
   /* ---------- screenshot slideshows ---------- */
@@ -1843,6 +1874,86 @@ A presentation and final audit on investigating phishing emails and links using 
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
         .then(function (t) { if (t.trim()) fill(t); else empty(); })
         .catch(empty);
+    });
+  }
+
+  /* ---------- screen recording panels ---------- */
+  function buildVideoPanels() {
+    el.rDoc.querySelectorAll(".videopanel").forEach(function (root) {
+      var title = root.getAttribute("data-title") || "Screen Recordings";
+      var folder = (root.getAttribute("data-folder") || "").replace(/\/+$/, "");
+      var prefix = root.getAttribute("data-prefix") || "step-";
+      var ext = (root.getAttribute("data-ext") || "mp4").replace(/^\./, "");
+      var labels = (root.getAttribute("data-labels") || "").split("|")
+        .map(function (s) { return s.trim(); }).filter(Boolean);
+      var explicit = (root.getAttribute("data-videos") || "").split(",")
+        .map(function (s) { return s.trim(); }).filter(Boolean);
+
+      root.innerHTML = '<div class="vp-head"><span class="cp-title">' + esc(title) +
+        '</span></div><div class="vp-empty">Looking for recordings…</div>';
+
+      function empty() {
+        root.innerHTML = '<div class="vp-head"><span class="cp-title">' + esc(title) + '</span></div>' +
+          '<div class="vp-empty"><strong style="color:var(--paper)">No recordings uploaded yet.</strong><br>' +
+          "Upload videos to <code>" + esc((folder || ".") + "/") + "</code> named <code>" +
+          esc(prefix + "01." + ext) + "</code>, <code>" + esc(prefix + "02." + ext) +
+          "</code>, … and they will appear here automatically.</div>";
+      }
+
+      function mount(list) {
+        var n = list.length, cur = 0;
+        var items = list.map(function (_, i) {
+          return '<button type="button" class="vp-item" data-i="' + i + '"><span class="n">' +
+            pad2(i + 1) + "</span><span>" + esc(labels[i] || "Step " + (i + 1)) + "</span></button>";
+        }).join("");
+
+        root.innerHTML =
+          '<div class="vp-head"><span class="cp-title">' + esc(title) + '</span>' +
+            '<span class="cp-meta">' + n + " recording" + (n === 1 ? "" : "s") + "</span>" +
+            '<label class="vp-auto"><input type="checkbox" checked> Auto-play next</label></div>' +
+          '<div class="vp-main"><div class="vp-stage"><video controls playsinline preload="metadata"></video></div>' +
+            '<div class="vp-list">' + items + "</div></div>" +
+          '<div class="vp-bar"><button type="button" class="ss-btn" data-act="prev"' + (n > 1 ? "" : " disabled") + '>&larr; Prev</button>' +
+            '<span class="ss-count"></span>' +
+            '<button type="button" class="ss-btn" data-act="next"' + (n > 1 ? "" : " disabled") + '>Next &rarr;</button></div>';
+
+        var video = root.querySelector("video");
+        var count = root.querySelector(".ss-count");
+        var btns = root.querySelectorAll(".vp-item");
+        var auto = root.querySelector(".vp-auto input");
+
+        function go(i, play) {
+          cur = ((i % n) + n) % n;
+          video.src = list[cur];
+          video.load();
+          if (play) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+          count.textContent = pad2(cur + 1) + " / " + pad2(n) + (labels[cur] ? "  ·  " + labels[cur] : "");
+          Array.prototype.forEach.call(btns, function (b, k) { b.classList.toggle("on", k === cur); });
+        }
+
+        video.addEventListener("ended", function () { if (auto.checked && cur < n - 1) go(cur + 1, true); });
+        root.addEventListener("click", function (e) {
+          var it = e.target.closest(".vp-item");
+          if (it) { go(parseInt(it.getAttribute("data-i"), 10), true); return; }
+          var b = e.target.closest("[data-act]");
+          if (!b) return;
+          go(cur + (b.getAttribute("data-act") === "next" ? 1 : -1), true);
+        });
+        go(0, false);
+      }
+
+      if (explicit.length) { mount(explicit); return; }
+
+      var found = [];
+      (function probe(k) {
+        if (k > 100) { found.length ? mount(found) : empty(); return; }
+        var path = (folder ? folder + "/" : "") + prefix + pad2(k) + "." + ext;
+        var v = document.createElement("video");
+        v.preload = "metadata";
+        v.onloadedmetadata = function () { found.push(path); v.removeAttribute("src"); v.load(); probe(k + 1); };
+        v.onerror = function () { found.length ? mount(found) : empty(); };
+        v.src = path;
+      })(1);
     });
   }
 
