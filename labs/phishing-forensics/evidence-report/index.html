@@ -1,1 +1,277 @@
-null
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email security audit – TED Settlement Notice</title>
+<style>
+  :root {
+    --bg: #EEF1F4; --ink: #17202B; --panel: #FFFFFF; --line: #D5DBE2; --mute: #5B6676;
+    --safe: #1F7A5A; --safe-bg: #E3F3EC; --warn: #9A6200; --warn-bg: #FBF0D9;
+    --bad: #B3362F; --bad-bg: #FBE7E5; --navy: #24406B;
+    --serif: Charter, 'Iowan Old Style', Georgia, serif;
+    --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); min-height: 100vh; }
+  .page { max-width: 860px; margin: 0 auto; padding: 28px 16px 48px; }
+  h1 { font-family: var(--serif); font-size: clamp(24px, 4vw, 32px); margin: 0; }
+  .sub { color: var(--mute); font-size: 15px; margin: 6px 0 22px; }
+
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tab { cursor: pointer; border: none; background: transparent; color: var(--ink); padding: 10px 16px; font: 600 15px var(--sans); border-radius: 6px 6px 0 0; }
+  .tab[aria-selected="true"] { background: var(--ink); color: #fff; }
+  .tab:focus-visible, .acc-btn:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+
+  .stack { display: grid; gap: 14px; }
+  .stack-12 { gap: 12px; }
+  .stack-20 { gap: 20px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+  .card.tight { padding: 16px 20px; }
+  .card.flush { padding: 0; overflow: hidden; }
+  .card.tone-ok { border-left: 5px solid var(--safe); }
+  .card.tone-note { border-left: 5px solid var(--warn); }
+  .card.tone-bad { border-left: 5px solid var(--bad); }
+  .card.navy { border-left: 5px solid var(--navy); }
+  .card.soft { background: #F7F9FB; }
+
+  .badge { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 4px; white-space: nowrap; }
+  .badge.ok { background: var(--safe-bg); color: var(--safe); }
+  .badge.note { background: var(--warn-bg); color: var(--warn); }
+  .badge.bad { background: var(--bad-bg); color: var(--bad); }
+
+  .hero { background: var(--ink); color: #fff; border-radius: 10px; padding: 32px 28px; border-left: 8px solid var(--safe); }
+  .hero .eyebrow { font-size: 14px; color: #AEB8C6; margin-bottom: 10px; }
+  .hero .big { font-family: var(--serif); font-size: clamp(28px, 5vw, 44px); line-height: 1.12; font-weight: 700; }
+  .hero p { font-size: 17px; line-height: 1.55; color: #D9E0EA; max-width: 640px; margin: 16px 0 0; }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  .grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+  .label { color: var(--mute); font-size: 13px; }
+  .stat { font-family: var(--serif); font-size: 20px; font-weight: 700; margin-top: 4px; }
+  .muted-p { color: var(--mute); font-size: 14px; line-height: 1.5; margin: 8px 0 0; }
+  .c-safe { color: var(--safe); } .c-bad { color: var(--bad); }
+  .meter { height: 8px; background: var(--line); border-radius: 4px; margin-top: 12px; }
+  .meter > div { width: 15%; height: 8px; background: var(--safe); border-radius: 4px; }
+
+  h3 { font-family: var(--serif); font-size: 20px; margin: 0 0 4px; }
+  .lede { color: var(--mute); font-size: 15px; line-height: 1.6; margin: 0; max-width: 680px; }
+  ol.steps { margin: 0; padding-left: 22px; display: grid; gap: 10px; }
+  ol.steps li { font-size: 15px; line-height: 1.55; max-width: 700px; }
+
+  .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .item-title { font-family: var(--serif); font-size: 18px; font-weight: 700; }
+  .body { margin: 8px 0 0; font-size: 15px; line-height: 1.55; max-width: 720px; }
+
+  .acc-btn { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .acc-btn:focus-visible { outline: 3px solid var(--navy); outline-offset: -3px; }
+  .acc-right { display: flex; gap: 8px; align-items: center; }
+  .acc-icon { font-size: 18px; color: var(--mute); }
+  .acc-panel { padding: 16px 20px 18px; display: grid; gap: 12px; border-top: 1px solid var(--line); }
+  .acc-panel[hidden] { display: none; }
+  .acc-panel .h { font-weight: 600; font-size: 14px; color: var(--navy); }
+  .acc-panel p { margin: 4px 0 0; font-size: 15px; line-height: 1.6; max-width: 700px; }
+
+  .sec-title { font-family: var(--serif); font-size: 22px; font-weight: 700; }
+  .sec-p { margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: var(--mute); max-width: 700px; }
+  .op-title { font-family: var(--serif); font-size: 17px; font-weight: 700; }
+  .op-body { margin: 6px 0 0; font-size: 15px; line-height: 1.6; max-width: 720px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Email security audit</h1>
+  <p class="sub">Notice of Proposed Class Action Settlement, Sutton v. TED Foundation Inc. Audited October 30, 2026.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div id="view" role="tabpanel"></div>
+</div>
+
+<script>
+const TONE = {
+  ok:   { t: "Supports legitimacy" },
+  note: { t: "Minor concern" },
+  bad:  { t: "Needs action" },
+};
+
+const evidence = [
+  ["Court case details", "Sutton v. TED Foundation Inc., No. 1:23-cv-09219-DEH, S.D.N.Y., Judge Dale E. Ho. The header details match public reporting (ClassAction.org, Top Class Actions).", "ok"],
+  ["Settlement terms", "$350,000 fund, $5 cash or two free months of membership, preliminary approval July 14, 2026, claim deadline Oct 26, 2026. All match public sources.", "ok"],
+  ["Contact details", "Toll-free 1-888-312-3966 and www.tedvppasettlement.com both appear on the official long-form notice copy hosted by ClassAction.org.", "ok"],
+  ["Link handling", "The destination is written out as plain text in the body. It is not hidden behind an image or a button.", "ok"],
+  ["DKIM signature", "Passed. The message was signed by the claimed domain and was not altered in transit. This proves who sent it, not that the sender is trustworthy.", "ok"],
+  ["VirusTotal", "No security vendor flagged the URL as malicious.", "ok"],
+  ["Blacklists", "0 errors and 0 warnings. Your notes show 141 passed in one place and 144 in another, which is a small transcription mismatch.", "ok"],
+  ["Original TED emails", "Your inbox holds earlier TED emails, so the address is tied to a real TED account. That fits how a class list is built.", "ok"],
+  ["What it asks for", "A Claim ID and PIN only. Payment is by check, PayPal or Venmo. No password, Social Security number or bank login is requested.", "ok"],
+  ["Cookies", "Three cookies: two Google Analytics cookies (_ga, _ga_) and one site cookie (scms). This is routine analytics. None are Secure-flagged, which is low risk on an informational site.", "note"],
+  ["Domain email protection", "DMARC is not enforcing and SPF is lenient. This is a weakness in the sender's setup and the most likely reason the filter flagged it.", "note"],
+  ["Claim deadline", "The notice says October 26, 2026. Today is October 30, 2026, so that date has passed.", "bad"],
+];
+
+const mx = [
+  { t: "HTTP timed out", tag: "Error", tone: "note",
+    plain: "The scanner knocked on the website's front door and nobody answered in time. That can happen when a server is busy or when it declines automated checks.",
+    meaning: "Low concern. The same report shows the web server tests passing, and VirusTotal found nothing. Re-run the test once to confirm." },
+  { t: "MX: use a quarantine or reject policy", tag: "Supplemental", tone: "note",
+    plain: "MX records say where a domain's incoming mail goes. This message is really about mail-protection settings, and it repeats the DMARC and SPF items below. It is a recommendation, not a failed check.",
+    meaning: "Low concern. It does not affect whether this email is real." },
+  { t: "DMARC quarantine/reject not enabled", tag: "Error", tone: "bad",
+    plain: "DMARC is the sender's instruction to inboxes about what to do with mail that fails identity checks. Right now the domain only asks inboxes to watch and report. It does not ask them to block fakes. Picture a guard told to write down suspicious visitors but not turn them away.",
+    meaning: "A real weakness. Someone could imitate this domain more easily, and weak DMARC often pushes bulk mail into spam. It does not show that this email is fake, because DKIM passed." },
+  { t: "SPF: use a quarantine or reject policy", tag: "Supplemental", tone: "note",
+    plain: "SPF is the list of servers allowed to send mail for the domain. The list exists, but its ending is soft. Strict wording would tell inboxes to reject mail from servers not on the list. The BIMI note refers to the logo some inboxes show beside a verified sender, which is cosmetic.",
+    meaning: "Low to moderate concern. It is a hardening suggestion and does not make this message unsafe." },
+  { t: "Mail server: 1 test failed", tag: "Error", tone: "note",
+    plain: "The domain's incoming mail is relayed through ImprovMX, a third-party forwarding service. That is common for short-lived campaign sites. Your screenshot does not show which test failed.",
+    meaning: "Unclear. Open that row in MX Toolbox to read the failing test. The heading in your screenshot looks like a slightly different spelling from tedvppasettlement.com, so confirm the exact domain you tested." },
+  { t: "DNS: 2 warnings", tag: "Warning", tone: "note",
+    plain: "DNS is the internet's address book. Warnings here usually mean housekeeping issues, such as records set up in a less-than-ideal way.",
+    meaning: "Low concern. The warnings are not named in your notes, so they cannot be judged individually." },
+];
+
+const steps = [
+  "Move the email to the main inbox and choose Not spam so the filter learns from it.",
+  "In Gmail, open Show original and confirm SPF, DKIM and DMARC for this specific message. The domain in the DKIM d= tag should match the From address.",
+  "Do not click the link in the email. Type tedvppasettlement.com into the browser yourself.",
+  "Check the site for the current claim status and whether late claims are accepted. Use the phone number printed on the site, not only the one in the email.",
+  "File only if you actually watched TED videos between Oct 19, 2021 and July 14, 2026. The claim is submitted under penalty of perjury.",
+  "Keep the email until the final approval hearing. The free membership benefit does not require a claim form, so watch for a follow-up email.",
+];
+
+const second = [
+  ["I agree with the verdict, but the yes/no framing is too coarse", "Moving the email to the inbox is right. The better outcome is a third state: not phishing, safe to open, verify before acting. Nothing in the evidence justifies deleting or blocking the sender."],
+  ["The deadline is the biggest practical finding", "Your draft says you would proceed with filing if eligible. The Oct 26 claim and exclusion deadlines have already passed. Cash may no longer be claimable unless the site announces an extension or accepts late claims. Confirm this on the official site rather than assuming either way."],
+  ["DKIM pass is necessary, not sufficient", "It proves the message came from a domain that holds the signing key. Scammers can also sign mail from domains they own. The strong evidence is the combination of a signed message, matching public case records, matching contact details and a clean reputation."],
+  ["The spam label was almost certainly a false positive", "Bulk sending, a money-related subject, a link to a newer domain and DMARC that is not enforced are the usual triggers. This is a legitimate legal notice that was filtered automatically."],
+  ["Unsubscribe is not the same as opting out", "Unsubscribing only stops emails. Excluding yourself from the class requires a written letter to the administrator by the stated deadline. Do not treat the unsubscribe link as a legal choice."],
+  ["Clean up three data points before you file the audit", "Blacklist passed count (141 vs 144), mail server counts (28 vs 29 passed, 5 vs 6 warnings), and the final approval hearing date. Your screenshot says Nov 13, 11:00 a.m., while the sources I found say Nov 12. Confirm the date on the court docket or settlement site."],
+  ["Limits of this audit", "It relies on your notes and screenshots. I did not inspect the raw message headers or visit the claim site, so the Gmail Show original check is worth doing."],
+];
+
+const badge = (tone, text) => `<span class="badge ${tone}">${text}</span>`;
+
+function Verdict() {
+  return `
+  <div class="stack stack-20">
+    <div class="hero">
+      <div class="eyebrow">Final verdict</div>
+      <div class="big">Not phishing. Move it to your inbox.</div>
+      <p>This is a genuine court-authorized settlement notice that the spam filter caught by mistake. Open it, but reach the claim site by typing the address yourself. The Oct 26 claim deadline has already passed.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="label">Email type</div>
+        <div class="stat">Legitimate bulk legal notice</div>
+        <p class="muted-p">A filtered false positive. If it were a scam, it would be a settlement-claim lure built to harvest personal data. None of that behavior appears here.</p>
+      </div>
+      <div class="card">
+        <div class="label">Risk level</div>
+        <div class="stat c-safe">Low</div>
+        <div class="meter"><div></div></div>
+        <p class="muted-p" style="margin-top:10px">Every scan came back clean. The open issues are on the sender's side.</p>
+      </div>
+      <div class="card">
+        <div class="label">Time sensitivity</div>
+        <div class="stat c-bad">Deadline passed</div>
+        <p class="muted-p">Claims were due Oct 26, 2026. Check the official site for late-claim or membership-benefit details.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Why it landed in spam</h3>
+      <p class="lede">Your original assumption was that the email was a data-gathering attempt. The evidence points the other way. The filter reacts to mass mailing, money wording, a link and a sender domain that does not yet enforce DMARC. Those are traits of many scams, but here they come from a real administrator's setup.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:12px">Remediation steps</h3>
+      <ol class="steps">${steps.map(s => `<li>${s}</li>`).join("")}</ol>
+    </div>
+  </div>`;
+}
+
+function Evidence() {
+  return `
+  <div class="stack stack-12">
+    <p class="lede">Findings from the tools and sources in your notes, plus a public cross-check of the case. Each row shows how it affects the verdict.</p>
+    ${evidence.map(([title, body, tone]) => `
+      <div class="card tight tone-${tone}">
+        <div class="row">
+          <div class="item-title">${title}</div>
+          ${badge(tone, TONE[tone].t)}
+        </div>
+        <p class="body">${body}</p>
+      </div>`).join("")}
+    <div class="card soft">
+      <h3 style="font-size:18px;margin:0 0 6px">What a passing DKIM check means</h3>
+      <p class="lede" style="line-height:1.6">The sender's digital signature matched the public key in its DNS records, the message was not changed after signing, and the signature is within its valid dates. A failure would mean the content was altered, the key was weak or expired, or the signing domain did not match the visible From address. None of those apply.</p>
+    </div>
+  </div>`;
+}
+
+let openMx = 2;
+function MX() {
+  const summary = [["Overall", "4 errors, 7 warnings, 184 passed"], ["Blacklist", "0 errors, 0 warnings"], ["Mail server", "3 errors, 6 warnings"], ["Web server", "0 errors, 0 warnings, 8 passed"], ["DNS", "0 errors, 2 warnings, 14 passed"]];
+  return `
+  <div class="stack">
+    <div class="card">
+      <div class="grid-5">
+        ${summary.map(([k, v]) => `<div><div class="label">${k}</div><div style="font-size:14px;font-weight:600;margin-top:2px">${v}</div></div>`).join("")}
+      </div>
+      <p class="muted-p" style="margin-top:14px">The overall counts include everything. Almost every error is about how strictly the sender protects its own domain, not about danger to you. Select a finding to read it in plain language.</p>
+    </div>
+    ${mx.map((m, i) => `
+      <div class="card flush">
+        <button class="acc-btn" data-i="${i}" aria-expanded="${openMx === i}" aria-controls="mx-panel-${i}">
+          <span class="item-title">${m.t}</span>
+          <span class="acc-right">${badge(m.tone, m.tag)}<span class="acc-icon" aria-hidden="true">${openMx === i ? "−" : "+"}</span></span>
+        </button>
+        <div class="acc-panel" id="mx-panel-${i}" ${openMx === i ? "" : "hidden"}>
+          <div><div class="h">In plain terms</div><p>${m.plain}</p></div>
+          <div><div class="h">What it means for this email</div><p>${m.meaning}</p></div>
+        </div>
+      </div>`).join("")}
+  </div>`;
+}
+
+function Second() {
+  return `
+  <div class="stack">
+    <div class="card navy">
+      <div class="sec-title">Second opinion: agree, with three changes</div>
+      <p class="sec-p">Keep the email, treat the deadline as the main risk, and verify the message in Gmail before relying on it.</p>
+    </div>
+    ${second.map(([t, b]) => `
+      <div class="card tight">
+        <div class="op-title">${t}</div>
+        <p class="op-body">${b}</p>
+      </div>`).join("")}
+  </div>`;
+}
+
+const tabs = [["Verdict", Verdict], ["Evidence", Evidence], ["MX Toolbox decoded", MX], ["Second opinion", Second]];
+let tab = 0;
+
+function render() {
+  document.getElementById("tabs").innerHTML = tabs.map(([name], i) =>
+    `<button class="tab" role="tab" aria-selected="${tab === i}" data-tab="${i}">${name}</button>`).join("");
+  document.getElementById("view").innerHTML = tabs[tab][1]();
+}
+
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-tab]");
+  if (t) { tab = +t.dataset.tab; render(); return; }
+  const a = e.target.closest(".acc-btn");
+  if (a) {
+    const i = +a.dataset.i;
+    openMx = openMx === i ? -1 : i;
+    render();
+    const btn = document.querySelector(`.acc-btn[data-i="${i}"]`);
+    if (btn) btn.focus();
+  }
+});
+
+render();
+</script>
+</body>
+</html>
