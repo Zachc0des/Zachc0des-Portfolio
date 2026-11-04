@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSH Brute-Force Log Analysis Lab</title>
+<style>
+:root{--bg:#060b12;--panel:#0b1420;--line:#18304a;--text:#c9d8e6;--dim:#6f87a0;--cyan:#2de2e6;--amber:#ffb454;--red:#ff5d6c;--green:#5dff9b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Segoe UI",system-ui,sans-serif;
+background-image:linear-gradient(rgba(45,226,230,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(45,226,230,.04) 1px,transparent 1px);background-size:32px 32px}
+code,pre,textarea,input,td.m,th{font-family:"JetBrains Mono","Fira Code",Consolas,monospace}
+header{padding:48px 20px 28px;max-width:960px;margin:0 auto;border-bottom:1px solid var(--line)}
+h1{margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.4rem);color:#fff;letter-spacing:.01em}
+h1 span{color:var(--red)}
+header p{margin:0;color:var(--dim);max-width:70ch}
+.status{display:inline-flex;gap:8px;align-items:center;margin-bottom:14px;color:var(--green);font:13px monospace}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.status i{animation:none}}
+main{max-width:960px;margin:0 auto;padding:8px 20px 64px}
+section{margin-top:36px}
+h2{font-size:1.2rem;color:var(--cyan);margin:0 0 14px;border-left:3px solid var(--cyan);padding-left:10px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-bottom:12px}
+.step h3{margin:0 0 6px;font-size:1rem;color:#fff}
+.step p{margin:4px 0 8px;color:var(--text)}
+.box{position:relative}
+pre{margin:0;background:#04080d;border:1px solid var(--line);border-radius:4px;padding:12px 14px;overflow-x:auto;font-size:13px;line-height:1.5;color:var(--green)}
+.cp{position:absolute;top:6px;right:6px;background:var(--line);color:var(--text);border:0;border-radius:3px;padding:3px 9px;font-size:12px;cursor:pointer}
+.cp:hover,.cp:focus-visible{background:var(--cyan);color:#001318;outline:none}
+.note{border-left:3px solid var(--amber);background:rgba(255,180,84,.07);padding:10px 14px;font-size:14px;color:#ffd9a6;border-radius:0 4px 4px 0;margin-top:10px}
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+textarea{width:100%;min-height:130px;background:#04080d;color:var(--text);border:1px solid var(--line);border-radius:4px;padding:10px;font-size:13px;resize:vertical}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;align-items:center}
+input[type=text]{background:#04080d;color:var(--text);border:1px solid var(--line);border-radius:4px;padding:8px 10px;font-size:13px;width:200px}
+button.go,label.file{background:var(--cyan);color:#001318;border:0;border-radius:4px;padding:8px 14px;font-weight:700;cursor:pointer;font-size:14px}
+label.file{background:var(--line);color:var(--text)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,label.file:focus-within{outline:2px solid var(--amber);outline-offset:2px}
+.tbl{overflow-x:auto;margin-top:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--dim);font-weight:600}
+tr.hit td{color:var(--red);background:rgba(255,93,108,.08)}
+#sum{color:var(--dim);font-size:14px;margin-top:8px}
+footer{max-width:960px;margin:0 auto;padding:0 20px 40px;color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="status"><i></i>lab environment: Kali (attacker) → Ubuntu (target)</div>
+  <h1>SSH brute-force <span>log analysis</span></h1>
+  <p>Export <code>auth.log</code> from the Ubuntu target, find the failed SSH attempts, isolate the Kali IP, and confirm the pattern with SQL.</p>
+</header>
+
+<main>
+<section>
+  <h2>1. Collect the log on Ubuntu</h2>
+  <div class="step">
+    <h3>Go to the log folder</h3>
+    <p><code>auth.log</code> is a file inside <code>/var/log</code>, so move into the folder first.</p>
+    <div class="box"><pre>cd /var/log
+ls -l auth.log</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Export the file</h3>
+    <div class="box"><pre>sudo cat /var/log/auth.log &gt; ~/auth_export.log</pre><button class="cp">Copy</button></div>
+    <div class="note">The <code>&gt;</code> redirect runs as your normal user, not sudo. Write the export to your home folder (<code>~/</code>) so it doesn't fail with "permission denied" inside /var/log.</div>
+  </div>
+  <div class="step">
+    <h3>Spot the failed attempts</h3>
+    <div class="box"><pre>grep "Failed password" ~/auth_export.log | head -20</pre><button class="cp">Copy</button></div>
+    <p>Each line carries a timestamp, the username tried, the source IP, and the port.</p>
+  </div>
+  <div class="step">
+    <h3>Get the Kali IP</h3>
+    <p>On the Kali machine, run this and note the address on the lab network.</p>
+    <div class="box"><pre>ip -4 addr show | grep inet</pre><button class="cp">Copy</button></div>
+    <p>The IP that dominates the failed-password lines should match it. That match confirms your simulated brute force.</p>
+  </div>
+</section>
+
+<section>
+  <h2>2. Parse timestamp + IP with SQL (SQLite)</h2>
+  <div class="step">
+    <h3>Load the log into a table</h3>
+    <div class="box"><pre>sudo apt install -y sqlite3
+sqlite3 auth.db
+.mode tabs
+CREATE TABLE raw(line TEXT);
+.import auth_export.log raw</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Create a view of failed SSH logins</h3>
+    <p>Ubuntu 24.04 writes ISO timestamps (<code>2026-11-03T10:15:22…</code>). On older releases the timestamp is <code>Nov  3 10:15:22</code>, so change the first <code>substr</code> to <code>substr(line,1,15)</code>.</p>
+    <div class="box"><pre>CREATE VIEW failed_ssh AS
+SELECT ts,
+       substr(rest, 1, instr(rest, ' ') - 1) AS src_ip,
+       replace(usr, 'invalid user ', '')     AS username
+FROM (
+  SELECT substr(line, 1, instr(line, ' ') - 1) AS ts,
+         substr(line, instr(line, ' from ') + 6) AS rest,
+         substr(line, instr(line, 'for ') + 4,
+                instr(line, ' from ') - instr(line, 'for ') - 4) AS usr
+  FROM raw
+  WHERE line LIKE '%sshd%Failed password%'
+);</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Timestamps and IP addresses</h3>
+    <div class="box"><pre>SELECT ts, src_ip, username FROM failed_ssh ORDER BY ts;</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Which IP is the attacker?</h3>
+    <div class="box"><pre>SELECT src_ip,
+       COUNT(*)  AS attempts,
+       MIN(ts)   AS first_seen,
+       MAX(ts)   AS last_seen
+FROM failed_ssh
+GROUP BY src_ip
+ORDER BY attempts DESC;</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Confirm it is your Kali box</h3>
+    <p>Replace <code>192.168.56.101</code> with the Kali IP.</p>
+    <div class="box"><pre>SELECT ts, src_ip, username
+FROM failed_ssh
+WHERE src_ip = '192.168.56.101'
+ORDER BY ts;</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Show the brute-force burst rate</h3>
+    <p>Dozens of attempts in the same minute is the signature of an automated tool.</p>
+    <div class="box"><pre>SELECT substr(ts, 1, 16) AS minute, src_ip, COUNT(*) AS attempts
+FROM failed_ssh
+GROUP BY minute, src_ip
+ORDER BY attempts DESC;</pre><button class="cp">Copy</button></div>
+  </div>
+  <div class="step">
+    <h3>Check whether it succeeded</h3>
+    <div class="box"><pre>SELECT line FROM raw
+WHERE line LIKE '%Accepted%'
+  AND line LIKE '%192.168.56.101%';</pre><button class="cp">Copy</button></div>
+  </div>
+</section>
+
+<section>
+  <h2>3. Quick analyzer (runs in your browser)</h2>
+  <div class="tool">
+    <textarea id="in" placeholder="Paste auth_export.log contents here, or load the file."></textarea>
+    <div class="row">
+      <label class="file">Load file<input id="f" type="file" hidden></label>
+      <input id="kali" type="text" placeholder="Kali IP (optional)" aria-label="Kali IP">
+      <button class="go" id="run">Analyze</button>
+    </div>
+    <div id="sum">Nothing analyzed yet. Paste a log and select Analyze.</div>
+    <div class="tbl" id="ips"></div>
+    <div class="tbl" id="ev"></div>
+  </div>
+  <p style="color:var(--dim);font-size:13px">The log never leaves your machine; parsing happens locally in this page.</p>
+</section>
+</main>
+<footer>Use only on systems you own or are authorized to test.</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.querySelectorAll('.cp').forEach(b => b.addEventListener('click', () => {
+  const t = b.previousElementSibling.textContent;
+  const done = () => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1400); };
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(done).catch(() => {
+    const r = document.createRange(); r.selectNodeContents(b.previousElementSibling);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); done();
+  });
+}));
+
+$('f').addEventListener('change', e => {
+  const file = e.target.files[0]; if (!file) return;
+  const r = new FileReader(); r.onload = () => { $('in').value = r.result; $('run').click(); };
+  r.readAsText(file);
+});
+
+const TS = /^(\d{4}-\d{2}-\d{2}T[\d:.+-]+|[A-Z][a-z]{2}\s+\d+\s[\d:]{8})/;
+const FAIL = /Failed password for (?:invalid user )?(\S+) from ([\d.]+) port (\d+)/;
+
+$('run').addEventListener('click', () => {
+  const kali = $('kali').value.trim();
+  const ev = [];
+  $('in').value.split('\n').forEach(l => {
+    const m = FAIL.exec(l); if (!m) return;
+    const t = TS.exec(l);
+    ev.push({ts: t ? t[1] : '?', user: m[1], ip: m[2], port: m[3]});
+  });
+  if (!ev.length) {
+    $('sum').textContent = 'No "Failed password" lines found. Check that you pasted the auth log.';
+    $('ips').innerHTML = $('ev').innerHTML = ''; return;
+  }
+  const by = {};
+  ev.forEach(e => { (by[e.ip] = by[e.ip] || {n: 0, first: e.ts, last: e.ts}); by[e.ip].n++; by[e.ip].last = e.ts; });
+  const rows = Object.entries(by).sort((a, b) => b[1].n - a[1].n);
+  $('sum').textContent = ev.length + ' failed attempts from ' + rows.length + ' IP address(es). Top source: ' + rows[0][0] + '.';
+  $('ips').innerHTML = '<table><tr><th>Source IP</th><th>Attempts</th><th>First seen</th><th>Last seen</th></tr>' +
+    rows.map(([ip, v]) => '<tr class="' + (ip === kali ? 'hit' : '') + '"><td class="m">' + esc(ip) + '</td><td class="m">' + v.n +
+    '</td><td class="m">' + esc(v.first) + '</td><td class="m">' + esc(v.last) + '</td></tr>').join('') + '</table>';
+  const shown = ev.slice(0, 200);
+  $('ev').innerHTML = '<table><tr><th>Timestamp</th><th>Source IP</th><th>Username</th></tr>' +
+    shown.map(e => '<tr class="' + (e.ip === kali ? 'hit' : '') + '"><td class="m">' + esc(e.ts) + '</td><td class="m">' + esc(e.ip) +
+    '</td><td class="m">' + esc(e.user) + '</td></tr>').join('') + '</table>' +
+    (ev.length > 200 ? '<p style="color:var(--dim);font-size:13px">Showing first 200 of ' + ev.length + ' events.</p>' : '');
+});
+</script>
+</body>
+</html>
