@@ -1417,6 +1417,35 @@ Step-by-step recordings of the lab being performed.
 
 </script>
 
+
+<!-- ── IT MGMT: CLOUD BASED HELP DESK BUILD ──
+     SLIDESHOW: upload images to  images/cloud-help-desk/
+       named slide-01.png, slide-02.png, slide-03.png ...
+     FINAL REPORT: upload your page to  labs/cloud-help-desk/final-report/index.html
+     SCREEN RECORDINGS: upload clips to  videos/cloud-help-desk/
+       named step-01.mp4, step-02.mp4, step-03.mp4 ...
+-->
+<script type="text/markdown" data-title="Cloud Based Help Desk Build" data-category="it-mgmt" data-tags="help-desk,google-forms,google-sheets,cloud,ticketing" data-updated="2026-11-12">
+
+# Cloud Based Help Desk Build
+A help desk is where people ask for assistance and someone keeps track of the requests until they're fixed. This build applies Google tools (Forms & Sheets) to create a cloud based help desk.
+
+## Presentation
+
+<div class="slideshow" data-folder="images/cloud-help-desk" data-prefix="slide-" data-ext="png"></div>
+
+## Screen Recordings
+
+Step-by-step recordings of the help desk build.
+
+<div class="videopanel" data-title="Screen Recordings · Step by Step" data-folder="videos/cloud-help-desk" data-prefix="step-" data-ext="mp4"></div>
+
+## Final Report
+
+<div class="framepanel" data-title="Final Report" data-src="labs/cloud-help-desk/final-report/index.html" data-filename="index.html"></div>
+
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
@@ -1458,6 +1487,7 @@ Step-by-step recordings of the lab being performed.
 
   function prettyCat(id) {
     if (!id) return "Guide";
+    if (id === "it-mgmt") return "IT MGMT";
     return id.replace(/[-_]/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
