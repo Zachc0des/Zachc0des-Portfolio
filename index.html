@@ -16,7 +16,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Jost:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     /* LIGHT (default): white surfaces, black text, silver lines */
@@ -45,7 +45,7 @@
     --hl-num:#2a2c30;
     --hl-attr:#6c717a;
     --hl-built:#33363b;
-    --display:"Chakra Petch",system-ui,sans-serif;
+    --display:"Jost",system-ui,sans-serif;
     --body:"Space Grotesk",system-ui,sans-serif;
     --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
     --wrap:1120px;
@@ -140,7 +140,7 @@
   .masthead .wrap{display:flex;align-items:center;gap:16px;height:60px}
   .mark{
     display:inline-flex;align-items:center;gap:12px;
-    font-family:var(--display);font-weight:700;font-size:18px;
+    font-family:var(--display);font-weight:400;font-size:17px;
     letter-spacing:.2em;text-transform:uppercase;color:var(--paper);
   }
   .mark span{color:var(--muted)}
@@ -220,9 +220,9 @@
   }
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--silver);flex:none}
   .hero h1{
-    font-family:var(--display);font-weight:700;
-    font-size:clamp(40px,8.2vw,80px);line-height:.96;letter-spacing:-.01em;
-    text-transform:uppercase;margin:0 0 18px;
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(40px,8vw,78px);line-height:1.04;letter-spacing:-.02em;
+    margin:0 0 18px;
     background:linear-gradient(180deg,var(--h1-from) 0%,var(--h1-to) 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
@@ -303,8 +303,8 @@
   }
   .card .kicker .date{color:var(--muted)}
   .card h3{
-    font-family:var(--display);font-weight:600;font-size:22px;
-    line-height:1.15;margin:0 0 8px;letter-spacing:.01em;
+    font-family:var(--display);font-weight:400;font-size:22px;
+    line-height:1.2;margin:0 0 8px;letter-spacing:.01em;
   }
   .card p{margin:0 0 14px;color:var(--muted);font-size:14.5px}
   .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -319,7 +319,7 @@
   }
   .empty h3{
     font-family:var(--display);color:var(--paper);font-size:22px;
-    margin:0 0 8px;font-weight:600;
+    margin:0 0 8px;font-weight:400;
   }
   .empty code{
     font-family:var(--mono);font-size:13px;color:var(--paper);
@@ -342,8 +342,8 @@
   }
   .reader-head .kicker::before{content:"";width:28px;height:1px;background:var(--silver)}
   .reader-head h2{
-    font-family:var(--display);font-weight:700;text-transform:uppercase;
-    font-size:clamp(30px,5.6vw,52px);line-height:1;letter-spacing:-.005em;margin:0 0 12px;
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(30px,5.4vw,50px);line-height:1.08;letter-spacing:-.015em;margin:0 0 12px;
   }
   .reader-head p{color:var(--muted);margin:0;max-width:60ch}
 
@@ -367,12 +367,12 @@
 
   /* markdown content */
   .doc{max-width:74ch}
-  .doc h1{font-family:var(--display);font-size:34px;margin:48px 0 16px;font-weight:700}
+  .doc h1{font-family:var(--display);font-size:34px;margin:48px 0 16px;font-weight:300}
   .doc h2{
-    font-family:var(--display);font-size:27px;font-weight:600;
+    font-family:var(--display);font-size:27px;font-weight:400;
     margin:52px 0 14px;padding-top:14px;border-top:1px solid var(--line);
   }
-  .doc h3{font-family:var(--display);font-size:20px;font-weight:600;margin:34px 0 10px}
+  .doc h3{font-family:var(--display);font-size:20px;font-weight:400;margin:34px 0 10px}
   .doc p{margin:0 0 18px}
   .doc ul,.doc ol{margin:0 0 20px;padding-left:22px}
   .doc li{margin-bottom:8px}
@@ -408,7 +408,7 @@
     aspect-ratio:auto;min-height:220px;padding:28px;text-align:center;
     color:var(--muted);border-style:dashed;font-size:14.5px;line-height:1.6;
   }
-  .ss-stage.ss-empty strong{display:block;color:var(--paper);font-family:var(--display);font-size:20px;margin-bottom:6px;font-weight:600}
+  .ss-stage.ss-empty strong{display:block;color:var(--paper);font-family:var(--display);font-size:20px;margin-bottom:6px;font-weight:400}
   .ss-bar{display:flex;align-items:center;gap:10px;margin-top:12px}
   .ss-mid{flex:1;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;min-width:0}
   .ss-count{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
