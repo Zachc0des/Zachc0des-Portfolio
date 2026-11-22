@@ -814,7 +814,1246 @@ Html Document Strucutre
 <H4>BR: Line Breaking</H4>
 Example:Lorem ipsol [BR] Lorem Ipsol<br>
 <h5>Use case: Forces Text to continue on the next line without creating a new pagraph<br>
-Best for: Adresses, poetry lryics, signatures, maintaining line structure without paragrpah spacing</h5 
+Best for: Adresses, poetry lryics, signatures, maintaining line structure without paragrpah spacing</h5>
+</p>
+
+
+<!-- ===================================================== -->
+<!--                  NEW SECTIONS BEGIN                   -->
+<!-- ===================================================== -->
+
+
+<h2>HTML Attributes</h2>
+<p>
+<h4>What Attributes Are</h4>
+Attributes add extra information to an element. They go inside the opening tag as name="value" pairs.<br>
+Example: [a href="https://example.com" target="_blank"] Visit [/a]<br>
+<h5>Best Used For: Linking, styling hooks, accessibility, telling the browser how an element should behave<br>
+Use case: Give an element a destination, a name, or a description.</h5>
+
+<h4>id: Unique Name</h4>
+Example: [p id="intro"] Welcome text [/p]<br>
+<h5>Best Used For: Jump links, JavaScript, one-of-a-kind elements<br>
+Use case: Each id must be unique on the page.</h5>
+
+<h4>class: Reusable Label</h4>
+Example: [p class="note highlight"] Two classes on one element [/p]<br>
+<h5>Best Used For: Applying the same CSS to many elements<br>
+Use case: One element can have several classes separated by spaces.</h5>
+
+<h4>style: Inline CSS</h4>
+Example: [p style="color: blue;"] Blue text [/p]<br>
+<h5>Best Used For: Quick tests only<br>
+Use case: Prefer classes in a stylesheet for real projects.</h5>
+
+<h4>src and alt: Images</h4>
+Example: [img src="cat.jpg" alt="A grey cat on a sofa"]<br>
+<h5>Best Used For: Telling the browser which file to load and describing it for screen readers</h5>
+
+<h4>href and target: Links</h4>
+Example: [a href="about.html" target="_blank" rel="noopener"] About [/a]<br>
+<h5>Best Used For: Setting where a link goes and whether it opens in a new tab</h5>
+
+<h4>title: Tooltip</h4>
+Example: [p title="Shown on hover"] Hover over me [/p]
+
+<h4>lang: Page Language</h4>
+Example: [html lang="en"]<br>
+<h5>Best Used For: Screen readers, translation tools, search engines</h5>
+
+<h4>data-*: Custom Data</h4>
+Example: [li data-user-id="42"] Sam [/li]<br>
+<h5>Best Used For: Storing extra information for JavaScript</h5>
+
+<h4>Boolean Attributes</h4>
+Example: [input type="checkbox" checked] [button disabled] Can't click [/button]<br>
+<h5>Features: On when present, off when absent. Common ones: checked, disabled, required, readonly, autofocus, hidden</h5>
+<h5>Tips: Always quote attribute values, use lowercase attribute names, and never repeat an id on the same page.</h5>
+</p>
+
+
+<h2>Headings & Paragraphs</h2>
+<p>
+<h4>H1 to H6: Headings</h4>
+Example:<br>
+[H1] Page Title [/H1]<br>
+[H2] Section [/H2]<br>
+[H3] Subsection [/H3]<br>
+<h5>Best Used For: Page structure, outlines, helping search engines and screen readers understand the page<br>
+Use case: Choose headings for meaning, not size. Change the size with CSS.</h5>
+
+<h4>Heading Rules</h4>
+Use only one H1 per page.<br>
+Never skip levels (do not jump from H2 to H4).<br>
+Keep headings short and descriptive.<br><br>
+
+<h4>P: Paragraphs</h4>
+Example: [P] This is a paragraph. Browsers add space above and below it. [/P]<br>
+<h5>Features: Extra spaces and line breaks in your code collapse into one space in the browser.</h5>
+
+<h4>BR and HR: Breaks and Dividers</h4>
+Example: [P] Line one [BR] Line two [/P]<br>
+Example: [HR]<br>
+<h5>Best Used For: BR for a line break inside text, HR for a horizontal dividing line between sections<br>
+Use case: Use separate [P] tags for paragraphs instead of stacking [BR] tags.</h5>
+
+<h4>Styling Text Blocks</h4>
+Example (CSS):<br>
+p {<br>
+&nbsp;&nbsp;max-width: 65ch;<br>
+&nbsp;&nbsp;line-height: 1.6;<br>
+}<br>
+<h5>Use case: Keeping lines about 65 characters wide makes paragraphs easier to read.</h5>
+</p>
+
+
+<h2>Links & Navigation</h2>
+<p>
+<h4>A: Anchor (Link)</h4>
+Example: [a href="https://developer.mozilla.org"] MDN Web Docs [/a]<br>
+<h5>Best Used For: Linking to other pages, sites, files, or sections<br>
+Use case: Write descriptive link text such as "Read the pricing guide" instead of "click here".</h5>
+
+<h4>Absolute vs Relative Links</h4>
+Absolute: [a href="https://example.com/about.html"] About [/a]<br>
+Relative: [a href="about.html"] About [/a]<br>
+Parent folder: [a href="../blog/post-1.html"] Post [/a]<br>
+<h5>Use case: Absolute links point to other sites. Relative links point to files inside your own project.</h5>
+
+<h4>Jump Links (Same Page)</h4>
+Example:<br>
+[a href="#contact"] Go to contact [/a]<br>
+[section id="contact"] ... [/section]<br>
+
+<h4>Email, Phone and Download Links</h4>
+Email: [a href="mailto:hello@example.com"] Email me [/a]<br>
+Phone: [a href="tel:+15551234567"] Call us [/a]<br>
+Download: [a href="guide.pdf" download] Download the guide [/a]<br>
+
+<h4>Opening in a New Tab</h4>
+Example: [a href="https://example.com" target="_blank" rel="noopener noreferrer"] New tab [/a]<br>
+<h5>Tip: Always add rel="noopener noreferrer" with target="_blank" for safety.</h5>
+
+<h4>NAV: Navigation Menu</h4>
+Example:<br>
+[nav]<br>
+&nbsp;&nbsp;[ul]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[li][a href="index.html"] Home [/a][/li]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[li][a href="contact.html"] Contact [/a][/li]<br>
+&nbsp;&nbsp;[/ul]<br>
+[/nav]<br>
+<h5>Best Used For: Main menus, footers with links, breadcrumbs<br>
+Use case: A list of links inside NAV is the standard menu structure.</h5>
+
+<h4>Styling Links</h4>
+Example (CSS):<br>
+a { color: #2e6bff; text-decoration: none; }<br>
+a:hover { text-decoration: underline; }<br>
+<h5>Link order for pseudo-classes: link, visited, hover, active.</h5>
+</p>
+
+
+<h2>Adding Images</h2>
+<p>
+<h4>IMG: Image</h4>
+Example: [img src="images/logo.png" alt="Company logo" width="200" height="80"]<br>
+<h5>Best Used For: Photos, logos, graphics, diagrams<br>
+Use case: IMG has no closing tag. The alt attribute is required.</h5>
+
+<h4>Attributes</h4>
+src: path to the image file<br>
+alt: text description for screen readers and broken images (use alt="" for decorative images)<br>
+width and height: reserve space so the page does not jump while loading<br>
+loading="lazy": waits to load until the image is near the screen<br><br>
+
+<h4>FIGURE and FIGCAPTION: Image With Caption</h4>
+Example:<br>
+[figure]<br>
+&nbsp;&nbsp;[img src="team.jpg" alt="Our team at the 2026 launch"]<br>
+&nbsp;&nbsp;[figcaption] The team at the launch. [/figcaption]<br>
+[/figure]<br>
+
+<h4>Responsive Images</h4>
+Example:<br>
+[img src="photo-800.jpg" srcset="photo-400.jpg 400w, photo-800.jpg 800w" sizes="(max-width: 600px) 100vw, 50vw" alt="Lake at sunrise"]<br>
+<h5>Use case: Lets the browser pick the best file size for the screen.</h5>
+
+<h4>PICTURE: Modern Formats</h4>
+Example:<br>
+[picture]<br>
+&nbsp;&nbsp;[source srcset="photo.webp" type="image/webp"]<br>
+&nbsp;&nbsp;[img src="photo.jpg" alt="Lake at sunrise"]<br>
+[/picture]<br>
+
+<h4>Image Formats</h4>
+JPEG: photos<br>
+PNG: graphics that need transparency<br>
+SVG: logos and icons that scale without blur<br>
+WebP / AVIF: smaller modern files<br>
+<h5>CSS tip: img { max-width: 100%; height: auto; } keeps images from overflowing their container.</h5>
+</p>
+
+
+<h2>Lists (Ordered & Unordered)</h2>
+<p>
+<h4>UL: Unordered List (Bullets)</h4>
+Example:<br>
+[ul]<br>
+&nbsp;&nbsp;[li] HTML [/li]<br>
+&nbsp;&nbsp;[li] CSS [/li]<br>
+[/ul]<br>
+<h5>Best Used For: Items where order does not matter, menus, feature lists</h5>
+
+<h4>OL: Ordered List (Numbers)</h4>
+Example:<br>
+[ol]<br>
+&nbsp;&nbsp;[li] Write the HTML [/li]<br>
+&nbsp;&nbsp;[li] Add the CSS [/li]<br>
+[/ol]<br>
+<h5>Best Used For: Steps, rankings, instructions<br>
+Attributes: type="A", start="3", reversed</h5>
+
+<h4>DL: Description List</h4>
+Example:<br>
+[dl]<br>
+&nbsp;&nbsp;[dt] HTML [/dt]<br>
+&nbsp;&nbsp;[dd] The structure of a page [/dd]<br>
+[/dl]<br>
+<h5>Best Used For: Glossaries, term and definition pairs</h5>
+
+<h4>Nested Lists</h4>
+Example:<br>
+[ul]<br>
+&nbsp;&nbsp;[li] Frontend<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[ul] [li] HTML [/li] [li] CSS [/li] [/ul]<br>
+&nbsp;&nbsp;[/li]<br>
+[/ul]<br>
+<h5>Rule: A nested list goes inside an LI, not directly inside the UL.</h5>
+
+<h4>Styling Lists</h4>
+Example (CSS):<br>
+ul { list-style-type: square; }<br>
+ul.plain { list-style: none; padding: 0; }<br>
+<h5>Use case: list-style: none is how navigation menus remove their bullets.</h5>
+</p>
+
+
+<h2>CSS Syntax & Rules</h2>
+<p>
+<h4>Rule Structure</h4>
+Example:<br>
+selector {<br>
+&nbsp;&nbsp;property: value;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: navy;<br>
+&nbsp;&nbsp;font-size: 2rem;<br>
+}<br>
+<h5>Features: The selector chooses what to style. Each declaration is a property and value pair ending in a semicolon.</h5>
+
+<h4>Three Ways to Add CSS</h4>
+External (best): [link rel="stylesheet" href="styles.css"]<br>
+Internal: [style] p { color: gray; } [/style]<br>
+Inline: [p style="color: gray;"] Text [/p]<br>
+<h5>Best Used For: External files for real projects, internal for single pages, inline for quick tests</h5>
+
+<h4>Comments</h4>
+Example: /* This is a CSS comment */<br><br>
+
+<h4>Common Units</h4>
+px: pixels (fixed)<br>
+%: percentage of the parent<br>
+em: relative to the element's font size<br>
+rem: relative to the root font size<br>
+vw / vh: 1% of the viewport width or height<br>
+fr: a share of free space in a grid<br>
+
+<h4>Cascade & Specificity</h4>
+When rules conflict, the browser decides by:<br>
+1. Importance (!important wins, avoid it)<br>
+2. Specificity (inline styles, then IDs, then classes, then elements)<br>
+3. Order (the rule written last wins a tie)<br>
+<h5>Inheritance: Some properties (color, font-family) pass down to children. Others (border, margin) do not.</h5>
+</p>
+
+
+<h2>CSS Selectors</h2>
+<p>
+<h4>Basic Selectors</h4>
+Element: p { }<br>
+Class: .card { }<br>
+ID: #header { }<br>
+Group: h1, h2, h3 { }<br>
+Universal: * { }<br>
+<h5>Best Used For: Class selectors for most styling because they are reusable and keep specificity low.</h5>
+
+<h4>Combinators</h4>
+Descendant: nav a { } (any link inside nav)<br>
+Child: ul &gt; li { } (direct children only)<br>
+Adjacent sibling: h2 + p { } (the paragraph right after)<br>
+General sibling: h2 ~ p { } (all paragraphs after)<br>
+
+<h4>Attribute Selectors</h4>
+a[target="_blank"] { }<br>
+input[type="email"] { }<br>
+a[href^="https"] { } (starts with)<br>
+a[href$=".pdf"] { } (ends with)<br>
+a[href*="shop"] { } (contains)<br>
+
+<h4>Combining</h4>
+Example: p.intro { } (a paragraph with the class intro)<br>
+
+<h4>Modern Helpers</h4>
+:is(h1, h2, h3) a { } (shorthand for a group)<br>
+.card:has(img) { } (selects a parent based on its child)<br>
+li:not(.active) { } (everything except)<br>
+</p>
+
+
+<h2>Color & Backgrounds</h2>
+<p>
+<h4>Color Formats</h4>
+Named: color: red;<br>
+Hex: color: #2e6bff;<br>
+RGB: color: rgb(46 107 255);<br>
+RGB with transparency: color: rgb(46 107 255 / 0.8);<br>
+HSL: color: hsl(222 100% 59%);<br>
+<h5>Tip: HSL is the easiest to adjust. Change the lightness for lighter or darker versions of the same color.</h5>
+
+<h4>Background Properties</h4>
+background-color: #f5f7fb;<br>
+background-image: url("hero.jpg");<br>
+background-repeat: no-repeat;<br>
+background-position: center;<br>
+background-size: cover; (or contain)<br>
+background-attachment: fixed;<br>
+<h5>Shorthand: background: #f5f7fb url("hero.jpg") center / cover no-repeat;</h5>
+
+<h4>Gradients</h4>
+Linear: background: linear-gradient(135deg, #2e6bff, #7b2ff7);<br>
+Radial: background: radial-gradient(circle at top left, #fff, #ccd6f0);<br>
+<h5>Best Used For: Hero sections, buttons, banners without needing an image file</h5>
+
+<h4>Overlay on an Image</h4>
+Example:<br>
+background: linear-gradient(rgb(0 0 0 / .4), rgb(0 0 0 / .4)), url("photo.jpg") center / cover;<br>
+<h5>Use case: Darkens a photo so white text on top stays readable.</h5>
+
+<h4>Tips</h4>
+Always check text and background contrast.<br>
+Set a background-color as a fallback behind background images.<br>
+</p>
+
+
+<h2>Text Styling & Fonts</h2>
+<p>
+<h4>Font Properties</h4>
+font-family: "Inter", system-ui, sans-serif;<br>
+font-size: 1rem;<br>
+font-weight: 400; (100 to 900, or normal and bold)<br>
+font-style: italic;<br>
+line-height: 1.6;<br>
+<h5>Font stacks: List fallbacks from most to least preferred and end with a generic family (serif, sans-serif, monospace).</h5>
+
+<h4>Text Properties</h4>
+color: #1a1a1a;<br>
+text-align: center; (left, right, center, justify)<br>
+text-transform: uppercase; (lowercase, capitalize)<br>
+text-decoration: underline; (none removes it from links)<br>
+letter-spacing: 0.05em;<br>
+text-shadow: 1px 1px 3px rgb(0 0 0 / .3);<br>
+
+<h4>Truncating Long Text</h4>
+Example:<br>
+white-space: nowrap;<br>
+overflow: hidden;<br>
+text-overflow: ellipsis;<br>
+
+<h4>Web Fonts</h4>
+Google Fonts: [link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"]<br>
+Self-hosted:<br>
+@font-face {<br>
+&nbsp;&nbsp;font-family: "MyFont";<br>
+&nbsp;&nbsp;src: url("myfont.woff2") format("woff2");<br>
+&nbsp;&nbsp;font-display: swap;<br>
+}<br>
+<h5>Tip: font-display: swap shows fallback text while the font loads.</h5>
+
+<h4>Fluid Sizing</h4>
+Example: font-size: clamp(1.5rem, 4vw, 3rem);<br>
+<h5>Use case: Text scales smoothly between a minimum and a maximum size.</h5>
+</p>
+
+
+<h2>The Box Model</h2>
+<p>
+<h4>Four Layers</h4>
+Every element is a box. From the inside out:<br>
+Content: the text or image itself<br>
+Padding: space inside the border<br>
+Border: the edge around the padding<br>
+Margin: space outside the border<br>
+<h5>Best Used For: Understanding why elements are bigger than their set width and how spacing works</h5>
+
+<h4>Box Sizing</h4>
+Example:<br>
+*, *::before, *::after { box-sizing: border-box; }<br>
+<h5>Use case: With border-box, width includes padding and border, so a 300px box stays 300px wide. Most projects start with this rule.</h5>
+
+<h4>Width and Height</h4>
+width: 300px;<br>
+max-width: 100%;<br>
+min-height: 200px;<br>
+<h5>Tip: Use max-width instead of width so boxes shrink on small screens.</h5>
+
+<h4>Overflow</h4>
+overflow: visible; (default)<br>
+overflow: hidden; (cuts off extra content)<br>
+overflow: auto; (adds scrollbars only when needed)<br>
+</p>
+
+
+<h2>Margins & Padding</h2>
+<p>
+<h4>Padding: Space Inside</h4>
+Example:<br>
+padding: 20px; (all four sides)<br>
+padding: 10px 20px; (top and bottom, left and right)<br>
+padding: 10px 20px 30px 40px; (top, right, bottom, left)<br>
+padding-left: 15px; (single side)<br>
+<h5>Features: The background color shows through padding.</h5>
+
+<h4>Margin: Space Outside</h4>
+Example:<br>
+margin: 0 auto; (centers a block that has a set width)<br>
+margin-top: 2rem;<br>
+margin-inline: auto;<br>
+<h5>Features: Margins are always transparent.</h5>
+
+<h4>Clockwise Rule</h4>
+With four values, they go top, right, bottom, left (clockwise).<br>
+
+<h4>Margin Collapsing</h4>
+Vertical margins between neighboring blocks merge into the larger one instead of adding up (12px and 20px become 20px).<br>
+<h5>Note: Margins inside flex and grid containers do not collapse.</h5>
+
+<h4>Tips</h4>
+Use gap in flexbox and grid instead of margins between items.<br>
+Use negative margins sparingly.<br>
+</p>
+
+
+<h2>Borders & Outlines</h2>
+<p>
+<h4>Border</h4>
+Example:<br>
+border: 2px solid #d8dfec; (width, style, color)<br>
+border-top: 4px dashed #2e6bff;<br>
+<h5>Styles: solid, dashed, dotted, double, groove, none</h5>
+
+<h4>Border Radius: Rounded Corners</h4>
+Example:<br>
+border-radius: 12px;<br>
+border-radius: 50%; (makes a circle from a square element)<br>
+
+<h4>Outline</h4>
+Example:<br>
+outline: 3px solid #2e6bff;<br>
+outline-offset: 2px;<br>
+<h5>Features: Sits outside the box and takes up no space, so it never shifts the layout.<br>
+Best Used For: Keyboard focus indicators</h5>
+<h5>Warning: Never use outline: none unless you add another visible focus style.</h5>
+
+<h4>Box Shadow</h4>
+Example: box-shadow: 0 8px 24px rgb(0 0 0 / .12);<br>
+<h5>Order: x-offset, y-offset, blur, color. Adds depth without changing layout.</h5>
+</p>
+
+
+<h2>Display Property</h2>
+<p>
+<h4>Block</h4>
+Example: display: block;<br>
+<h5>Features: Takes the full width and starts on a new line. DIV, P and H1 are block by default.</h5>
+
+<h4>Inline</h4>
+Example: display: inline;<br>
+<h5>Features: Flows within text. Width and height are ignored. SPAN and A are inline by default.</h5>
+
+<h4>Inline-Block</h4>
+Example: display: inline-block;<br>
+<h5>Features: Flows inline but accepts width, height, margin and padding.<br>
+Best Used For: Navigation links and buttons in a row</h5>
+
+<h4>None vs Visibility</h4>
+display: none; (removed completely, takes no space)<br>
+visibility: hidden; (invisible but still takes space)<br>
+<h5>Note: display: none also hides content from screen readers.</h5>
+
+<h4>Flex and Grid</h4>
+display: flex; (one-dimensional layout)<br>
+display: grid; (two-dimensional layout)<br>
+</p>
+
+
+<h2>Positioning Elements</h2>
+<p>
+<h4>Static (Default)</h4>
+Normal page flow. top, left, right and bottom have no effect.<br>
+
+<h4>Relative</h4>
+Example: position: relative; top: 10px;<br>
+<h5>Features: Stays in the flow but can be nudged from its normal spot.<br>
+Best Used For: Acting as the reference point for absolute children</h5>
+
+<h4>Absolute</h4>
+Example: position: absolute; top: 8px; right: 8px;<br>
+<h5>Features: Removed from the flow and placed relative to the nearest positioned ancestor.<br>
+Use case: Badges, close buttons, overlays</h5>
+
+<h4>Fixed</h4>
+Example: position: fixed; bottom: 20px; right: 20px;<br>
+<h5>Features: Stays in place relative to the browser window while scrolling.<br>
+Use case: Chat buttons, back-to-top buttons</h5>
+
+<h4>Sticky</h4>
+Example: position: sticky; top: 0;<br>
+<h5>Features: Scrolls normally, then sticks once it reaches the set position.<br>
+Use case: Navigation bars, table headers</h5>
+
+<h4>z-index: Stacking Order</h4>
+Example: z-index: 10;<br>
+<h5>Features: A higher number sits on top. Only works on positioned elements (and flex or grid items).</h5>
+
+<h4>Fill the Parent</h4>
+Example: position: absolute; inset: 0;<br>
+</p>
+
+
+<h2>Float & Clear</h2>
+<p>
+<h4>Float</h4>
+Example:<br>
+img.left { float: left; margin: 0 16px 8px 0; }<br>
+img.right { float: right; margin: 0 0 8px 16px; }<br>
+<h5>Best Used For: Wrapping text around an image<br>
+Note: Floats used to build page layouts. Use Flexbox or Grid for that today.</h5>
+
+<h4>Clear</h4>
+Example: clear: both;<br>
+<h5>Use case: Stops wrapping and starts below the floated elements. Values: left, right, both.</h5>
+
+<h4>Collapsed Parent Problem</h4>
+Floated children do not add to their parent's height, so the parent can collapse.<br>
+Fix 1: .container { display: flow-root; }<br>
+Fix 2:<br>
+.clearfix::after {<br>
+&nbsp;&nbsp;content: "";<br>
+&nbsp;&nbsp;display: block;<br>
+&nbsp;&nbsp;clear: both;<br>
+}<br>
+</p>
+
+
+<h2>Flexbox Layout</h2>
+<p>
+<h4>Flex Container</h4>
+Example:<br>
+.container {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;gap: 16px;<br>
+}<br>
+<h5>Best Used For: Laying items out along one axis (a row or a column), navbars, button rows, card rows</h5>
+
+<h4>flex-direction</h4>
+row (default), row-reverse, column, column-reverse<br>
+
+<h4>justify-content: Main Axis</h4>
+flex-start, center, flex-end, space-between, space-around, space-evenly<br>
+
+<h4>align-items: Cross Axis</h4>
+stretch (default), flex-start, center, flex-end, baseline<br>
+
+<h4>flex-wrap</h4>
+Example: flex-wrap: wrap;<br>
+<h5>Use case: Lets items move onto new lines when they run out of room.</h5>
+
+<h4>Flex Items</h4>
+flex: 1; (grow to share space equally)<br>
+flex: 0 0 200px; (fixed width, no grow or shrink)<br>
+align-self: flex-end; (override alignment for one item)<br>
+order: 2; (change visual order)<br>
+
+<h4>Common Patterns</h4>
+Perfect centering:<br>
+display: flex; justify-content: center; align-items: center;<br><br>
+Navbar with logo left and links right:<br>
+display: flex; justify-content: space-between; align-items: center;<br><br>
+Push one item to the far end: margin-left: auto;<br>
+</p>
+
+
+<h2>CSS Grid Layout</h2>
+<p>
+<h4>Grid Container</h4>
+Example:<br>
+.grid {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br>
+&nbsp;&nbsp;gap: 20px;<br>
+}<br>
+<h5>Best Used For: Two-dimensional layouts with rows and columns, page layouts, galleries</h5>
+
+<h4>Defining Columns and Rows</h4>
+grid-template-columns: 1fr 2fr 1fr; (three columns)<br>
+grid-template-rows: auto 1fr auto;<br>
+<h5>Note: fr means a fraction of the free space.</h5>
+
+<h4>Responsive Grid Without Media Queries</h4>
+Example:<br>
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));<br>
+<h5>Use case: Columns fit as many as possible and wrap automatically.</h5>
+
+<h4>Placing Items</h4>
+grid-column: 1 / -1; (span all columns)<br>
+grid-column: span 2;<br>
+grid-row: span 2;<br>
+
+<h4>Named Areas</h4>
+Example:<br>
+.page {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: 220px 1fr;<br>
+&nbsp;&nbsp;grid-template-areas:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"header header"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"sidebar main"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"footer footer";<br>
+}<br>
+header { grid-area: header; }<br>
+
+<h4>Flexbox or Grid?</h4>
+Flexbox: one direction (components like navbars and card rows)<br>
+Grid: two directions (full page layouts)<br>
+<h5>Tip: They work well together. Use a grid for the page and flexbox inside the components.</h5>
+</p>
+
+
+<h2>Responsive Design</h2>
+<p>
+<h4>Viewport Meta Tag</h4>
+Example: [meta name="viewport" content="width=device-width, initial-scale=1"]<br>
+<h5>Required: Goes in the HEAD. Without it, phones show a shrunken desktop page.</h5>
+
+<h4>Fluid Layouts</h4>
+Use %, fr, rem, max-width and clamp() instead of fixed pixel widths.<br>
+
+<h4>Media Queries</h4>
+Example:<br>
+.cards { display: grid; grid-template-columns: 1fr; }<br>
+@media (min-width: 640px) {<br>
+&nbsp;&nbsp;.cards { grid-template-columns: repeat(2, 1fr); }<br>
+}<br>
+@media (min-width: 1024px) {<br>
+&nbsp;&nbsp;.cards { grid-template-columns: repeat(3, 1fr); }<br>
+}<br>
+<h5>Mobile-first: Write base styles for small screens, then add min-width queries for larger ones.</h5>
+
+<h4>Common Breakpoints</h4>
+About 640px (large phones), 768px (tablets), 1024px (laptops), 1280px (desktops).<br>
+<h5>Tip: Let your content decide where the layout breaks instead of targeting specific devices.</h5>
+
+<h4>Other Useful Queries</h4>
+@media (prefers-color-scheme: dark) { }<br>
+@media (prefers-reduced-motion: reduce) { }<br>
+@media print { }<br>
+
+<h4>Flexible Media</h4>
+Example: img, video { max-width: 100%; height: auto; }<br>
+
+<h4>Container Queries</h4>
+Example:<br>
+.card-wrap { container-type: inline-size; }<br>
+@container (min-width: 400px) { .card { display: flex; } }<br>
+<h5>Use case: Styles a component based on the size of its container, not the screen.</h5>
+</p>
+
+
+<h2>Forms & Input Elements</h2>
+<p>
+<h4>FORM: Form Container</h4>
+Example:<br>
+[form action="/submit" method="POST"]<br>
+&nbsp;&nbsp;... fields ...<br>
+&nbsp;&nbsp;[button type="submit"] Send [/button]<br>
+[/form]<br>
+<h5>Best Used For: Contact forms, sign-ups, search, checkout<br>
+Use case: action is where the data goes, method is how it is sent (GET or POST).</h5>
+
+<h4>LABEL and INPUT</h4>
+Example:<br>
+[label for="email"] Email [/label]<br>
+[input type="email" id="email" name="email" required]<br>
+<h5>Rule: Every input needs a label. Match the label's for to the input's id.</h5>
+
+<h4>Input Types</h4>
+text, email, password, number, tel, url, date, time, color, range, file, search, checkbox, radio, hidden<br>
+<h5>Use case: The right type brings the right mobile keyboard and built-in validation.</h5>
+
+<h4>SELECT: Dropdown</h4>
+Example:<br>
+[select name="topic"]<br>
+&nbsp;&nbsp;[option value="web"] Website [/option]<br>
+&nbsp;&nbsp;[option value="ads"] Ads [/option]<br>
+[/select]<br>
+
+<h4>TEXTAREA: Multi-line Text</h4>
+Example: [textarea name="message" rows="5"] [/textarea]<br>
+
+<h4>Radio Buttons and Checkboxes</h4>
+Radio (pick one): [input type="radio" name="contact" value="email"]<br>
+Checkbox (pick any): [input type="checkbox" name="news"]<br>
+<h5>Tip: Radios in the same group share the same name.</h5>
+
+<h4>FIELDSET and LEGEND: Grouping</h4>
+Example: [fieldset] [legend] Contact me by [/legend] ... [/fieldset]<br>
+
+<h4>Validation Attributes</h4>
+required, minlength, maxlength, min, max, step, pattern="[A-Za-z]{3,}"<br>
+<h5>Warning: Always validate again on the server. Browser validation can be bypassed.</h5>
+
+<h4>Other Useful Attributes</h4>
+placeholder, autocomplete, autofocus, disabled, readonly, multiple<br>
+<h5>Note: A placeholder is a hint, not a replacement for a label.</h5>
+
+<h4>Styling Forms</h4>
+Example (CSS):<br>
+input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid #ccd3e0; border-radius: 8px; font: inherit; }<br>
+input:focus-visible { outline: 3px solid #2e6bff; }<br>
+</p>
+
+
+<h2>Tables & Data</h2>
+<p>
+<h4>TABLE: Data Table</h4>
+Example:<br>
+[table]<br>
+&nbsp;&nbsp;[caption] Monthly plans [/caption]<br>
+&nbsp;&nbsp;[thead] [tr] [th scope="col"] Plan [/th] [th scope="col"] Price [/th] [/tr] [/thead]<br>
+&nbsp;&nbsp;[tbody] [tr] [td] Starter [/td] [td] $20 [/td] [/tr] [/tbody]<br>
+[/table]<br>
+<h5>Best Used For: Real data such as prices, schedules, comparisons<br>
+Rule: Use tables for data, never for page layout.</h5>
+
+<h4>Table Parts</h4>
+TR: table row<br>
+TH: header cell<br>
+TD: data cell<br>
+THEAD, TBODY, TFOOT: header, body and footer groups<br>
+CAPTION: the table's title<br>
+
+<h4>Spanning Cells</h4>
+colspan="2": cell stretches across columns<br>
+rowspan="2": cell stretches across rows<br>
+
+<h4>Accessibility</h4>
+Use scope="col" or scope="row" on header cells so screen readers know what each header covers.<br>
+
+<h4>Styling Tables</h4>
+Example (CSS):<br>
+table { border-collapse: collapse; width: 100%; }<br>
+th, td { padding: 10px 14px; border-bottom: 1px solid #d8dfec; text-align: left; }<br>
+tbody tr:nth-child(even) { background: #f7f9fc; }<br>
+<h5>Tip: Wrap wide tables in a container with overflow-x: auto so they scroll on small screens.</h5>
+</p>
+
+
+<h2>Semantic HTML</h2>
+<p>
+<h4>What It Means</h4>
+Semantic elements describe their meaning, not just their appearance. They help screen readers, search engines and other developers.<br>
+
+<h4>HEADER</h4>
+Intro content or navigation aids for a page or section.<br>
+
+<h4>NAV</h4>
+Major navigation links.<br>
+
+<h4>MAIN</h4>
+The main content of the page (only one per page).<br>
+
+<h4>SECTION</h4>
+A group of related content, usually with a heading.<br>
+
+<h4>ARTICLE</h4>
+Self-contained content that makes sense on its own, such as a blog post or product card.<br>
+
+<h4>ASIDE</h4>
+Side content related to the main content, such as related links.<br>
+
+<h4>FOOTER</h4>
+Footer for a page or a section.<br>
+
+<h4>Page Layout Example</h4>
+[body]<br>
+&nbsp;&nbsp;[header] [nav] ... [/nav] [/header]<br>
+&nbsp;&nbsp;[main]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[article] [h1] Title [/h1] [section] ... [/section] [/article]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[aside] Related links [/aside]<br>
+&nbsp;&nbsp;[/main]<br>
+&nbsp;&nbsp;[footer] ... [/footer]<br>
+[/body]<br>
+
+<h4>Other Semantic Elements</h4>
+FIGURE and FIGCAPTION: media with a caption<br>
+TIME: dates, for example [time datetime="2026-11-22"]<br>
+STRONG: strong importance, EM: emphasis, MARK: highlight<br>
+<h5>Tip: Avoid "div soup". Use BUTTON for buttons, A for links, and real headings, lists and tables. They give you keyboard support and accessibility for free.</h5>
+</p>
+
+
+<h2>Audio & Video</h2>
+<p>
+<h4>VIDEO</h4>
+Example:<br>
+[video controls width="640" poster="thumbnail.jpg"]<br>
+&nbsp;&nbsp;[source src="intro.mp4" type="video/mp4"]<br>
+&nbsp;&nbsp;[source src="intro.webm" type="video/webm"]<br>
+&nbsp;&nbsp;Your browser does not support video.<br>
+[/video]<br>
+<h5>Best Used For: Tutorials, product demos, short films, backgrounds</h5>
+
+<h4>AUDIO</h4>
+Example:<br>
+[audio controls]<br>
+&nbsp;&nbsp;[source src="podcast.mp3" type="audio/mpeg"]<br>
+[/audio]<br>
+<h5>Best Used For: Podcasts, music, voice recordings</h5>
+
+<h4>Attributes</h4>
+controls: show play, pause and volume buttons<br>
+autoplay: start automatically<br>
+loop: repeat<br>
+muted: start silent<br>
+poster: preview image shown before playing (video)<br>
+preload: none, metadata or auto<br>
+playsinline: play inside the page on iPhones<br>
+<h5>Note: Browsers block autoplay with sound. Use autoplay muted loop playsinline for background video.</h5>
+
+<h4>TRACK: Captions</h4>
+Example: [track kind="captions" src="captions.vtt" srclang="en" label="English" default]<br>
+<h5>Use case: Required for accessibility and helps people watching without sound.</h5>
+
+<h4>Embedding YouTube or Vimeo</h4>
+Example: [iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen] [/iframe]<br>
+<h5>CSS tip: iframe, video { max-width: 100%; aspect-ratio: 16 / 9; height: auto; }</h5>
+
+<h4>Formats</h4>
+Video: MP4 (H.264) is the most widely supported, WebM is a good second option.<br>
+Audio: MP3 is the most widely supported.<br>
+</p>
+
+
+<h2>Meta Tags & SEO</h2>
+<p>
+<h4>META Tags</h4>
+Meta tags live in the HEAD and describe the page to browsers, search engines and social sites. They are not shown on the page.<br>
+
+<h4>Essential Tags</h4>
+[meta charset="UTF-8"]<br>
+[meta name="viewport" content="width=device-width, initial-scale=1"]<br>
+[title] Web Design for Small Businesses [/title]<br>
+[meta name="description" content="Simple websites, social media and ads for small businesses."]<br>
+<h5>Tips: Give every page a unique title (about 50 to 60 characters) and a unique description (about 150 to 160 characters).</h5>
+
+<h4>Other Useful Tags</h4>
+[link rel="canonical" href="https://example.com/"]<br>
+[link rel="icon" href="favicon.ico"]<br>
+[meta name="robots" content="index, follow"]<br>
+[meta name="theme-color" content="#2e6bff"]<br>
+
+<h4>Open Graph: Social Sharing</h4>
+[meta property="og:title" content="Six Cards Online"]<br>
+[meta property="og:description" content="Websites, social and ads."]<br>
+[meta property="og:image" content="https://example.com/share.jpg"]<br>
+[meta property="og:url" content="https://example.com/"]<br>
+<h5>Use case: Controls the title, description and image when your link is shared on Facebook, LinkedIn and more.</h5>
+
+<h4>SEO Checklist</h4>
+One H1 and a logical heading structure<br>
+Descriptive alt text and link text<br>
+Semantic HTML<br>
+Fast loading, mobile-friendly pages over HTTPS<br>
+Meaningful URLs (/services/websites instead of /page?id=7)<br>
+A sitemap.xml and robots.txt at the site root<br>
+</p>
+
+
+<h2>CSS Animations</h2>
+<p>
+<h4>@keyframes: Define the Steps</h4>
+Example:<br>
+@keyframes fade-in-up {<br>
+&nbsp;&nbsp;from { opacity: 0; transform: translateY(20px); }<br>
+&nbsp;&nbsp;to { opacity: 1; transform: translateY(0); }<br>
+}<br>
+<h5>Best Used For: Page-load effects, loaders, attention-grabbing elements</h5>
+
+<h4>animation: Apply It</h4>
+Example: animation: fade-in-up 0.6s ease-out 0.2s 1 forwards;<br>
+<h5>Order: name, duration, timing function, delay, iteration count, fill mode</h5>
+
+<h4>Multi-Step Animation</h4>
+Example:<br>
+@keyframes pulse {<br>
+&nbsp;&nbsp;0%, 100% { transform: scale(1); }<br>
+&nbsp;&nbsp;50% { transform: scale(1.1); }<br>
+}<br>
+.heartbeat { animation: pulse 1.5s ease-in-out infinite; }<br>
+
+<h4>Animation Properties</h4>
+animation-duration: how long one cycle takes<br>
+animation-timing-function: ease, linear, ease-in-out, cubic-bezier(), steps()<br>
+animation-delay: wait before starting<br>
+animation-iteration-count: a number or infinite<br>
+animation-direction: normal, reverse, alternate<br>
+animation-fill-mode: forwards keeps the end state<br>
+animation-play-state: running or paused<br>
+
+<h4>Performance and Accessibility</h4>
+Animate transform and opacity. They are smooth. Animating width, height, top or left can stutter.<br>
+Respect users who prefer less motion:<br>
+@media (prefers-reduced-motion: reduce) {<br>
+&nbsp;&nbsp;* { animation: none !important; }<br>
+}<br>
+</p>
+
+
+<h2>Transitions & Effects</h2>
+<p>
+<h4>Transition</h4>
+Example:<br>
+.btn {<br>
+&nbsp;&nbsp;background: #2e6bff;<br>
+&nbsp;&nbsp;transition: background 0.2s ease, transform 0.2s ease;<br>
+}<br>
+.btn:hover { background: #1b3fa8; transform: translateY(-2px); }<br>
+<h5>Best Used For: Smooth hover and focus effects on buttons, links and cards<br>
+Order: property, duration, timing function, delay</h5>
+
+<h4>Tips</h4>
+Put the transition on the base state so it animates both in and out.<br>
+List the properties you change instead of using transition: all.<br>
+Not everything can transition (display cannot, opacity and transform can).<br>
+
+<h4>Visual Effects</h4>
+opacity: 0.6; (transparency)<br>
+filter: blur(4px); (also brightness, grayscale, contrast)<br>
+backdrop-filter: blur(8px); (frosted glass behind an element)<br>
+clip-path: circle(50%); (cut an element into a shape)<br>
+object-fit: cover; (crop an image to fit its box)<br>
+scroll-behavior: smooth; (smooth scrolling for jump links)<br>
+</p>
+
+
+<h2>Pseudo-classes & Elements</h2>
+<p>
+<h4>Pseudo-classes (One Colon)</h4>
+Select an element in a certain state or position.<br>
+<h5>Best Used For: Hover effects, form feedback, zebra-striped lists</h5>
+
+<h4>User Interaction</h4>
+a:hover (mouse over)<br>
+a:active (being clicked)<br>
+a:focus (has focus)<br>
+a:focus-visible (focus from the keyboard, best for focus rings)<br>
+
+<h4>Form States</h4>
+input:required, input:disabled, input:checked, input:valid, input:invalid, input:placeholder-shown<br>
+
+<h4>Position</h4>
+li:first-child<br>
+li:last-child<br>
+li:nth-child(2)<br>
+li:nth-child(odd) (zebra striping)<br>
+li:nth-child(3n) (every third)<br>
+li:not(.active)<br>
+
+<h4>Pseudo-elements (Two Colons)</h4>
+Style a part of an element or add generated content.<br>
+p::first-line<br>
+p::first-letter<br>
+::selection (highlighted text)<br>
+input::placeholder<br>
+li::marker (bullet or number)<br>
+
+<h4>::before and ::after</h4>
+Example:<br>
+.external::after { content: " ↗"; }<br>
+<h5>Rule: The content property is required. Do not put important text in it, because screen readers may skip it.</h5>
+</p>
+
+
+<h2>CSS Transforms</h2>
+<p>
+<h4>Transform</h4>
+Moves, rotates, scales or skews an element without affecting the layout around it.<br>
+
+<h4>Translate: Move</h4>
+Example: transform: translate(20px, 10px);<br>
+(also translateX and translateY)<br>
+
+<h4>Rotate</h4>
+Example: transform: rotate(15deg);<br>
+
+<h4>Scale: Resize</h4>
+Example: transform: scale(1.2);<br>
+(also scaleX and scaleY)<br>
+
+<h4>Skew</h4>
+Example: transform: skew(10deg, 0);<br>
+
+<h4>Combining</h4>
+Example: transform: translateY(-4px) rotate(3deg) scale(1.05);<br>
+<h5>Note: Transforms apply from right to left.</h5>
+
+<h4>transform-origin: The Pivot Point</h4>
+Example: transform-origin: top left;<br>
+<h5>Default is the center.</h5>
+
+<h4>Centering With Transforms</h4>
+Example:<br>
+position: absolute; top: 50%; left: 50%;<br>
+transform: translate(-50%, -50%);<br>
+
+<h4>3D Transforms</h4>
+Example:<br>
+.scene { perspective: 800px; }<br>
+.card { transform: rotateY(25deg); }<br>
+<h5>Best Used For: Flip cards, tilted images, hover effects</h5>
+</p>
+
+
+<h2>CSS Custom Properties</h2>
+<p>
+<h4>Declaring Variables</h4>
+Example:<br>
+:root {<br>
+&nbsp;&nbsp;--color-primary: #2e6bff;<br>
+&nbsp;&nbsp;--space: 1rem;<br>
+&nbsp;&nbsp;--radius: 12px;<br>
+}<br>
+<h5>Features: Names start with two dashes. :root makes them available everywhere.</h5>
+
+<h4>Using Variables</h4>
+Example:<br>
+.btn {<br>
+&nbsp;&nbsp;background: var(--color-primary);<br>
+&nbsp;&nbsp;padding: var(--space);<br>
+&nbsp;&nbsp;border-radius: var(--radius);<br>
+}<br>
+
+<h4>Fallback Values</h4>
+Example: color: var(--btn-color, #fff);<br>
+<h5>Use case: The value after the comma is used if the variable is not defined.</h5>
+
+<h4>Scoping</h4>
+Example: .card.featured { --color-primary: #c99a4b; }<br>
+<h5>Features: Variables inherit like other properties, so this only changes the featured card and its children.</h5>
+
+<h4>Theming (Dark Mode)</h4>
+Example:<br>
+:root { --bg: #f5f7fb; --text: #0b1424; }<br>
+:root[data-theme="dark"] { --bg: #000; --text: #f2f2f2; }<br>
+body { background: var(--bg); color: var(--text); }<br>
+<h5>Best Used For: One place to change colors, fonts and spacing for the entire site</h5>
+
+<h4>Changing With JavaScript</h4>
+Example: document.documentElement.style.setProperty("--color-primary", "#7b2ff7");<br>
+<h5>Note: Unlike Sass variables, CSS variables stay live in the browser and can change at runtime.</h5>
+</p>
+
+
+<h2>HTML/CSS Validation</h2>
+<p>
+<h4>Why Validate</h4>
+Validators catch typos, unclosed tags and invalid markup before they cause strange bugs.<br>
+
+<h4>Tools</h4>
+W3C Markup Validator: validator.w3.org (HTML)<br>
+W3C CSS Validator: jigsaw.w3.org/css-validator (CSS)<br>
+Linters in your editor: HTMLHint, Stylelint<br>
+Formatter: Prettier<br>
+
+<h4>Common Errors Found</h4>
+Missing DOCTYPE, lang, title or alt attributes<br>
+Unclosed or wrongly nested tags<br>
+Duplicate id values<br>
+Block elements placed inside inline elements<br>
+Misspelled CSS properties or invalid values<br>
+<h5>Habit: Validate before you publish and fix the first error first. One mistake can cause many later warnings.</h5>
+</p>
+
+
+<h2>Web Accessibility</h2>
+<p>
+<h4>What It Is</h4>
+Accessibility (a11y) means everyone can use your site, including people using screen readers, keyboards, voice control or magnification. The standard is WCAG (aim for level AA).<br>
+
+<h4>Semantic HTML</h4>
+Use real headings, landmarks (NAV, MAIN), buttons and links.<br>
+
+<h4>Alt Text</h4>
+Describe meaningful images. Use alt="" for decorative ones.<br>
+
+<h4>Color Contrast</h4>
+Normal text needs at least 4.5:1 contrast and large text 3:1. Never use color alone to carry meaning.<br>
+
+<h4>Keyboard Access</h4>
+Everything must work with Tab, Enter, Space and Esc, with a visible focus style.<br>
+
+<h4>Forms</h4>
+Label every control and write clear error messages.<br>
+
+<h4>Skip Link</h4>
+Example: [a class="skip-link" href="#main"] Skip to main content [/a]<br>
+<h5>Use case: Lets keyboard users jump past the navigation.</h5>
+
+<h4>ARIA</h4>
+Example:<br>
+[button aria-expanded="false" aria-controls="menu"] Menu [/button]<br>
+[button aria-label="Close dialog"] × [/button]<br>
+<h5>First rule of ARIA: Do not use ARIA if a native HTML element does the job.</h5>
+
+<h4>Other Checks</h4>
+Set the page language (lang="en") and write descriptive page titles.<br>
+Add captions to video and transcripts to audio.<br>
+Respect prefers-reduced-motion.<br>
+Use rem units so text can be resized.<br>
+Make tap targets at least about 44 by 44 pixels.<br>
+
+<h4>Tools</h4>
+Lighthouse (in Chrome DevTools), axe DevTools, WAVE, and testing with a keyboard and a screen reader (NVDA, VoiceOver).<br>
+</p>
+
+
+<h2>Performance Optimization</h2>
+<p>
+<h4>Why It Matters</h4>
+Faster pages keep visitors and rank better. Google's Core Web Vitals measure loading (LCP), responsiveness (INP) and layout stability (CLS).<br>
+
+<h4>Images (Biggest Win)</h4>
+Resize images to the size they are displayed and compress them.<br>
+Use WebP or AVIF for photos and SVG for icons.<br>
+Add loading="lazy" to images below the fold.<br>
+Add width and height to prevent layout shift.<br>
+
+<h4>CSS and JavaScript</h4>
+Minify files for production.<br>
+Remove unused CSS.<br>
+Load scripts with defer: [script src="app.js" defer] [/script]<br>
+
+<h4>Fonts</h4>
+Limit the number of families and weights.<br>
+Prefer WOFF2 and use font-display: swap.<br>
+Preconnect to font hosts: [link rel="preconnect" href="https://fonts.gstatic.com" crossorigin]<br>
+
+<h4>Network</h4>
+Use HTTPS and a CDN.<br>
+Enable Gzip or Brotli compression.<br>
+Cache static files.<br>
+Limit third-party scripts.<br>
+
+<h4>Animations</h4>
+Animate only transform and opacity.<br>
+
+<h4>Measure</h4>
+Lighthouse, PageSpeed Insights and WebPageTest.<br>
+<h5>Tip: Test on a throttled mobile connection. That is where problems show up.</h5>
+</p>
+
+
+<h2>Browser Developer Tools</h2>
+<p>
+<h4>Opening DevTools</h4>
+F12, Ctrl+Shift+I (Windows and Linux), Cmd+Option+I (Mac), or right-click an element and choose Inspect.<br>
+
+<h4>Elements Panel</h4>
+Inspect and live-edit HTML and CSS. See the box model and which rule is winning. Toggle :hover and :focus states.<br>
+
+<h4>Console Panel</h4>
+See errors and warnings, run JavaScript and view console.log() output.<br>
+
+<h4>Network Panel</h4>
+See every file loaded with its size and timing. Throttle the connection to test slow networks.<br>
+
+<h4>Sources Panel</h4>
+View files, set breakpoints and debug JavaScript.<br>
+
+<h4>Performance and Application Panels</h4>
+Performance records page load and runtime. Application shows storage, cookies, caches and service workers.<br>
+
+<h4>Lighthouse</h4>
+Audits performance, accessibility, SEO and best practices.<br>
+
+<h4>Handy Workflows</h4>
+Device toolbar (Ctrl/Cmd+Shift+M): test phone and tablet sizes.<br>
+Click a color swatch to open the color picker.<br>
+Tick and untick CSS declarations to see what they do. Edits are temporary until copied into your code.<br>
+Use the Layout pane to see Flexbox and Grid overlays.<br>
+Use the Computed tab to see the final value of any property.<br>
+Hard refresh (Ctrl/Cmd+Shift+R) to bypass the cache.<br>
+</p>
+
+
+<h2>CSS Preprocessors</h2>
+<p>
+<h4>What They Are</h4>
+A preprocessor adds programming features to CSS and compiles your source into normal CSS. The most popular is Sass (.scss files). Others include Less and Stylus.<br>
+
+<h4>Installing and Compiling Sass</h4>
+npm install -g sass<br>
+sass styles.scss styles.css (compile once)<br>
+sass --watch styles.scss:styles.css (recompile on every save)<br>
+
+<h4>Variables</h4>
+Example:<br>
+$primary: #2e6bff;<br>
+a { color: $primary; }<br>
+
+<h4>Nesting</h4>
+Example:<br>
+.nav {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;a {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color: $primary;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;:hover { text-decoration: underline; }<br>
+&nbsp;&nbsp;}<br>
+}<br>
+<h5>Note: The &amp; stands for the parent selector.</h5>
+
+<h4>Mixins: Reusable Blocks</h4>
+Example:<br>
+@mixin flex-center($gap: 1rem) {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;justify-content: center;<br>
+&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;gap: $gap;<br>
+}<br>
+.hero { @include flex-center(2rem); }<br>
+
+<h4>Partials and Imports</h4>
+Example: @use "variables"; (loads the file _variables.scss)<br>
+<h5>Use case: Split large stylesheets into small files such as _buttons.scss and _header.scss.</h5>
+
+<h4>Do You Still Need One?</h4>
+Native CSS now has variables, calc() and nesting, so small projects often do not need a preprocessor. It still helps on large projects with mixins, loops and organized partials.<br>
+
+<h4>Related Tools</h4>
+PostCSS and Autoprefixer: adds vendor prefixes automatically<br>
+Tailwind CSS: utility-first framework<br>
+Vite, Parcel, webpack: build tools that compile and bundle your code<br>
+</p>
+     
 </script>
 
      
